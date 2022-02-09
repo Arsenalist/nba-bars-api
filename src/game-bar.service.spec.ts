@@ -1,4 +1,5 @@
 import { GameBarService } from './game-bar.service';
+
 const fs = require('fs');
 
 import { BoxScore, PlayByPlay, PlayerGameBar, PlayerPeriodPerformance } from './model';
@@ -49,8 +50,8 @@ describe('GameBarService', () => {
   it('gets players from box score', () => {
     let boxScore: BoxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
     const players = nbaService.getPlayers(boxScore);
-    expect(players[0].name).toBe("Jimmy Butler")
-    expect(players[0].personId).toBe(202710)
+    expect(players[0].name).toBe('Jimmy Butler');
+    expect(players[0].personId).toBe(202710);
   });
   it('gets periods from box score', () => {
     let boxScore: BoxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
@@ -58,90 +59,129 @@ describe('GameBarService', () => {
     expect(periods.length).toBe(7);
     expect(periods[0].period).toBe(1);
     expect(periods[6].period).toBe(7);
-    expect(periods[6].periodType).toBe("OVERTIME");
+    expect(periods[6].periodType).toBe('OVERTIME');
   });
-  it('calculates distribution of player points by period and total', () => {
-    let boxScore: BoxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
-    let playByPlay: PlayByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
+  describe('GameBarService', () => {
+    let nbaService: GameBarService;
+    let boxScore: BoxScore;
+    let playByPlay: PlayByPlay;
+    beforeEach(async () => {
+      nbaService = new GameBarService();
+      boxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
+      playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
+    });
 
-    // jimmy butler
-    const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
-    let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
-    expect(pointsTotal(result, 202710)).toBe(37);
-    expect(quarterPointsTotal(result, 202710, 1)).toBe(11);
-    expect(quarterPointsTotal(result, 202710, 2)).toBe(13);
-    expect(quarterPointsTotal(result, 202710, 3)).toBe(5);
-    expect(quarterPointsTotal(result, 202710, 4)).toBe(4);
-    expect(quarterPointsTotal(result, 202710, 5)).toBe(2);
-    expect(quarterPointsTotal(result, 202710, 6)).toBe(2);
-    expect(quarterPointsTotal(result, 202710, 7)).toBe(0);
+    it('calculates distribution of player points by period and total', () => {
+      // jimmy butler
+      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
+      expect(pointsTotal(result, 202710)).toBe(37);
+      expect(quarterPointsTotal(result, 202710, 1)).toBe(11);
+      expect(quarterPointsTotal(result, 202710, 2)).toBe(13);
+      expect(quarterPointsTotal(result, 202710, 3)).toBe(5);
+      expect(quarterPointsTotal(result, 202710, 4)).toBe(4);
+      expect(quarterPointsTotal(result, 202710, 5)).toBe(2);
+      expect(quarterPointsTotal(result, 202710, 6)).toBe(2);
+      expect(quarterPointsTotal(result, 202710, 7)).toBe(0);
 
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 1)).toBe(2);
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 2)).toBe(3); // bug on NBA.com which doesn't count FGs
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 3)).toBe(3);
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 4)).toBe(4);
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 5)).toBe(3);
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 6)).toBe(0);
-    expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 7)).toBe(0);
+      // pj tucker
+      const pj = boxScore.homeTeam.players.find(p => p.personId === 200782);
+      result = nbaService.createPlayerPeriodPerformance(playByPlay, pj, boxScore.homeTeam.periods);
+      expect(pointsTotal(result, 200782)).toBe(11);
 
-    expect(quarterAssistsTotal(result, 202710, 1)).toBe(1);
-    expect(quarterAssistsTotal(result, 202710, 2)).toBe(2);
-    expect(quarterAssistsTotal(result, 202710, 3)).toBe(3);
-    expect(quarterAssistsTotal(result, 202710, 4)).toBe(2);
-    expect(quarterAssistsTotal(result, 202710, 5)).toBe(1);
-    expect(quarterAssistsTotal(result, 202710, 6)).toBe(1);
-    expect(quarterAssistsTotal(result, 202710, 7)).toBe(0);
+    });
+    it('calculates missed shots and free throws totals', () => {
+      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
 
-    expect(quarterTurnoversTotal(result, 202710, 1)).toBe(0);
-    expect(quarterTurnoversTotal(result, 202710, 2)).toBe(1);
-    expect(quarterTurnoversTotal(result, 202710, 3)).toBe(3);
-    expect(quarterTurnoversTotal(result, 202710, 4)).toBe(0);
-    expect(quarterTurnoversTotal(result, 202710, 5)).toBe(1);
-    expect(quarterTurnoversTotal(result, 202710, 6)).toBe(0);
-    expect(quarterTurnoversTotal(result, 202710, 7)).toBe(0);
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 1)).toBe(2);
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 2)).toBe(3); // bug on NBA.com which doesn't count FGs
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 3)).toBe(3);
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 4)).toBe(4);
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 5)).toBe(3);
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 6)).toBe(0);
+      expect(quarterMissedShotsAndFreeThrowsTotal(result, 202710, 7)).toBe(0);
+    });
 
-    // pj tucker
-    const pj = boxScore.homeTeam.players.find(p => p.personId === 200782);
-    result = nbaService.createPlayerPeriodPerformance(playByPlay, pj, boxScore.homeTeam.periods);
-    expect(pointsTotal(result, 200782)).toBe(11);
-    // bam adebayo
-    const bam = boxScore.homeTeam.players.find(p => p.personId === 1628389);
-    result = nbaService.createPlayerPeriodPerformance(playByPlay, bam, boxScore.homeTeam.periods);
-    expect(pointsTotal(result, 1628389)).toBe(14);
-    expect(quarterReboundsTotal(result, 1628389, 1)).toBe(4);
-    expect(quarterReboundsTotal(result, 1628389, 2)).toBe(2);
-    expect(quarterReboundsTotal(result, 1628389, 3)).toBe(3);
-    expect(quarterReboundsTotal(result, 1628389, 4)).toBe(3);
-    expect(quarterReboundsTotal(result, 1628389, 5)).toBe(2);
-    expect(quarterReboundsTotal(result, 1628389, 6)).toBe(1);
-    expect(quarterReboundsTotal(result, 1628389, 7)).toBe(1);
+    it('calculates assists by quarter', () => {
 
-    const siakam = boxScore.awayTeam.players.find(p => p.personId === 1627783);
-    result = nbaService.createPlayerPeriodPerformance(playByPlay, siakam, boxScore.awayTeam.periods);
-    expect(quarterStealsTotal(result, 1627783, 1)).toBe(0);
-    expect(quarterStealsTotal(result, 1627783, 2)).toBe(1);
-    expect(quarterStealsTotal(result, 1627783, 3)).toBe(2);
-    expect(quarterStealsTotal(result, 1627783, 4)).toBe(0);
-    expect(quarterStealsTotal(result, 1627783, 5)).toBe(0);
-    expect(quarterStealsTotal(result, 1627783, 6)).toBe(1);
-    expect(quarterStealsTotal(result, 1627783, 7)).toBe(0);
+      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
 
-    expect(quarterBlocksTotal(result, 1627783, 1)).toBe(0);
-    expect(quarterBlocksTotal(result, 1627783, 2)).toBe(0);
-    expect(quarterBlocksTotal(result, 1627783, 3)).toBe(0);
-    expect(quarterBlocksTotal(result, 1627783, 4)).toBe(2);
-    expect(quarterBlocksTotal(result, 1627783, 5)).toBe(0);
-    expect(quarterBlocksTotal(result, 1627783, 6)).toBe(1);
-    expect(quarterBlocksTotal(result, 1627783, 7)).toBe(1);
+      expect(quarterAssistsTotal(result, 202710, 1)).toBe(1);
+      expect(quarterAssistsTotal(result, 202710, 2)).toBe(2);
+      expect(quarterAssistsTotal(result, 202710, 3)).toBe(3);
+      expect(quarterAssistsTotal(result, 202710, 4)).toBe(2);
+      expect(quarterAssistsTotal(result, 202710, 5)).toBe(1);
+      expect(quarterAssistsTotal(result, 202710, 6)).toBe(1);
+      expect(quarterAssistsTotal(result, 202710, 7)).toBe(0);
+    });
 
-    expect(quarterFoulsTotal(result, 1627783, 1)).toBe(1);
-    expect(quarterFoulsTotal(result, 1627783, 2)).toBe(1);
-    expect(quarterFoulsTotal(result, 1627783, 3)).toBe(1);
-    expect(quarterFoulsTotal(result, 1627783, 4)).toBe(0);
-    expect(quarterFoulsTotal(result, 1627783, 5)).toBe(1);
-    expect(quarterFoulsTotal(result, 1627783, 6)).toBe(0);
-    expect(quarterFoulsTotal(result, 1627783, 7)).toBe(1);
+    it('calculates turnvoers by quarter', () => {
+      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
 
-  })
+      expect(quarterTurnoversTotal(result, 202710, 1)).toBe(0);
+      expect(quarterTurnoversTotal(result, 202710, 2)).toBe(1);
+      expect(quarterTurnoversTotal(result, 202710, 3)).toBe(3);
+      expect(quarterTurnoversTotal(result, 202710, 4)).toBe(0);
+      expect(quarterTurnoversTotal(result, 202710, 5)).toBe(1);
+      expect(quarterTurnoversTotal(result, 202710, 6)).toBe(0);
+      expect(quarterTurnoversTotal(result, 202710, 7)).toBe(0);
+    });
+    it('calculates rebounds by quarter', () => {
+      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
+
+      // bam adebayo
+      const bam = boxScore.homeTeam.players.find(p => p.personId === 1628389);
+      result = nbaService.createPlayerPeriodPerformance(playByPlay, bam, boxScore.homeTeam.periods);
+      expect(pointsTotal(result, 1628389)).toBe(14);
+      expect(quarterReboundsTotal(result, 1628389, 1)).toBe(4);
+      expect(quarterReboundsTotal(result, 1628389, 2)).toBe(2);
+      expect(quarterReboundsTotal(result, 1628389, 3)).toBe(3);
+      expect(quarterReboundsTotal(result, 1628389, 4)).toBe(3);
+      expect(quarterReboundsTotal(result, 1628389, 5)).toBe(2);
+      expect(quarterReboundsTotal(result, 1628389, 6)).toBe(1);
+      expect(quarterReboundsTotal(result, 1628389, 7)).toBe(1);
+    });
+
+    it('calculates steals by quarter', () => {
+      const siakam = boxScore.awayTeam.players.find(p => p.personId === 1627783);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, siakam, boxScore.awayTeam.periods);
+      expect(quarterStealsTotal(result, 1627783, 1)).toBe(0);
+      expect(quarterStealsTotal(result, 1627783, 2)).toBe(1);
+      expect(quarterStealsTotal(result, 1627783, 3)).toBe(2);
+      expect(quarterStealsTotal(result, 1627783, 4)).toBe(0);
+      expect(quarterStealsTotal(result, 1627783, 5)).toBe(0);
+      expect(quarterStealsTotal(result, 1627783, 6)).toBe(1);
+      expect(quarterStealsTotal(result, 1627783, 7)).toBe(0);
+
+    });
+
+    it('calculates blocks by quarter', () => {
+      const siakam = boxScore.awayTeam.players.find(p => p.personId === 1627783);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, siakam, boxScore.awayTeam.periods);
+      expect(quarterBlocksTotal(result, 1627783, 1)).toBe(0);
+      expect(quarterBlocksTotal(result, 1627783, 2)).toBe(0);
+      expect(quarterBlocksTotal(result, 1627783, 3)).toBe(0);
+      expect(quarterBlocksTotal(result, 1627783, 4)).toBe(2);
+      expect(quarterBlocksTotal(result, 1627783, 5)).toBe(0);
+      expect(quarterBlocksTotal(result, 1627783, 6)).toBe(1);
+      expect(quarterBlocksTotal(result, 1627783, 7)).toBe(1);
+    });
+
+    it('calculates fouls by quarter', () => {
+      const siakam = boxScore.awayTeam.players.find(p => p.personId === 1627783);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, siakam, boxScore.awayTeam.periods);
+      expect(quarterFoulsTotal(result, 1627783, 1)).toBe(1);
+      expect(quarterFoulsTotal(result, 1627783, 2)).toBe(1);
+      expect(quarterFoulsTotal(result, 1627783, 3)).toBe(1);
+      expect(quarterFoulsTotal(result, 1627783, 4)).toBe(0);
+      expect(quarterFoulsTotal(result, 1627783, 5)).toBe(1);
+      expect(quarterFoulsTotal(result, 1627783, 6)).toBe(0);
+      expect(quarterFoulsTotal(result, 1627783, 7)).toBe(1);
+    });
+  });
 });
 
