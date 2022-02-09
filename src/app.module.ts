@@ -2,11 +2,12 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { GameBarService } from './game-bar.service';
 import { NbaService } from './nba.service';
-import { HttpModule, HttpService } from '@nestjs/axios';
+import { HttpModule } from '@nestjs/axios';
+import { LineupService } from './lineup.service';
 
 @Module({
   imports: [HttpModule],
   controllers: [AppController],
-  providers: [GameBarService, NbaService],
+  providers: [GameBarService, NbaService, LineupService],
 })
 export class AppModule {}

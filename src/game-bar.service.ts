@@ -24,7 +24,7 @@ export class GameBarService {
     let blocks = 0;
     let fouls = 0;
     for (const action of actions) {
-      if (action.period === period.period && action.personId === player.personId) {
+      if ((period === undefined || action.period === period.period) && action.personId === player.personId) {
         if (['2pt', '3pt', 'freethrow'].includes(action.actionType) && action.shotResult === 'Made') {
           switch (action.actionType) {
             case '2pt':
@@ -46,11 +46,11 @@ export class GameBarService {
         } else if (action.actionType === "foul") {
           fouls += 1;
         }
-      } else if (action.period === period.period && action.assistPersonId === player.personId) {
+      } else if ((period === undefined || action.period === period.period) && action.assistPersonId === player.personId) {
         assists += 1;
-      } else if (action.period === period.period && action.stealPersonId === player.personId) {
+      } else if ((period === undefined || action.period === period.period) && action.stealPersonId === player.personId) {
         steals += 1;
-      } else if (action.period === period.period && action.blockPersonId === player.personId) {
+      } else if ((period === undefined || action.period === period.period) && action.blockPersonId === player.personId) {
         blocks += 1;
       }
     }

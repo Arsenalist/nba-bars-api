@@ -11,7 +11,9 @@ export interface PlayerStats {
 
 export interface Player {
   personId: number
-  name: string
+  name: string,
+  starter: string,
+  stats?: PlayerStats
 }
 
 export interface BoxScore {
@@ -28,7 +30,12 @@ export interface Action {
   pointsTotal: number,
   assistPersonId: number,
   stealPersonId: number,
-  blockPersonId: number
+  blockPersonId: number,
+  teamId: number,
+  scoreHome: string,
+  scoreAway: string,
+  clock: string,
+  subType: string
 }
 
 export interface PlayByPlay {
