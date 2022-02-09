@@ -1,7 +1,9 @@
-import { Action, Player } from './model';
+import { Action, HomeAway, Player } from './model';
 import { GameBarService } from './game-bar.service';
 
 export class Lineup {
+  constructor(private homeAway: HomeAway) {
+  }
   private _players: Player[] = [];
   private _firstAction: Action;
   private _lastAction: Action;
@@ -15,9 +17,15 @@ export class Lineup {
   }
 
   get plusMinus(): number {
-    const startDifferential = parseInt(this._firstAction.scoreAway) - parseInt(this._firstAction.scoreHome);
-    const endDifferential =  parseInt(this._lastAction.scoreAway) - parseInt(this._lastAction.scoreHome);
-    return endDifferential - startDifferential;
+    if (this.homeAway == HomeAway.AWAY) {
+      const startDifferential = parseInt(this._firstAction.scoreAway) - parseInt(this._firstAction.scoreHome);
+      const endDifferential =  parseInt(this._lastAction.scoreAway) - parseInt(this._lastAction.scoreHome);
+      return endDifferential - startDifferential;
+    } else {
+      const startDifferential = parseInt(this._firstAction.scoreHome) - parseInt(this._firstAction.scoreAway);
+      const endDifferential =  parseInt(this._lastAction.scoreHome) - parseInt(this._lastAction.scoreAway);
+      return endDifferential - startDifferential;
+    }
   }
 
   get firstAction(): Action {

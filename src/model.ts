@@ -9,6 +9,11 @@ export interface PlayerStats {
   fouls: number
 }
 
+export enum HomeAway {
+  HOME = 0,
+  AWAY = 1
+}
+
 export interface Player {
   personId: number
   name: string,

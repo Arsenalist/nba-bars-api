@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Action, BoxScore, PlayByPlay } from './model';
+import { BoxScore, HomeAway, PlayByPlay } from './model';
 import { Lineup } from './lineup';
+
 @Injectable()
 
 export class LineupService {
@@ -8,28 +9,25 @@ export class LineupService {
   constructor(private playByPlay: PlayByPlay, private boxScore: BoxScore) {
   }
 
-  getAwayLineups(): Lineup[] {
-    let lineup = new Lineup();
-    lineup.players = this.getAwayStarters();
+  getLineups(homeAway: HomeAway): Lineup[] {
+    let lineup = new Lineup(homeAway);
+    lineup.players = homeAway === HomeAway.AWAY ? this.getAwayStarters() : this.getHomeStarters();
     lineup.firstAction = this.playByPlay.actions[0];
     const lineups = [lineup];
-    let previousSubClock = undefined;
-    for (const action of this.playByPlay.actions) {
-      if (action.actionType === "substitution" && this.boxScore.awayTeam.teamId === action.teamId) {
-        const nextLineup: Lineup = new Lineup();
-        nextLineup.players = lineups[lineups.length-1].players;
-        if (previousSubClock === undefined || previousSubClock !== action.clock) {
+    let previousActionTypeForTeam = undefined;
+    let nextLineup: Lineup;
+    this.playByPlay.actions.forEach( (action, index) =>  {
+      const boxScoreTeamToCompareId = homeAway === HomeAway.AWAY ? this.boxScore.awayTeam.teamId : this.boxScore.homeTeam.teamId;
+      if (action.actionType === "substitution" && boxScoreTeamToCompareId === action.teamId) {
+        if (previousActionTypeForTeam !== "substitution") {
+          nextLineup = new Lineup(homeAway);
+          nextLineup.players = lineups[lineups.length-1].players;
           lineups[lineups.length-1].lastAction = action;
-          lineups[lineups.length-1].actions = this.playByPlay.actions.reduce((prev, curr) => {
-            if (curr.actionNumber >= lineups[lineups.length-1].firstAction.actionNumber &&
-              curr.actionNumber <= lineups[lineups.length-1].lastAction.actionNumber) {
-              prev.push(curr);
-            }
-            return prev;
-          }, []);
+          lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1]);
           nextLineup.firstAction = action;
           lineups.push(nextLineup);
-          previousSubClock = action.clock;
+        } else {
+          nextLineup = lineups[lineups.length-1];
         }
         if (action.subType === "out") {
           nextLineup.players = nextLineup.players.filter(p => action.personId !== p.personId);
@@ -37,8 +35,26 @@ export class LineupService {
           nextLineup.players.push(this.getPlayerFromBoxScore(action.personId))
         }
       }
-    }
+      if (boxScoreTeamToCompareId === action.teamId) {
+        previousActionTypeForTeam = action.actionType;
+      }
+      // last entry needs to be part of the last lineup
+      if (index === this.playByPlay.actions.length - 1) {
+        lineups[lineups.length - 1].lastAction = action;
+        lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1]);
+      }
+    });
     return lineups;
+  }
+
+  private getActionsForLineup(lineup: Lineup) {
+    return this.playByPlay.actions.reduce((prev, curr) => {
+      if (curr.actionNumber >= lineup.firstAction.actionNumber &&
+        curr.actionNumber <= lineup.lastAction.actionNumber) {
+        prev.push(curr);
+      }
+      return prev;
+    }, []);
   }
 
   getPlayerFromBoxScore(personId: number) {
