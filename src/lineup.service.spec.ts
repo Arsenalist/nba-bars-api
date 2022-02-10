@@ -5,14 +5,16 @@ const fs = require('fs');
 
 describe('LineupService', () => {
   let service: LineupService;
+  let playByPlay: PlayByPlay;
+  let boxScore: BoxScore;
   beforeEach(async () => {
-    const playByPlay: PlayByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
-    const boxScore: BoxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
-    service = new LineupService(playByPlay, boxScore);
+    playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
+    boxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
+    service = new LineupService();
   });
 
   it ('returns the away team lineup which started the game', () => {
-    const lineups: Lineup[] = service.getLineups(HomeAway.AWAY);
+    const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
     expect(lineups[0].players.find(p => p.personId === 1630567).name).toBe("Scottie Barnes");
     expect(lineups[0].players.find(p => p.personId === 1628384).name).toBe("OG Anunoby");
     expect(lineups[0].players.find(p => p.personId === 1627783).name).toBe("Pascal Siakam");
@@ -24,10 +26,10 @@ describe('LineupService', () => {
     expect(lineups[0].plusMinus).toBe(1);
     let stats = lineups[0].playersWithStats;
     // barnes had a foul
-    expect(stats.find(p => p.personId === 1630567).stats.fouls).toBe(1);
+    expect(stats.find(p => p.personId === 1630567).lineupStats.fouls).toBe(1);
     // trent
-    expect(stats.find(p => p.personId === 1629018).stats.points).toBe(5);
-    expect(stats.find(p => p.personId === 1629018).stats.fouls).toBe(1);
+    expect(stats.find(p => p.personId === 1629018).lineupStats.points).toBe(5);
+    expect(stats.find(p => p.personId === 1629018).lineupStats.fouls).toBe(1);
 
     expect(lineups[1].players.find(p => p.personId === 1628449).name).toBe("Chris Boucher");
     expect(lineups[1].players.find(p => p.personId === 1628384).name).toBe("OG Anunoby");
@@ -60,7 +62,7 @@ describe('LineupService', () => {
     expect(lineups[3].plusMinus).toBe(-1);
   });
   it ('returns the home team lineup which ended the game', () => {
-    const lineups: Lineup[] = service.getLineups(HomeAway.HOME);
+    const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
     let lineup = lineups[lineups.length-1];
     expect(lineup.players.find(p => p.personId === 202710).name).toBe("Jimmy Butler");
     expect(lineup.players.find(p => p.personId === 1629639).name).toBe("Tyler Herro");
@@ -72,7 +74,7 @@ describe('LineupService', () => {
     expect(lineup.players.find(p => p.personId === 203473)).toBe(undefined);
     // gabe vincent had one turnover just before the end of the game
     let stats = lineup.playersWithStats;
-    expect(stats.find(p => p.personId === 1629216).stats.turnovers).toBe(1);
+    expect(stats.find(p => p.personId === 1629216).lineupStats.turnovers).toBe(1);
 
     lineup = lineups[lineups.length-2];
     expect(lineup.players.find(p => p.personId === 202710).name).toBe("Jimmy Butler");

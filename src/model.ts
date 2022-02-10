@@ -18,7 +18,7 @@ export interface Player {
   personId: number
   name: string,
   starter: string,
-  stats?: PlayerStats
+  lineupStats?: PlayerStats
 }
 
 export interface BoxScore {

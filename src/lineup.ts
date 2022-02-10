@@ -1,5 +1,6 @@
 import { Action, HomeAway, Player } from './model';
 import { GameBarService } from './game-bar.service';
+import { Clock } from './clock';
 
 export class Lineup {
   constructor(private homeAway: HomeAway) {
@@ -52,9 +53,23 @@ export class Lineup {
   get playersWithStats(): Player[] {
     const service = new GameBarService();
     return this._players.map(p => {
-      p.stats = service.calculateStatsForPlayerForPeriod(this._actions, p, undefined);
+      p.lineupStats = service.calculateStatsForPlayerForPeriod(this._actions, p, undefined);
       return p;
     })
   }
 
+  get durationInSeconds(): number {
+    return new Clock(this.lastAction.clock, this.lastAction.period).elapsedTime() -
+    new Clock(this.firstAction.clock, this.firstAction.period).elapsedTime()
+  }
+
+  get summary(): string {
+    const startClock = `${new Clock(this.firstAction.clock, this.firstAction.period).displayTime()}`;
+    const endClock = `${new Clock(this.lastAction.clock, this.lastAction.period).displayTime()}<br>`;
+    let text = `${startClock}-${endClock} ${this.plusMinus} +/-<br>`;
+    this.playersWithStats.forEach(p => {
+      text += `${p.name}: ${p.lineupStats.points} PTS, ${p.lineupStats.assists} AST, ${p.lineupStats.rebounds} REB<br>`
+    });
+    return text;
+  }
 }
