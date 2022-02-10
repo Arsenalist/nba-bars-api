@@ -2,9 +2,11 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { GameBarService } from './game-bar.service';
 import { NbaService } from './nba.service';
 import { LineupService } from './lineup.service';
-import { HomeAway } from './model';
+import { HomeAway, Player } from './model';
 import { Lineup } from './lineup';
 import { Periods } from './periods';
+import * as dayjs from 'dayjs';
+dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
 export class AppController {
@@ -18,8 +20,9 @@ export class AppController {
     const playByPlay = await this.nbaService.getPlayByPlay(gameId);
     const [awayGameBar, homeGameBar] =  this.gameBarService.getGameBarsForTeam(boxScore, playByPlay);
 
-    const graphLineups = this.toLineupJson(this.lineupService.getLineups(HomeAway.AWAY, playByPlay, boxScore),
-        this.lineupService.getLineups(HomeAway.HOME, playByPlay, boxScore));
+    const awayLineup = this.lineupService.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+    const homeLineup = this.lineupService.getLineups(HomeAway.HOME, playByPlay, boxScore);
+    const graphLineups = this.toLineupJson(awayLineup, homeLineup);
 
     const periods = new Periods(boxScore.homeTeam.periods.length);
     return {
@@ -28,6 +31,8 @@ export class AppController {
       boxScore: boxScore,
       lineupIntervals: periods.intervalsInSeconds(),
       lineupIntervalsText: periods.display(),
+      awayPlayerLineups: this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup),
+      homePlayerLineups: this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup),
       lineups: graphLineups,
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar)
@@ -88,5 +93,28 @@ export class AppController {
       traces.push(trace);
     }
     return traces;
+  }
+
+  private createLineupsForPlayers(players: Player[], lineup: Lineup[]) {
+    const traces = [];
+    lineup.forEach(l => {
+      const trace = [];
+      players.forEach(p => {
+        const foundPlayer: Player = l.playersWithStats.find(lp => lp.personId === p.personId);
+        trace.push({
+          duration: l.durationInSeconds,
+          inLineup: foundPlayer !== undefined,
+          player: p.name,
+          lineupStats: l.durationInSeconds,
+        });
+      });
+      traces.push(trace);
+    });
+    return traces;
+  }
+
+  private formattedLineupStats(lineup: Lineup, player: Player) {
+    // @ts-ignore
+    return `${player.name}<br>${dayjs.duration(lineup.durationInSeconds, 'seconds').format('mm:ss')}`
   }
 }
