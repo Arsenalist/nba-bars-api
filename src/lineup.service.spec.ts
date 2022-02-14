@@ -7,6 +7,9 @@ describe('LineupService', () => {
   let service: LineupService;
   let playByPlay: PlayByPlay;
   let boxScore: BoxScore;
+  describe('Toronto @ Miam', () => {
+
+
   beforeEach(async () => {
     playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
     boxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
@@ -87,5 +90,23 @@ describe('LineupService', () => {
     expect(lineup.players.find(p => p.personId === 1629639)).toBe(undefined);
 
   });
+  });
+  describe('Cleveland @ Philly', () => {
+    beforeEach(async () => {
+      playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-clephi.json`)).game;
+      boxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-clephi.json`)).game;
+      service = new LineupService();
+    });
+    it ('checks that cleveland has the correct final lineup', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+      const lastLineup = lineups[lineups.length-1];
+      expect(lastLineup.players.find(p => p.personId === 202334).name).toBe("Ed Davis");
+      expect(lastLineup.players.find(p => p.personId === 1629164).name).toBe("Brandon Goodwin");
+      expect(lastLineup.players.find(p => p.personId === 1629731).name).toBe("Dean Wade");
+      expect(lastLineup.players.find(p => p.personId === 1626224).name).toBe("Cedi Osman");
+      expect(lastLineup.players.find(p => p.personId === 1630205).name).toBe("Lamar Stevens");
+      expect(lastLineup.players.length).toBe(5);
 
-});
+    })
+  });
+  });

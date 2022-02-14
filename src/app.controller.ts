@@ -25,6 +25,8 @@ export class AppController {
     const graphLineups = this.toLineupJson(awayLineup, homeLineup);
 
     const periods = new Periods(boxScore.homeTeam.periods.length);
+    boxScore.awayTeam.color = this.teamColorCodes(boxScore.awayTeam.teamName)
+    boxScore.homeTeam.color = this.teamColorCodes(boxScore.homeTeam.teamName)
     return {
       groupLabels: awayGameBar.periods.map(p => p.period),
       chartLabels: ['PTS vs Misses', 'AST vs TO'],
@@ -87,7 +89,7 @@ export class AppController {
         trace.summary.push(homeLineup[i].summary)
       } else {
         trace.values.push(0);
-        trace.values.push(0);
+        trace.labels.push(0);
         trace.summary.push('')
       }
       traces.push(trace);
@@ -116,5 +118,41 @@ export class AppController {
   private formattedLineupStats(lineup: Lineup, player: Player) {
     // @ts-ignore
     return `${player.name}<br>${dayjs.duration(lineup.durationInSeconds, 'seconds').format('mm:ss')}`
+  }
+
+  private teamColorCodes(teamName: string) {
+    return {
+      'Celtics': '#007a33',
+      'Hawks': '#e03a3e',
+      'Heat': '#98002e',
+      'Nets': '#000000',
+      'Bulls': '#ce1141',
+      'Suns': '#1d1160',
+      'Nuggets': '#0e2240',
+      'Warriors': '#1d428a',
+      'Pacers': '#fdbb30',
+      'Bucks': '#00471b',
+      'Pelicans': '#0c2340',
+      'Thunder': '#007ac1',
+      '76ers': '#006bb6',
+      'Kings': '#5a2d81',
+      'Raptors': '#ce1141',
+      'Cavaliers': '#860038',
+      'Lakers': '#552583',
+      'Clippers': '#c8102e',
+      'Hornets': '#1d1160',
+      'Mavericks': '#00538c',
+      'Pistons': '#c8102e',
+      'Rockets': '#ce1141',
+      'Grizzlies': '#5d76a9',
+      'Timberwolves': '#0c2340',
+      'Knicks': '#f58426',
+      'Magic': '#0077c0',
+      'Trail Blazers': '#e03a3e',
+      'Spurs': '#c4ced4',
+      'Jazz': '#002b5c',
+      'Wizards': '#002b5c'
+
+    }[teamName];
   }
 }

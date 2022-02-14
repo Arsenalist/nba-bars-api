@@ -69,5 +69,6 @@ export interface Team {
   teamName: string,
   playerGameBars: PlayerGameBar[]
   players: Player[],
-  periods: Period[]
+  periods: Period[],
+  color: string
 }
