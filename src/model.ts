@@ -1,3 +1,29 @@
+export class PlayerStatsClass implements PlayerStats {
+
+  constructor(stats: PlayerStats) {
+    Object.keys(stats).forEach(key=>this[key]=stats[key]);
+  }
+
+  add(stats: PlayerStats) {
+    this.points += stats.points;
+    this.missedShotsAndFreeThrows += stats.missedShotsAndFreeThrows;
+    this.assists += stats.assists;
+    this.turnovers += stats.turnovers;
+    this.rebounds += stats.rebounds;
+    this.steals += stats.steals;
+    this.blocks += stats.blocks;
+    this.fouls += stats.fouls;
+  }
+
+  points: number;
+  missedShotsAndFreeThrows: number;
+  assists: number;
+  turnovers: number;
+  rebounds: number;
+  steals: number;
+  blocks: number;
+  fouls: number;
+}
 export interface PlayerStats {
   points?: number,
   missedShotsAndFreeThrows: number,

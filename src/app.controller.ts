@@ -2,10 +2,11 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { GameBarService } from './game-bar.service';
 import { NbaService } from './nba.service';
 import { LineupService } from './lineup.service';
-import { HomeAway, Player } from './model';
+import { HomeAway, Player, PlayerStatsClass } from './model';
 import { Lineup } from './lineup';
 import { Periods } from './periods';
 import * as dayjs from 'dayjs';
+import { consolidateMultiplePlayerLineups } from './lineup-for-chart';
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
@@ -33,8 +34,8 @@ export class AppController {
       boxScore: boxScore,
       lineupIntervals: periods.intervalsInSeconds(),
       lineupIntervalsText: periods.display(),
-      awayPlayerLineups: this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup),
-      homePlayerLineups: this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup),
+      awayPlayerLineups: consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup)),
+      homePlayerLineups: consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup)),
       lineups: graphLineups,
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar)
@@ -107,17 +108,12 @@ export class AppController {
           duration: l.durationInSeconds,
           inLineup: foundPlayer !== undefined,
           player: p.name,
-          lineupStats: l.durationInSeconds,
+          lineupStats: foundPlayer ? new PlayerStatsClass(foundPlayer.lineupStats) : undefined,
         });
       });
       traces.push(trace);
     });
     return traces;
-  }
-
-  private formattedLineupStats(lineup: Lineup, player: Player) {
-    // @ts-ignore
-    return `${player.name}<br>${dayjs.duration(lineup.durationInSeconds, 'seconds').format('mm:ss')}`
   }
 
   private teamColorCodes(teamName: string) {
