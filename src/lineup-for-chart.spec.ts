@@ -44,17 +44,6 @@ describe('Lineup for chart', () => {
     expect(result[7].inLineup).toBe(true);
     expect(result[8].duration).toBe(0);
     expect(result[8].inLineup).toBe(true);
-
-
-/*    expect(result[0].lineupStats).toBe(14);
-    expect(result[1].lineupStats).toBe(14);
-    expect(result[2].lineupStats).toBe(4);
-    expect(result[3].lineupStats).toBe(10);
-    expect(result[4].lineupStats).toBe(8);
-    expect(result[5].lineupStats).toBe(8);
-    expect(result[6].lineupStats).toBe(2);
-    expect(result[7].lineupStats).toBe(10);
-    expect(result[8].lineupStats).toBe(10);*/
   });
   it ('consolidates when player is not in last lineup', () => {
     const playerLineups = [
