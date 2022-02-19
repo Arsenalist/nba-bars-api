@@ -111,7 +111,7 @@ export class AppController {
           duration: l.durationInSeconds,
           inLineup: foundPlayer !== undefined,
           player: p.name,
-          lineupStats: foundPlayer ? new PlayerStats(foundPlayer.lineupStats) : undefined,
+          lineupStats: foundPlayer ? foundPlayer.lineupStats : undefined,
         });
       });
       traces.push(trace);
