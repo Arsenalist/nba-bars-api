@@ -1,15 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { BoxScore, HomeAway, PlayByPlay } from './model';
 import { Lineup } from './lineup';
+import { GameBarService } from './game-bar.service';
 
 @Injectable()
 export class LineupService {
+
+  constructor(private readonly gameBarService: GameBarService) {}
 
   getLineups(homeAway: HomeAway, playByPlay: PlayByPlay, boxScore: BoxScore): Lineup[] {
     let lineup = new Lineup(homeAway);
     lineup.players = homeAway === HomeAway.AWAY ? this.getAwayStarters(boxScore) : this.getHomeStarters(boxScore);
     lineup.firstAction = playByPlay.actions[0];
-    const lineups = [lineup];
+    let lineups = [lineup];
     let previousActionTypeForTeam = undefined;
     let nextLineup: Lineup;
     playByPlay.actions.forEach( (action, index) =>  {
@@ -40,7 +43,19 @@ export class LineupService {
         lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay);
       }
     });
-    return lineups;
+    return this.addLineupSpecificStatsForPlayers(lineups);
+  }
+
+  private addLineupSpecificStatsForPlayers(lineups: Lineup[]) {
+    return lineups.map(lineup => {
+      lineup.players = lineup.players.map(player => {
+        return {
+          ...player,
+          lineupStats: this.gameBarService.calculateStatsForPlayerForPeriod(lineup.actions, player, undefined),
+        };
+      });
+      return lineup;
+    });
   }
 
   private getActionsForLineup(lineup: Lineup, playByPlay: PlayByPlay) {

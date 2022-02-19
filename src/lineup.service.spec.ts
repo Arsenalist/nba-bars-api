@@ -1,6 +1,7 @@
 import { LineupService } from './lineup.service';
 import { Lineup } from './lineup';
 import { BoxScore, HomeAway, PlayByPlay } from './model';
+import { GameBarService } from './game-bar.service';
 const fs = require('fs');
 
 describe('LineupService', () => {
@@ -13,7 +14,7 @@ describe('LineupService', () => {
   beforeEach(async () => {
     playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
     boxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-tormia.json`)).game;
-    service = new LineupService();
+    service = new LineupService(new GameBarService());
   });
 
   it ('returns the away team lineup which started the game', () => {
@@ -27,7 +28,7 @@ describe('LineupService', () => {
     // Chris Boucher did not start
     expect(lineups[0].players.find(p => p.personId === 1628449)).toBe(undefined);
     expect(lineups[0].plusMinus).toBe(1);
-    let stats = lineups[0].playersWithStats;
+    let stats = lineups[0].players;
     // barnes had a foul
     expect(stats.find(p => p.personId === 1630567).lineupStats.fouls).toBe(1);
     // trent
@@ -76,7 +77,7 @@ describe('LineupService', () => {
     // Dedmon got subbed out
     expect(lineup.players.find(p => p.personId === 203473)).toBe(undefined);
     // gabe vincent had one turnover just before the end of the game
-    let stats = lineup.playersWithStats;
+    let stats = lineup.players;
     expect(stats.find(p => p.personId === 1629216).lineupStats.turnovers).toBe(1);
 
     lineup = lineups[lineups.length-2];
@@ -95,7 +96,7 @@ describe('LineupService', () => {
     beforeEach(async () => {
       playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-clephi.json`)).game;
       boxScore = JSON.parse(fs.readFileSync(`./testdata/boxscore-clephi.json`)).game;
-      service = new LineupService();
+      service = new LineupService(new GameBarService());
     });
     it ('checks that cleveland has the correct final lineup', () => {
       const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);

@@ -50,14 +50,6 @@ export class Lineup {
     this._actions = value;
   }
 
-  get playersWithStats(): Player[] {
-    const service = new GameBarService();
-    return this._players.map(p => {
-      p.lineupStats = service.calculateStatsForPlayerForPeriod(this._actions, p, undefined);
-      return p;
-    })
-  }
-
   get durationInSeconds(): number {
     return new Clock(this.lastAction.clock, this.lastAction.period).elapsedTime() -
     new Clock(this.firstAction.clock, this.firstAction.period).elapsedTime()
@@ -67,7 +59,7 @@ export class Lineup {
     const startClock = `${new Clock(this.firstAction.clock, this.firstAction.period).displayTime()}`;
     const endClock = `${new Clock(this.lastAction.clock, this.lastAction.period).displayTime()}<br>`;
     let text = `${startClock}-${endClock} ${this.plusMinus} +/-<br>`;
-    this.playersWithStats.forEach(p => {
+    this.players.forEach(p => {
       text += `${p.name}: ${p.lineupStats.points} PTS, ${p.lineupStats.assists} AST, ${p.lineupStats.rebounds} REB<br>`
     });
     return text;

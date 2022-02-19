@@ -106,7 +106,7 @@ export class AppController {
     lineup.forEach(l => {
       const trace = [];
       players.forEach(p => {
-        const foundPlayer: Player = l.playersWithStats.find(lp => lp.personId === p.personId);
+        const foundPlayer: Player = l.players.find(lp => lp.personId === p.personId);
         trace.push({
           duration: l.durationInSeconds,
           inLineup: foundPlayer !== undefined,
