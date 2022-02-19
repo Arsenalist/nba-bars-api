@@ -7,6 +7,7 @@ import { Lineup } from './lineup';
 import { Periods } from './periods';
 import * as dayjs from 'dayjs';
 import { consolidateMultiplePlayerLineups } from './lineup-for-chart';
+import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for-chart';
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
@@ -28,14 +29,16 @@ export class AppController {
     const periods = new Periods(boxScore.homeTeam.periods.length);
     boxScore.awayTeam.color = this.teamColorCodes(boxScore.awayTeam.teamName)
     boxScore.homeTeam.color = this.teamColorCodes(boxScore.homeTeam.teamName)
+    boxScore.homeTeam.players = removeDNPsFromBoxScore(boxScore.homeTeam.players);
+    boxScore.awayTeam.players = removeDNPsFromBoxScore(boxScore.awayTeam.players);
     return {
       groupLabels: awayGameBar.periods.map(p => p.period),
       chartLabels: ['PTS vs Misses', 'AST vs TO'],
       boxScore: boxScore,
       lineupIntervals: periods.intervalsInSeconds(),
       lineupIntervalsText: periods.display(),
-      awayPlayerLineups: consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup)),
-      homePlayerLineups: consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup)),
+      awayPlayerLineups: removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup))),
+      homePlayerLineups: removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup))),
       lineups: graphLineups,
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar)
