@@ -42,8 +42,9 @@ export enum HomeAway {
 
 export interface Player {
   personId: number
-  name: string,
-  starter: string,
+  played?: string
+  name?: string,
+  starter?: string,
   lineupStats?: PlayerStats
 }
 
