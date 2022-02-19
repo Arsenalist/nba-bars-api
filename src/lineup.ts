@@ -1,5 +1,4 @@
 import { Action, HomeAway, Player } from './model';
-import { GameBarService } from './game-bar.service';
 import { Clock } from './clock';
 
 export class Lineup {
