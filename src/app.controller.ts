@@ -2,7 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { GameBarService } from './game-bar.service';
 import { NbaService } from './nba.service';
 import { LineupService } from './lineup.service';
-import { HomeAway, Player, PlayerStatsClass } from './model';
+import { HomeAway, Player, PlayerStats } from './model';
 import { Lineup } from './lineup';
 import { Periods } from './periods';
 import * as dayjs from 'dayjs';
@@ -111,7 +111,7 @@ export class AppController {
           duration: l.durationInSeconds,
           inLineup: foundPlayer !== undefined,
           player: p.name,
-          lineupStats: foundPlayer ? new PlayerStatsClass(foundPlayer.lineupStats) : undefined,
+          lineupStats: foundPlayer ? new PlayerStats(foundPlayer.lineupStats) : undefined,
         });
       });
       traces.push(trace);

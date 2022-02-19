@@ -1,8 +1,17 @@
-export class PlayerStatsClass implements PlayerStats {
+export class PlayerStats {
 
-  constructor(stats: PlayerStats) {
+  constructor(stats: {}) {
     Object.keys(stats).forEach(key=>this[key]=stats[key]);
   }
+
+  points: number;
+  missedShotsAndFreeThrows: number;
+  assists: number;
+  turnovers: number;
+  rebounds: number;
+  steals: number;
+  blocks: number;
+  fouls: number;
 
   add(stats: PlayerStats) {
     this.points += stats.points;
@@ -14,26 +23,8 @@ export class PlayerStatsClass implements PlayerStats {
     this.blocks += stats.blocks;
     this.fouls += stats.fouls;
   }
+}
 
-  points: number;
-  missedShotsAndFreeThrows: number;
-  assists: number;
-  turnovers: number;
-  rebounds: number;
-  steals: number;
-  blocks: number;
-  fouls: number;
-}
-export interface PlayerStats {
-  points?: number,
-  missedShotsAndFreeThrows: number,
-  assists: number,
-  turnovers: number,
-  rebounds: number,
-  steals: number,
-  blocks: number,
-  fouls: number
-}
 
 export enum HomeAway {
   HOME = 0,

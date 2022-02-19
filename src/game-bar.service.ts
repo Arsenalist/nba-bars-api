@@ -54,7 +54,7 @@ export class GameBarService {
         blocks += 1;
       }
     }
-    return {
+    return new PlayerStats({
       points: points,
       missedShotsAndFreeThrows: missedShotsAndFreeThrows,
       assists: assists,
@@ -63,7 +63,7 @@ export class GameBarService {
       steals: steals,
       blocks: blocks,
       fouls: fouls
-    };
+    });
   }
 
   getGameBarsForTeam = (boxScore: BoxScore, playByPlay: PlayByPlay): [Team, Team] => {

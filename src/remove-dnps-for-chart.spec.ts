@@ -1,8 +1,8 @@
 import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for-chart';
-import { Player, PlayerStatsClass } from './model';
+import { Player, PlayerStats } from './model';
 
 function p(duration, inLineup) {
-  return {duration: duration, inLineup: inLineup, lineupStats: new PlayerStatsClass({
+  return {duration: duration, inLineup: inLineup, lineupStats: new PlayerStats({
       assists: 0,
       blocks: 0,
       fouls: 0,
