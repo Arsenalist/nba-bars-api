@@ -64,13 +64,15 @@ export class AppController {
       const negativeValues1 = pgb.playerPeriodPerformance.map(ppp => ppp.stats.missedShotsAndFreeThrows);
       const positiveValues2 = pgb.playerPeriodPerformance.map(ppp => ppp.stats.assists);
       const negativeValues2 = pgb.playerPeriodPerformance.map(ppp => ppp.stats.turnovers);
-      players.push({
-        positiveValues: [positiveValues1, positiveValues2],
-        negativeValues: [negativeValues1, negativeValues2],
-        positiveLabels: ["PTS", "Assists"],
-        negativeLabels: ["Misses", "TO"],
-        player: pgb.player,
-      })
+      if (pgb.player.played === "1") {
+        players.push({
+          positiveValues: [positiveValues1, positiveValues2],
+          negativeValues: [negativeValues1, negativeValues2],
+          positiveLabels: ["PTS", "Assists"],
+          negativeLabels: ["Misses", "TO"],
+          player: pgb.player,
+        })
+      }
     }
     return players;
   }
