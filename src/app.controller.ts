@@ -2,12 +2,13 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { GameBarService } from './game-bar.service';
 import { NbaService } from './nba.service';
 import { LineupService } from './lineup.service';
-import { HomeAway, Player, PlayerStats } from './model';
+import { HomeAway, Player, PlayerGraphLineup } from './model';
 import { Lineup } from './lineup';
 import { Periods } from './periods';
 import * as dayjs from 'dayjs';
 import { consolidateMultiplePlayerLineups } from './lineup-for-chart';
 import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for-chart';
+import { unloadAndFormat } from './unload-and-format';
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
@@ -37,8 +38,8 @@ export class AppController {
       boxScore: boxScore,
       lineupIntervals: periods.intervalsInSeconds(),
       lineupIntervalsText: periods.display(),
-      awayPlayerLineups: removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup))),
-      homePlayerLineups: removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup))),
+      awayPlayerLineups: unloadAndFormat(removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup)))),
+      homePlayerLineups: unloadAndFormat(removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup)))),
       lineups: graphLineups,
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar)
@@ -107,12 +108,14 @@ export class AppController {
       const trace = [];
       players.forEach(p => {
         const foundPlayer: Player = l.players.find(lp => lp.personId === p.personId);
-        trace.push({
+        trace.push(new PlayerGraphLineup({
           duration: l.durationInSeconds,
+          plusMinus: l.plusMinus,
           inLineup: foundPlayer !== undefined,
           player: p.name,
           lineupStats: foundPlayer ? foundPlayer.lineupStats : undefined,
-        });
+          actions: foundPlayer ? l.actions.filter(a => a.personId === p.personId) : []
+        }));
       });
       traces.push(trace);
     });

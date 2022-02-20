@@ -1,8 +1,8 @@
 import { consolidateMultiplePlayerLineups, consolidatePlayerLineups } from './lineup-for-chart';
-import { PlayerStats } from './model';
+import { PlayerGraphLineup, PlayerStats } from './model';
 
 function p(duration, inLineup) {
-  return {duration: duration, inLineup: inLineup, lineupStats: new PlayerStats({
+  return new PlayerGraphLineup({duration: duration, inLineup: inLineup, lineupStats: new PlayerStats({
       assists: 0,
       blocks: 0,
       fouls: 0,
@@ -10,7 +10,7 @@ function p(duration, inLineup) {
       rebounds: 0,
       steals: 0,
       turnovers: 0
-    })};
+    })});
 }
 describe('Lineup for chart', () => {
   it ('consolidates a single player\'s lineup', () => {

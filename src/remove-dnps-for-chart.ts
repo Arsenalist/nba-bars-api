@@ -1,11 +1,11 @@
-import { Player } from './model';
+import { Player, PlayerGraphLineup } from './model';
 import { consolidatePlayerLineups } from './lineup-for-chart';
 
 export function removeDNPsFromBoxScore(player: Player[]): Player[] {
   return player.filter(player => player.played === "1");
 }
 
-export function removeDNPSFromLineups(lineups): any {
+export function removeDNPSFromLineups(lineups: PlayerGraphLineup[][]): any {
   const transposed = lineups[0].map((_, colIndex) => lineups.map(row => row[colIndex]));
   const result = [];
   transposed.forEach((value) => {

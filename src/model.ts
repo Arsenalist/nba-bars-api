@@ -23,6 +23,17 @@ export class PlayerStats {
     this.blocks += stats.blocks;
     this.fouls += stats.fouls;
   }
+
+  toHtml(): string {
+    return [
+      `${this.points} PTS`,
+      `${this.rebounds} REB`,
+      `${this.assists} AST`,
+      `${this.turnovers} TO`,
+      `${this.steals} STL`,
+      `${this.blocks} BLK`
+    ].join(", ")
+  }
 }
 
 
@@ -45,20 +56,21 @@ export interface BoxScore {
 }
 
 export interface Action {
-  period: number,
-  personId: number,
-  actionType: string,
-  actionNumber: number,
-  shotResult: string,
-  pointsTotal: number,
-  assistPersonId: number,
-  stealPersonId: number,
-  blockPersonId: number,
-  teamId: number,
-  scoreHome: string,
-  scoreAway: string,
-  clock: string,
-  subType: string
+  period?: number,
+  personId?: number,
+  actionType?: string,
+  actionNumber?: number,a
+  shotResult?: string,
+  pointsTotal?: number,
+  assistPersonId?: number,
+  stealPersonId?: number,
+  blockPersonId?: number,
+  teamId?: number,
+  scoreHome?: string,
+  scoreAway?: string,
+  clock?: string,
+  subType?: string,
+  description?: string
 }
 
 export interface PlayByPlay {
@@ -89,4 +101,18 @@ export interface Team {
   players: Player[],
   periods: Period[],
   color: string
+}
+
+export class PlayerGraphLineup {
+  constructor(data: {}) {
+    Object.keys(data).forEach(key=>this[key]=data[key]);
+  }
+  duration: number;
+  inLineup: boolean;
+  player: string;
+  plusMinus: number;
+  lineupStats: PlayerStats;
+  actions: Action[] = [];
+  formattedDetail: string;
+  formattedLabel: string;
 }
