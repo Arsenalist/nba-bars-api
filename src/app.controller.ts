@@ -9,13 +9,15 @@ import * as dayjs from 'dayjs';
 import { consolidateMultiplePlayerLineups } from './lineup-for-chart';
 import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for-chart';
 import { unloadAndFormat } from './unload-and-format';
+import { DifferentialService } from './differential.service';
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
 export class AppController {
   constructor(private readonly nbaService: NbaService,
               private readonly gameBarService: GameBarService,
-              private readonly lineupService: LineupService) {}
+              private readonly lineupService: LineupService,
+              private readonly differentialService: DifferentialService) {}
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
@@ -36,6 +38,7 @@ export class AppController {
       groupLabels: awayGameBar.periods.map(p => p.period),
       chartLabels: ['PTS vs Misses', 'AST vs TO'],
       boxScore: boxScore,
+      differential: this.differentialService.createDifferential(playByPlay),
       lineupIntervals: periods.intervalsInSeconds(),
       lineupIntervalsText: periods.display(),
       awayPlayerLineups: unloadAndFormat(removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup)))),
