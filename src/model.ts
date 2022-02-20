@@ -59,7 +59,7 @@ export interface Action {
   period?: number,
   personId?: number,
   actionType?: string,
-  actionNumber?: number,a
+  actionNumber?: number,
   shotResult?: string,
   pointsTotal?: number,
   assistPersonId?: number,
