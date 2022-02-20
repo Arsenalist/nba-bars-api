@@ -10,7 +10,7 @@ describe('differential', () => {
     service = new DifferentialService();
     playByPlay = JSON.parse(fs.readFileSync(`./testdata/playbyplay-tormia.json`)).game;
   });
-  it ('returns differential every 10 seconds', () => {
+  it ('returns differential for every action', () => {
     const result: Differential[] = service.createDifferential(playByPlay);
     expect(result[0].elapsedTimeInSeconds).toBe(0);
     expect(result[0].awayMinusHomeDifference).toBe(0);
