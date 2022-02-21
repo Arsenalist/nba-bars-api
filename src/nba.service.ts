@@ -21,7 +21,7 @@ export class NbaService {
 
   async getGames(date: string) {
     const url =`https://ca.global.nba.com/stats2/scores/daily.json?countryCode=CA&gameDate=${date}&locale=en&tz=-5`;
-    return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.payload.date.games)));
+    return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.payload.date ? response.data.payload.date.games : [])));
   }
 
 }
