@@ -5,10 +5,11 @@ import { NbaService } from './nba.service';
 import { HttpModule } from '@nestjs/axios';
 import { LineupService } from './lineup.service';
 import { DifferentialService } from './differential.service';
+import { AssistDistributionService } from './assist-distribution.service';
 
 @Module({
   imports: [HttpModule],
   controllers: [AppController],
-  providers: [GameBarService, NbaService, LineupService, DifferentialService],
+  providers: [GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService],
 })
 export class AppModule {}

@@ -10,6 +10,7 @@ import { consolidateMultiplePlayerLineups } from './lineup-for-chart';
 import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for-chart';
 import { unloadAndFormat } from './unload-and-format';
 import { DifferentialService } from './differential.service';
+import { AssistDistributionService } from './assist-distribution.service';
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
@@ -17,7 +18,8 @@ export class AppController {
   constructor(private readonly nbaService: NbaService,
               private readonly gameBarService: GameBarService,
               private readonly lineupService: LineupService,
-              private readonly differentialService: DifferentialService) {}
+              private readonly differentialService: DifferentialService,
+              private readonly assistDistributionService: AssistDistributionService) {}
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
@@ -45,10 +47,12 @@ export class AppController {
       homePlayerLineups: unloadAndFormat(removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup)))),
       lineups: graphLineups,
       awayTeam: {
-        players: this.getPlayersFromGameBar(awayGameBar)
+        players: this.getPlayersFromGameBar(awayGameBar),
+        assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.awayTeam.players, playByPlay)
       },
       homeTeam: {
-        players: this.getPlayersFromGameBar(homeGameBar)
+        players: this.getPlayersFromGameBar(homeGameBar),
+        assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.homeTeam.players, playByPlay)
       }
     };
   }
