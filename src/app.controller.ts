@@ -11,6 +11,8 @@ import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for
 import { unloadAndFormat } from './unload-and-format';
 import { DifferentialService } from './differential.service';
 import { AssistDistributionService } from './assist-distribution.service';
+import { ShotDistanceService } from './shot-distance.service';
+
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
@@ -19,7 +21,8 @@ export class AppController {
               private readonly gameBarService: GameBarService,
               private readonly lineupService: LineupService,
               private readonly differentialService: DifferentialService,
-              private readonly assistDistributionService: AssistDistributionService) {}
+              private readonly assistDistributionService: AssistDistributionService,
+              private readonly shotDistanceService: ShotDistanceService) {}
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
@@ -48,11 +51,13 @@ export class AppController {
       lineups: graphLineups,
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar),
-        assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.awayTeam.players, playByPlay)
+        assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.awayTeam.players, playByPlay),
+        shotDistance: this.shotDistanceService.getTeamShotDistances(HomeAway.AWAY, boxScore, playByPlay)
       },
       homeTeam: {
         players: this.getPlayersFromGameBar(homeGameBar),
-        assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.homeTeam.players, playByPlay)
+        assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.homeTeam.players, playByPlay),
+        shotDistance: this.shotDistanceService.getTeamShotDistances(HomeAway.HOME, boxScore, playByPlay)
       }
     };
   }

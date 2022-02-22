@@ -1,3 +1,5 @@
+import { Clock } from './clock';
+
 export class PlayerStats {
 
   constructor(stats: {}) {
@@ -70,7 +72,10 @@ export interface Action {
   scoreAway?: string,
   clock?: string,
   subType?: string,
-  description?: string
+  description?: string,
+  shotDistance: number,
+  teamTricode: string,
+  playerNameI: string
 }
 
 export interface PlayByPlay {
@@ -100,7 +105,8 @@ export interface Team {
   playerGameBars: PlayerGameBar[]
   players: Player[],
   periods: Period[],
-  color: string
+  color: string,
+  teamTricode: string
 }
 
 export class PlayerGraphLineup {
@@ -115,4 +121,16 @@ export class PlayerGraphLineup {
   actions: Action[] = [];
   formattedDetail: string;
   formattedLabel: string;
+}
+
+export class Shot {
+  constructor(action: Action) {
+    this.action = action;
+    const clock = new Clock(action.clock, action.period)
+    this.gameClockInSeconds = clock.elapsedTime();
+    this.displayTime = clock.displayTime()
+  }
+  action: Action;
+  gameClockInSeconds: number;
+  displayTime: string;
 }
