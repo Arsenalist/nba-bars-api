@@ -73,9 +73,10 @@ export interface Action {
   clock?: string,
   subType?: string,
   description?: string,
-  shotDistance: number,
-  teamTricode: string,
-  playerNameI: string
+  shotDistance?: number,
+  teamTricode?: string,
+  playerNameI?: string,
+  qualifiers?: string[]
 }
 
 export interface PlayByPlay {

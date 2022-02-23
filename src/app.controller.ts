@@ -12,6 +12,7 @@ import { unloadAndFormat } from './unload-and-format';
 import { DifferentialService } from './differential.service';
 import { AssistDistributionService } from './assist-distribution.service';
 import { ShotDistanceService } from './shot-distance.service';
+import { PointsQualifierService } from './points-qualifier-service';
 
 dayjs.extend(require('dayjs/plugin/duration'));
 
@@ -22,7 +23,8 @@ export class AppController {
               private readonly lineupService: LineupService,
               private readonly differentialService: DifferentialService,
               private readonly assistDistributionService: AssistDistributionService,
-              private readonly shotDistanceService: ShotDistanceService) {}
+              private readonly shotDistanceService: ShotDistanceService,
+              private readonly pointsQualifierService: PointsQualifierService) {}
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
@@ -52,12 +54,18 @@ export class AppController {
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar),
         assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.awayTeam.players, playByPlay),
-        shotDistance: this.shotDistanceService.getTeamShotDistances(HomeAway.AWAY, boxScore, playByPlay)
+        shotDistance: this.shotDistanceService.getTeamShotDistances(HomeAway.AWAY, boxScore, playByPlay),
+        pointsFastBreak: this.pointsQualifierService.getFastBreakPointsByPeriod(HomeAway.AWAY, boxScore, playByPlay),
+        pointsFromTurnovers: this.pointsQualifierService.getPointsScoredOffTurnovers(HomeAway.AWAY, boxScore, playByPlay),
+        pointsInThePaint: this.pointsQualifierService.getPointsInThePaintByPeriod(HomeAway.AWAY, boxScore, playByPlay)
       },
       homeTeam: {
         players: this.getPlayersFromGameBar(homeGameBar),
         assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.homeTeam.players, playByPlay),
-        shotDistance: this.shotDistanceService.getTeamShotDistances(HomeAway.HOME, boxScore, playByPlay)
+        shotDistance: this.shotDistanceService.getTeamShotDistances(HomeAway.HOME, boxScore, playByPlay),
+        pointsFastBreak: this.pointsQualifierService.getFastBreakPointsByPeriod(HomeAway.HOME, boxScore, playByPlay),
+        pointsFromTurnovers: this.pointsQualifierService.getPointsScoredOffTurnovers(HomeAway.HOME, boxScore, playByPlay),
+        pointsInThePaint: this.pointsQualifierService.getPointsInThePaintByPeriod(HomeAway.HOME, boxScore, playByPlay)
       }
     };
   }

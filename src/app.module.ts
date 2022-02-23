@@ -7,10 +7,11 @@ import { LineupService } from './lineup.service';
 import { DifferentialService } from './differential.service';
 import { AssistDistributionService } from './assist-distribution.service';
 import { ShotDistanceService } from './shot-distance.service';
+import { PointsQualifierService } from './points-qualifier-service';
 
 @Module({
   imports: [HttpModule],
   controllers: [AppController],
-  providers: [GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService],
+  providers: [GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService, PointsQualifierService],
 })
 export class AppModule {}
