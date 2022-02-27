@@ -135,3 +135,27 @@ export class Shot {
   gameClockInSeconds: number;
   displayTime: string;
 }
+
+export class Run {
+  constructor(actions: Action[]) {
+    this.actions = actions;
+    this.setScores();
+  }
+  private setScores() {
+    const awayScoreBegin = parseInt(this.actions[0].scoreAway);
+    const awayScoreEnd = parseInt(this.actions[this.actions.length-1].scoreAway);
+    const homeScoreBegin = parseInt(this.actions[0].scoreHome);
+    const homeScoreEnd = parseInt(this.actions[this.actions.length-1].scoreHome);
+    this.awayScore = awayScoreEnd - awayScoreBegin;
+    this.homeScore = homeScoreEnd - homeScoreBegin;
+  }
+  awayScore: number
+  homeScore: number
+  actions: Action[];
+
+}
+
+export interface TimeoutAnalysis {
+  timeoutAction: Action;
+  afterRun: Run;
+}

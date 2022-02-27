@@ -8,10 +8,11 @@ import { DifferentialService } from './differential.service';
 import { AssistDistributionService } from './assist-distribution.service';
 import { ShotDistanceService } from './shot-distance.service';
 import { PointsQualifierService } from './points-qualifier-service';
+import { TimeoutService } from './timeout.service';
 
 @Module({
   imports: [HttpModule],
   controllers: [AppController],
-  providers: [GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService, PointsQualifierService],
+  providers: [GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService, PointsQualifierService, TimeoutService],
 })
 export class AppModule {}

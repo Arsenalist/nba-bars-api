@@ -13,6 +13,7 @@ import { DifferentialService } from './differential.service';
 import { AssistDistributionService } from './assist-distribution.service';
 import { ShotDistanceService } from './shot-distance.service';
 import { PointsQualifierService } from './points-qualifier-service';
+import { TimeoutService } from './timeout.service';
 
 dayjs.extend(require('dayjs/plugin/duration'));
 
@@ -24,7 +25,8 @@ export class AppController {
               private readonly differentialService: DifferentialService,
               private readonly assistDistributionService: AssistDistributionService,
               private readonly shotDistanceService: ShotDistanceService,
-              private readonly pointsQualifierService: PointsQualifierService) {}
+              private readonly pointsQualifierService: PointsQualifierService,
+              private readonly timeoutService: TimeoutService) {}
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
@@ -51,6 +53,7 @@ export class AppController {
       awayPlayerLineups: unloadAndFormat(removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.awayTeam.players, awayLineup)))),
       homePlayerLineups: unloadAndFormat(removeDNPSFromLineups(consolidateMultiplePlayerLineups(this.createLineupsForPlayers(boxScore.homeTeam.players, homeLineup)))),
       lineups: graphLineups,
+      timeoutAnalysis: this.timeoutService.getTimeoutAnalysis(boxScore, playByPlay),
       awayTeam: {
         players: this.getPlayersFromGameBar(awayGameBar),
         assistDistribution: this.assistDistributionService.getAssistDistribution(boxScore.awayTeam.players, playByPlay),
