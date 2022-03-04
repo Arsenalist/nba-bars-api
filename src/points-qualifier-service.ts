@@ -26,7 +26,6 @@ export class PointsQualifierService {
       result.push(0);
     }
     actions.filter(a => (a.teamTricode === teamTricode && a.shotResult === "Made" && a.qualifiers && a.qualifiers.includes(qualifier))).forEach(a => {
-      console.log(a.actionNumber)
       result[a.period - 1] += this.getPointsFromAction(a);
     });
     return result;

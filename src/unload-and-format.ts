@@ -1,4 +1,4 @@
-import { Action, PlayerGraphLineup, PlayerStats } from './model';
+import { Action, PlayerGraphLineup, PlayerStats, TeamStats } from './model';
 import * as dayjs from 'dayjs';
 import { Clock } from './clock';
 dayjs.extend(require('dayjs/plugin/duration'))
@@ -12,12 +12,49 @@ export function unloadAndFormat(lineups: PlayerGraphLineup[][]): any {
   return result[0].map((_, colIndex) => result.map(row => row[colIndex]));
 }
 
+function calculateUsageRate(lineupStats: PlayerStats, teamStats: TeamStats): number {
+  const usage = ((lineupStats.fga2 + lineupStats.fga3 + lineupStats.turnovers) + .44*lineupStats.fta) / teamStats.totalOffensivePossessions;
+  const percentage = usage * 100;
+  return Math.round(percentage * 10) / 10;
+}
+
+function explainUsageRate(actions: Action[], lineupStats: PlayerStats, teamStats: TeamStats) {
+  return `<b>Usage Rate:</b> ${calculateUsageRate(lineupStats, teamStats)}%<br>` +
+      `3FGA: ${lineupStats.fga3}<br>` +
+      `2FGA: ${lineupStats.fga2}<br>` +
+      `FTA: ${lineupStats.fta}<br>` +
+      `TO: ${lineupStats.turnovers}<br>` +
+      `Team Possessions: ${teamStats.totalOffensivePossessions}<br><br>` +
+      `${formatActions(actions)}`;
+}
+
+function usageRateAlpha(lineupStats: PlayerStats, teamStats: TeamStats) {
+  if (!lineupStats) {
+    return 0;
+  }
+  const usageRate = calculateUsageRate(lineupStats, teamStats);
+  let alpha = 0;
+  if (usageRate < 16) {
+    alpha = 0.20;
+  } else if (usageRate >= 16 && usageRate < 20) {
+    alpha = 0.55;
+  } else if (usageRate >= 20 && usageRate < 24) {
+    alpha = 0.75;
+  } else {
+    alpha = 1;
+  }
+  return alpha;
+}
+
 function unloadAndFormatSingle(playerGraphLineup: PlayerGraphLineup[]): PlayerGraphLineup[] {
   return playerGraphLineup.map(pgl => new PlayerGraphLineup({
     ...pgl,
     actions: [],
-    formattedDetail: formatDetail(pgl),
-    formattedLabel: `${secondsToDuration(pgl.duration)}, ${addSign(pgl.plusMinus)}`
+    plusMinusDetail: formatDetail(pgl),
+    plusMinusLabel: `${secondsToDuration(pgl.duration)}, ${addSign(pgl.plusMinus)}`,
+    usageDetail: pgl.lineupStats ? explainUsageRate(pgl.actions, pgl.lineupStats, pgl.teamStats) : "",
+    usageLabel: pgl.lineupStats ? `${calculateUsageRate(pgl.lineupStats, pgl.teamStats)}%` : "",
+    usageRateAlphaColor: usageRateAlpha(pgl.lineupStats, pgl.teamStats)
   }));
 }
 

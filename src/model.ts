@@ -25,6 +25,9 @@ export class PlayerStats {
   steals: number;
   blocks: number;
   fouls: number;
+  fta: number;
+  fga2: number;
+  fga3: number;
 
   add(stats: PlayerStats) {
     this.points += stats.points;
@@ -132,8 +135,8 @@ export class PlayerGraphLineup {
   plusMinus: number;
   lineupStats: PlayerStats;
   actions: Action[] = [];
-  formattedDetail: string;
-  formattedLabel: string;
+  plusMinusDetail: string;
+  plusMinusLabel: string;
   teamStats: TeamStats
 }
 

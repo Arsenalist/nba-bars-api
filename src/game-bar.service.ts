@@ -23,21 +23,38 @@ export class GameBarService {
     let steals = 0;
     let blocks = 0;
     let fouls = 0;
+    let fta = 0;
+    let fga2 = 0;
+    let fga3 = 0;
     for (const action of actions) {
       if ((period === undefined || action.period === period.period) && action.personId === player.personId) {
         if (['2pt', '3pt', 'freethrow'].includes(action.actionType) && action.shotResult === 'Made') {
           switch (action.actionType) {
             case '2pt':
               points += 2;
+              fga2++;
               break;
             case '3pt':
               points += 3;
+              fga3++;
               break;
             case 'freethrow':
               points += 1;
+              fta++;
               break;
           }
         } else if (['2pt', '3pt', 'freethrow'].includes(action.actionType) && action.shotResult === 'Missed') {
+          switch (action.actionType) {
+            case '2pt':
+              fga2++;
+              break;
+            case '3pt':
+              fga3++;
+              break;
+            case 'freethrow':
+              fta++;
+              break;
+          }
           missedShotsAndFreeThrows += 1;
         } else if (action.actionType === "turnover") {
           turnovers += 1;
@@ -62,7 +79,10 @@ export class GameBarService {
       rebounds: rebounds,
       steals: steals,
       blocks: blocks,
-      fouls: fouls
+      fouls: fouls,
+      fta: fta,
+      fga2: fga2,
+      fga3: fga3
     });
   }
 

@@ -16,6 +16,18 @@ function quarterMissedShotsAndFreeThrowsTotal(playerGameBar: PlayerGameBar, pers
   return playerGameBar.playerPeriodPerformance.filter(ppp => ppp.player.personId === personId && ppp.period.period === period).reduce((prev, curr) => curr.stats.missedShotsAndFreeThrows + prev, 0);
 }
 
+function quarterTwoPointFgasTotal(playerGameBar: PlayerGameBar, personId: number, period: number) {
+  return playerGameBar.playerPeriodPerformance.filter(ppp => ppp.player.personId === personId && ppp.period.period === period).reduce((prev, curr) => curr.stats.fga2 + prev, 0);
+}
+
+function quarterThreePointFgasTotal(playerGameBar: PlayerGameBar, personId: number, period: number) {
+  return playerGameBar.playerPeriodPerformance.filter(ppp => ppp.player.personId === personId && ppp.period.period === period).reduce((prev, curr) => curr.stats.fga3 + prev, 0);
+}
+
+function quarterFtaTotal(playerGameBar: PlayerGameBar, personId: number, period: number) {
+  return playerGameBar.playerPeriodPerformance.filter(ppp => ppp.player.personId === personId && ppp.period.period === period).reduce((prev, curr) => curr.stats.fta + prev, 0);
+}
+
 function quarterAssistsTotal(playerGameBar: PlayerGameBar, personId: number, period: number) {
   return playerGameBar.playerPeriodPerformance.filter(ppp => ppp.player.personId === personId && ppp.period.period === period).reduce((prev, curr) => curr.stats.assists + prev, 0);
 }
@@ -130,12 +142,9 @@ describe('GameBarService', () => {
       expect(quarterTurnoversTotal(result, 202710, 7)).toBe(0);
     });
     it('calculates rebounds by quarter', () => {
-      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
-      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
-
       // bam adebayo
       const bam = boxScore.homeTeam.players.find(p => p.personId === 1628389);
-      result = nbaService.createPlayerPeriodPerformance(playByPlay, bam, boxScore.homeTeam.periods);
+      const result = nbaService.createPlayerPeriodPerformance(playByPlay, bam, boxScore.homeTeam.periods);
       expect(pointsTotal(result, 1628389)).toBe(14);
       expect(quarterReboundsTotal(result, 1628389, 1)).toBe(4);
       expect(quarterReboundsTotal(result, 1628389, 2)).toBe(2);
@@ -144,6 +153,28 @@ describe('GameBarService', () => {
       expect(quarterReboundsTotal(result, 1628389, 5)).toBe(2);
       expect(quarterReboundsTotal(result, 1628389, 6)).toBe(1);
       expect(quarterReboundsTotal(result, 1628389, 7)).toBe(1);
+    });
+
+    it('calculates 2pt FGAs by quarter', () => {
+      // bam adebayo
+      const bam = boxScore.homeTeam.players.find(p => p.personId === 1628389);
+      const result = nbaService.createPlayerPeriodPerformance(playByPlay, bam, boxScore.homeTeam.periods);
+      expect(quarterTwoPointFgasTotal(result, 1628389, 1)).toBe(3);
+      expect(quarterTwoPointFgasTotal(result, 1628389, 2)).toBe(3);
+    });
+
+    it('calculates 3FGAs by quarter', () => {
+      const gabe = boxScore.homeTeam.players.find(p => p.personId === 1629216);
+      const result = nbaService.createPlayerPeriodPerformance(playByPlay, gabe, boxScore.homeTeam.periods);
+      expect(quarterThreePointFgasTotal(result, 1629216, 1)).toBe(5);
+      expect(quarterThreePointFgasTotal(result, 1629216, 2)).toBe(1);
+    });
+
+    it('calculates FTAs by quarter', () => {
+      const jimmy = boxScore.homeTeam.players.find(p => p.personId === 202710);
+      let result = nbaService.createPlayerPeriodPerformance(playByPlay, jimmy, boxScore.homeTeam.periods);
+      expect(quarterFtaTotal(result, 202710, 1)).toBe(2);
+      expect(quarterFtaTotal(result, 202710, 2)).toBe(8);
     });
 
     it('calculates steals by quarter', () => {

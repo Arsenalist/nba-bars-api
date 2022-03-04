@@ -12,6 +12,7 @@ export function consolidatePlayerLineups(playerLineups: PlayerGraphLineup[]) {
          playerLineups[j].duration = 0;
          if (playerLineups[i].inLineup) {
            playerLineups[i].lineupStats.add(playerLineups[j].lineupStats);
+           playerLineups[i].teamStats.add(playerLineups[j].teamStats);
          }
 
         j++;
