@@ -1,4 +1,4 @@
-import { Action, HomeAway, Player } from './model';
+import { Action, HomeAway, Player, TeamStats } from './model';
 import { Clock } from './clock';
 
 export class Lineup {
@@ -8,6 +8,7 @@ export class Lineup {
   private _firstAction: Action;
   private _lastAction: Action;
   private _actions: Action[];
+  private _teamStats: TeamStats;
 
   get players(): Player[] {
     return this._players;
@@ -47,6 +48,13 @@ export class Lineup {
   }
   set actions(value: Action[]) {
     this._actions = value;
+  }
+
+  get teamStats(): TeamStats {
+    return this._teamStats;
+  }
+  set teamStats(value: TeamStats) {
+    this._teamStats = value;
   }
 
   get durationInSeconds(): number {

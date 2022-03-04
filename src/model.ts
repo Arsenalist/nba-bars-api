@@ -1,5 +1,16 @@
 import { Clock } from './clock';
 
+export class TeamStats {
+  constructor(stats: {}) {
+    Object.keys(stats).forEach(key=>this[key]=stats[key]);
+  }
+  totalOffensivePossessions: number
+
+  add(stats: TeamStats) {
+    this.totalOffensivePossessions += stats.totalOffensivePossessions;
+  }
+}
+
 export class PlayerStats {
 
   constructor(stats: {}) {
@@ -76,7 +87,8 @@ export interface Action {
   shotDistance?: number,
   teamTricode?: string,
   playerNameI?: string,
-  qualifiers?: string[]
+  qualifiers?: string[],
+  timeActual: string
 }
 
 export interface PlayByPlay {
@@ -122,6 +134,7 @@ export class PlayerGraphLineup {
   actions: Action[] = [];
   formattedDetail: string;
   formattedLabel: string;
+  teamStats: TeamStats
 }
 
 export class Shot {

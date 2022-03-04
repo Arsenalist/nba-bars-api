@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { BoxScore, HomeAway, PlayByPlay } from './model';
+import { Action, BoxScore, HomeAway, PlayByPlay, TeamStats } from './model';
 import { Lineup } from './lineup';
 import { GameBarService } from './game-bar.service';
 
@@ -9,6 +9,7 @@ export class LineupService {
   constructor(private readonly gameBarService: GameBarService) {}
 
   getLineups(homeAway: HomeAway, playByPlay: PlayByPlay, boxScore: BoxScore): Lineup[] {
+    this.sortActionsByTimeActualInPlace(playByPlay);
     let lineup = new Lineup(homeAway);
     lineup.players = homeAway === HomeAway.AWAY ? this.getAwayStarters(boxScore) : this.getHomeStarters(boxScore);
     lineup.firstAction = playByPlay.actions[0];
@@ -22,7 +23,7 @@ export class LineupService {
           nextLineup = new Lineup(homeAway);
           nextLineup.players = lineups[lineups.length-1].players;
           lineups[lineups.length-1].lastAction = action;
-          lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay);
+          lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay.actions);
           nextLineup.firstAction = action;
           lineups.push(nextLineup);
         } else {
@@ -40,13 +41,26 @@ export class LineupService {
       // last entry needs to be part of the last lineup
       if (index === playByPlay.actions.length - 1) {
         lineups[lineups.length - 1].lastAction = action;
-        lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay);
+        lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay.actions);
       }
     });
-    return this.addLineupSpecificStatsForPlayers(lineups);
+     const lineupWithStats = this.addLineupSpecificStatsForPlayers(lineups);
+     return this.addTeamStatsForLineups(lineupWithStats, homeAway === HomeAway.AWAY ? boxScore.awayTeam.teamId : boxScore.homeTeam.teamId);
   }
 
-  private addLineupSpecificStatsForPlayers(lineups: Lineup[]) {
+  private sortActionsByTimeActualInPlace(playByPlay: PlayByPlay) {
+    playByPlay.actions.sort((a, b) => {
+      if (a.timeActual > b.timeActual) {
+        return 1;
+      } else if (b.timeActual > a.timeActual) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+  }
+
+  private addLineupSpecificStatsForPlayers(lineups: Lineup[]): Lineup[] {
     return lineups.map(lineup => {
       lineup.players = lineup.players.map(player => {
         return {
@@ -58,10 +72,37 @@ export class LineupService {
     });
   }
 
-  private getActionsForLineup(lineup: Lineup, playByPlay: PlayByPlay) {
-    return playByPlay.actions.reduce((prev, curr) => {
-      if (curr.actionNumber >= lineup.firstAction.actionNumber &&
-        curr.actionNumber <= lineup.lastAction.actionNumber) {
+  private addTeamStatsForLineups(lineups: Lineup[], teamId: number): Lineup[] {
+    return lineups.map(lineup => {
+      lineup.teamStats = this.calculateTeamStatsForForPeriod(lineup.actions, teamId);
+      return lineup;
+    });
+  }
+
+  private calculateTeamStatsForForPeriod(actions: Action[], teamId: number): TeamStats {
+    let fga = 0;
+    let fta = 0;
+    let turnovers = 0;
+    for (const action of actions) {
+      if (action.teamId === teamId) {
+        if (["3pt", "2pt"].includes(action.actionType)) {
+          fga++;
+        } else if (["freethrow"].includes(action.actionType)) {
+          fta++;
+        } else if (["turnover"].includes(action.actionType)) {
+          turnovers++;
+        }
+      }
+    }
+    return new TeamStats({
+      totalOffensivePossessions: fga+turnovers + (.44 * fta)
+    });
+  }
+
+  private getActionsForLineup(lineup: Lineup, actions: Action[]) {
+    return actions.reduce((prev, curr) => {
+      if (curr.timeActual >= lineup.firstAction.timeActual &&
+        curr.timeActual <= lineup.lastAction.timeActual) {
         prev.push(curr);
       }
       return prev;

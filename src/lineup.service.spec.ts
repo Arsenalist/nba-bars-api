@@ -109,5 +109,16 @@ describe('LineupService', () => {
       expect(lastLineup.players.length).toBe(5);
 
     })
+    it ('checks that the total estimated offensive possessions are correct for the first cleveland lineup', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+      expect(lineups[0].teamStats.totalOffensivePossessions).toBe(5)
+      expect(lineups[1].teamStats.totalOffensivePossessions).toBe(8)
+      expect(lineups[2].teamStats.totalOffensivePossessions).toBe(5)
+    });
+    it ('checks that the total estimated offensive possessions are correct for the first philly lineup is correct', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
+      // includes five FTs at .44 weight
+      expect(lineups[0].teamStats.totalOffensivePossessions).toBe(15.2)
+    })
   });
   });
