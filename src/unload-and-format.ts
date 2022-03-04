@@ -19,7 +19,7 @@ function calculateUsageRate(lineupStats: PlayerStats, teamStats: TeamStats): num
 }
 
 function explainUsageRate(actions: Action[], lineupStats: PlayerStats, teamStats: TeamStats) {
-  return `<b>Usage Rate:</b> ${calculateUsageRate(lineupStats, teamStats)}%<br>` +
+  return `<b>Usage Rate:</b> ${calculateUsageRate(lineupStats, teamStats)}%<br>${lineupStats.toHtml()} <br> ` +
       `3FGA: ${lineupStats.fga3}<br>` +
       `2FGA: ${lineupStats.fga2}<br>` +
       `FTA: ${lineupStats.fta}<br>` +
