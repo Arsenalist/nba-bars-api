@@ -38,6 +38,9 @@ export class PlayerStats {
     this.steals += stats.steals;
     this.blocks += stats.blocks;
     this.fouls += stats.fouls;
+    this.fta += stats.fta;
+    this.fga2 += stats.fga2;
+    this.fga3 += stats.fga3;
   }
 
   toHtml(): string {
