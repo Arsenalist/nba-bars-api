@@ -24,8 +24,7 @@ function explainUsageRate(actions: Action[], lineupStats: PlayerStats, teamStats
       `2FGA: ${lineupStats.fga2}<br>` +
       `FTA: ${lineupStats.fta}<br>` +
       `TO: ${lineupStats.turnovers}<br>` +
-      `Team Possessions: ${Math.round(teamStats.totalOffensivePossessions)}<br><br>` +
-      `${formatActions(actions)}`;
+      `Team Possessions: ${Math.round(teamStats.totalOffensivePossessions)}`;
 }
 
 function usageRateAlpha(lineupStats: PlayerStats, teamStats: TeamStats) {
