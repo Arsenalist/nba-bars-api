@@ -4,10 +4,21 @@ export class TeamStats {
   constructor(stats: {}) {
     Object.keys(stats).forEach(key=>this[key]=stats[key]);
   }
-  totalOffensivePossessions: number
+  totalOffensivePossessions: number;
+  offensiveRebounds: number;
+  defensiveRebounds: number;
+  fga: number;
+  fgaMade: number;
+  missedSecondFreeThrow: number;
+
 
   add(stats: TeamStats) {
     this.totalOffensivePossessions += stats.totalOffensivePossessions;
+    this.offensiveRebounds += stats.offensiveRebounds;
+    this.defensiveRebounds += stats.defensiveRebounds;
+    this.fga += stats.fga;
+    this.fgaMade += stats.fgaMade;
+    this.missedSecondFreeThrow += stats.missedSecondFreeThrow;
   }
 }
 

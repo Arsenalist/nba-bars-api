@@ -71,4 +71,19 @@ export class Lineup {
     });
     return text;
   }
+
+  get offensiveReboundPercentage(): string {
+    const opportunitiesForOffensiveRebounds = (this._teamStats.fga-this._teamStats.fgaMade) + this._teamStats.missedSecondFreeThrow;
+    if (opportunitiesForOffensiveRebounds > 0) {
+      return `${Math.round(100*this._teamStats.offensiveRebounds/opportunitiesForOffensiveRebounds)}%`
+    } else {
+      return "";
+    }
+  }
+
+  get offensiveReboundPercentageExplained(): string {
+    return `OREB: ${this._teamStats.offensiveRebounds}<br>` +
+      `Missed FGA: ${this._teamStats.fga - this._teamStats.fgaMade}<br>` +
+      `Missed FTs (last ones only): ${this._teamStats.missedSecondFreeThrow}`;
+  }
 }

@@ -103,24 +103,32 @@ export class AppController {
   private toLineupJson(awayLineup: Lineup[], homeLineup: Lineup[]) {
     const traces = [];
     for (let i=0; i<Math.max(awayLineup.length, homeLineup.length); i++) {
-      const trace = {values: [], labels: [], summary: []};
+      const trace = {values: [], labels: [], summary: [], offensiveReboundPercentage: [], offensiveReboundPercentageExplained: []};
       if (i < awayLineup.length) {
         trace.values.push(awayLineup[i].durationInSeconds);
         trace.labels.push(awayLineup[i].plusMinus)
         trace.summary.push(awayLineup[i].summary)
+        trace.offensiveReboundPercentage.push(awayLineup[i].offensiveReboundPercentage)
+        trace.offensiveReboundPercentageExplained.push(awayLineup[i].offensiveReboundPercentageExplained)
       } else {
         trace.labels.push(0);
         trace.values.push(0);
         trace.summary.push('')
+        trace.offensiveReboundPercentage.push('')
+        trace.offensiveReboundPercentageExplained.push('')
       }
       if (i < homeLineup.length) {
         trace.values.push(homeLineup[i].durationInSeconds);
         trace.labels.push(homeLineup[i].plusMinus)
         trace.summary.push(homeLineup[i].summary)
+        trace.offensiveReboundPercentage.push(homeLineup[i].offensiveReboundPercentage)
+        trace.offensiveReboundPercentageExplained.push(homeLineup[i].offensiveReboundPercentageExplained)
       } else {
         trace.values.push(0);
         trace.labels.push(0);
         trace.summary.push('')
+        trace.offensiveReboundPercentage.push('')
+        trace.offensiveReboundPercentageExplained.push('')
       }
       traces.push(trace);
     }

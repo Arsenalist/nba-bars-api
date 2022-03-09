@@ -83,19 +83,38 @@ export class LineupService {
     let fga = 0;
     let fta = 0;
     let turnovers = 0;
+    let offensiveRebounds = 0;
+    let defensiveRebounds = 0;
+    let fgaMade = 0;
+    let missedSecondFreeThrow = 0;
     for (const action of actions) {
       if (action.teamId === teamId) {
         if (["3pt", "2pt"].includes(action.actionType)) {
           fga++;
+          if (action.shotResult === "Made") {
+            fgaMade++;
+          }
         } else if (["freethrow"].includes(action.actionType)) {
           fta++;
+          if (["2 of 2", "3 of 3"].includes(action.subType) && action.shotResult === "Missed") {
+            missedSecondFreeThrow++;
+          }
         } else if (["turnover"].includes(action.actionType)) {
           turnovers++;
+        } else if (action.actionType === "rebound" && action.subType === "offensive") {
+          offensiveRebounds++;
+        } else if (action.actionType === "rebound" && action.subType === "defensive") {
+          defensiveRebounds++;
         }
       }
     }
     return new TeamStats({
-      totalOffensivePossessions: fga+turnovers + (.44 * fta)
+      totalOffensivePossessions: fga+turnovers + (.44 * fta),
+      fga,
+      offensiveRebounds,
+      defensiveRebounds,
+      fgaMade,
+      missedSecondFreeThrow
     });
   }
 

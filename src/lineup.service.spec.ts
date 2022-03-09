@@ -91,6 +91,18 @@ describe('LineupService', () => {
     expect(lineup.players.find(p => p.personId === 1629639)).toBe(undefined);
 
   });
+    it ('checks the stats to calculate OREB% for Toronto', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+      expect(lineups[0].teamStats.offensiveRebounds).toBe(1)
+      expect(lineups[0].teamStats.fgaMade).toBe(5)
+      expect(lineups[0].teamStats.fga).toBe(8)
+      expect(lineups[0].teamStats.missedSecondFreeThrow).toBe(0)
+    })
+    it ('missed second FTs for Miami', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
+      expect(lineups[1].teamStats.missedSecondFreeThrow).toBe(1)
+    })
+
   });
   describe('Cleveland @ Philly', () => {
     beforeEach(async () => {
