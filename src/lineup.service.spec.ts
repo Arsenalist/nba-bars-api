@@ -102,6 +102,10 @@ describe('LineupService', () => {
       const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
       expect(lineups[1].teamStats.missedSecondFreeThrow).toBe(1)
     })
+    it ('missed first FTs are not counted as offensive rebounds', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
+      expect(lineups[0].teamStats.offensiveRebounds).toBe(6)
+    })
 
   });
   describe('Cleveland @ Philly', () => {

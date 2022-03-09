@@ -101,7 +101,7 @@ export class LineupService {
           }
         } else if (["turnover"].includes(action.actionType)) {
           turnovers++;
-        } else if (action.actionType === "rebound" && action.subType === "offensive") {
+        } else if (action.actionType === "rebound" && action.subType === "offensive" && (action.qualifiers === undefined || !action.qualifiers.includes("deadball"))) {
           offensiveRebounds++;
         } else if (action.actionType === "rebound" && action.subType === "defensive") {
           defensiveRebounds++;

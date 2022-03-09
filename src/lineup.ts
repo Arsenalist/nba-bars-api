@@ -72,12 +72,29 @@ export class Lineup {
     return text;
   }
 
-  get offensiveReboundPercentage(): string {
+  private calculateOffensiveReboundPercentage(): number {
     const opportunitiesForOffensiveRebounds = (this._teamStats.fga-this._teamStats.fgaMade) + this._teamStats.missedSecondFreeThrow;
     if (opportunitiesForOffensiveRebounds > 0) {
-      return `${Math.round(100*this._teamStats.offensiveRebounds/opportunitiesForOffensiveRebounds)}%`
+      return this._teamStats.offensiveRebounds / opportunitiesForOffensiveRebounds;
     } else {
-      return "";
+      return 0;
+    }
+  }
+
+  get offensiveReboundPercentage(): string {
+    return `${(Math.round(100*this.calculateOffensiveReboundPercentage()))}%`;
+  }
+
+  get offensiveReboundAlphaColor() : number {
+    const oreb = this.calculateOffensiveReboundPercentage();
+    if (oreb <= 0.11) {
+      return 0.20;
+    } else if (oreb <= 0.23) {
+      return 0.55;
+    } else if (oreb <= 0.35) {
+      return 0.75;
+    } else {
+      return 1;
     }
   }
 
