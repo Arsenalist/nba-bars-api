@@ -1,7 +1,7 @@
 import { removeDNPsFromBoxScore, removeDNPSFromLineups } from './remove-dnps-for-chart';
-import { Player, PlayerStats } from './model';
+import { Player, PlayerGraphLineup, PlayerStats, TeamStats } from './model';
 
-function p(duration, inLineup) {
+function p(duration, inLineup): PlayerGraphLineup {
   return {duration: duration, inLineup: inLineup, lineupStats: new PlayerStats({
       assists: 0,
       blocks: 0,
@@ -10,7 +10,7 @@ function p(duration, inLineup) {
       rebounds: 0,
       steals: 0,
       turnovers: 0
-    })};
+    }), teamStats: new TeamStats({})};
 }
 describe('remove DNPs for chart', () => {
   it('remove DNP from box score', () => {

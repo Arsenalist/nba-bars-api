@@ -94,7 +94,7 @@ export interface Action {
   teamTricode?: string,
   playerNameI?: string,
   qualifiers?: string[],
-  timeActual: string
+  timeActual?: string
 }
 
 export interface PlayByPlay {
@@ -134,13 +134,13 @@ export class PlayerGraphLineup {
   }
   duration: number;
   inLineup: boolean;
-  player: string;
-  plusMinus: number;
+  player?: string;
+  plusMinus?: number;
   lineupStats: PlayerStats;
-  actions: Action[] = [];
-  plusMinusDetail: string;
-  plusMinusLabel: string;
-  teamStats: TeamStats
+  actions?: Action[] = [];
+  plusMinusDetail?: string;
+  plusMinusLabel?: string;
+  teamStats?: TeamStats
 }
 
 export class Shot {

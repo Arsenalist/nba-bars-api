@@ -1,5 +1,4 @@
-import { consolidateMultiplePlayerLineups } from './lineup-for-chart';
-import { PlayerGraphLineup, PlayerStats } from './model';
+import { PlayerGraphLineup, PlayerStats, TeamStats } from './model';
 import { unloadAndFormat } from './unload-and-format';
 
 function createPgl(): PlayerGraphLineup {
@@ -13,6 +12,7 @@ function createPgl(): PlayerGraphLineup {
       turnovers: 1,
       points: 8
     }),
+    teamStats: new TeamStats({}),
     actions: [
       {actionType: 'assist'},
       {actionType: 'assist'},
@@ -40,6 +40,6 @@ describe('unload and format', () => {
       [pgl],
     ];
     const result = unloadAndFormat(pgls);
-    expect(result[0][0].formattedDetail).toEqual("assist")
+    expect(result[0][0].plusMinusDetail.includes("8 PTS, 3 REB, 2 AST, 1 TO, 2 STL, 1 BLK")).toBe(true)
   })
 });
