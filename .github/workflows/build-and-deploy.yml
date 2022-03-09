@@ -31,3 +31,10 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
           EXCLUDE: "/dist/, /node_modules/"
+      - name: restart PM2 app
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key : ${{ secrets.SSH_PRIVATE_KEY }}
+          script: pm2 restart nbaapi.raptorsrepublic.com
