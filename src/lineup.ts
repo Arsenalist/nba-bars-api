@@ -101,6 +101,6 @@ export class Lineup {
   get offensiveReboundPercentageExplained(): string {
     return `OREB: ${this._teamStats.offensiveRebounds}<br>` +
       `Missed FGA: ${this._teamStats.fga - this._teamStats.fgaMade}<br>` +
-      `Missed FTs (last ones only): ${this._teamStats.missedSecondFreeThrow}`;
+      `Missed FTs (last ones only): ${this._teamStats.missedSecondFreeThrow}<br>${this.summary}`;
   }
 }
