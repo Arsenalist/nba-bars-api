@@ -136,10 +136,12 @@ export class Lineup {
 
   get ortgAlphaColor() : number {
     const ortg = this.calculateOrtg();
-    if (ortg <= 0.55) {
+    if (ortg <= 95) {
       return 0.20;
-    } else if (ortg <= 0.78) {
+    } else if (ortg <= 111) {
       return 0.55;
+    } else if (ortg <= 127) {
+      return 0.75;
     } else {
       return 1;
     }
@@ -147,36 +149,38 @@ export class Lineup {
 
   get drtgAlphaColor() : number {
     const drtg = this.calculateDrtg();
-    if (drtg <= 0.55) {
+    if (drtg <= 95) {
       return 0.20;
-    } else if (drtg <= 0.78) {
+    } else if (drtg <= 111) {
       return 0.55;
+    } else if (drtg <= 127) {
+      return 0.75;
     } else {
       return 1;
     }
   }
 
   private calculateOrtg(): number {
-    return this._teamStats.offensivePossessions > 0 ? (this._teamStats.pointsScored / this._teamStats.offensivePossessions) : 0;
+    return this._teamStats.offensivePossessions > 0 ? (100 * this._teamStats.pointsScored / this._teamStats.offensivePossessions) : 0;
   }
 
   get ortg(): string {
-    return `${(Math.round(100*this.calculateOrtg()))}`;
+    return `${(Math.round(this.calculateOrtg()))}`;
   }
 
   get ortgExplained(): string {
-    return `ORTG: ${this.ortg}<br>Points Scored: ${this._teamStats.pointsScored}<br>Offensive Possessions: ${this._teamStats.offensivePossessions}`;
+    return `ORTG: ${this.ortg}<br>Points Scored: ${this._teamStats.pointsScored}<br>Offensive Possessions: ${this._teamStats.offensivePossessions}<br>${this.summary}`;
   }
 
   get drtgExplained(): string {
-    return `DRTG: ${this.drtg}<br>Opp. Points Scored: ${this._teamStats.oppositionPointsScored}<br>Defensive Possessions: ${this._teamStats.defensivePossessions}`;
+    return `DRTG: ${this.drtg}<br>Opp. Points Scored: ${this._teamStats.oppositionPointsScored}<br>Defensive Possessions: ${this._teamStats.defensivePossessions}<br>${this.summary}`;
   }
 
   get drtg(): string {
-    return `${(Math.round(100*this.calculateDrtg()))}`;
+    return `${(Math.round(this.calculateDrtg()))}`;
   }
 
   private calculateDrtg(): number {
-    return this._teamStats.defensivePossessions > 0 ? (this._teamStats.oppositionPointsScored / this._teamStats.defensivePossessions) : 0;
+    return this._teamStats.defensivePossessions > 0 ? (100*this._teamStats.oppositionPointsScored / this._teamStats.defensivePossessions) : 0;
   }
 }
