@@ -121,6 +121,11 @@ describe('LineupService', () => {
       const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
       expect(lineups[0].teamStats.oppositionPointsScored).toBe(12)
       expect(lineups[0].teamStats.defensivePossessions).toBe(12)
+      expect(lineups[1].teamStats.defensivePossessions).toBe(9)
+    })
+    it ('stats for ORTG are accurate when counting FTs', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
+      expect(lineups[1].teamStats.offensivePossessions).toBe(3)
     })
   });
   describe('Cleveland @ Philly', () => {
