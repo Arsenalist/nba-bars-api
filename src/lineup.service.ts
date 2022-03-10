@@ -6,7 +6,8 @@ import { GameBarService } from './game-bar.service';
 @Injectable()
 export class LineupService {
 
-  constructor(private readonly gameBarService: GameBarService) {}
+  constructor(private readonly gameBarService: GameBarService) {
+  }
 
   getLineups(homeAway: HomeAway, playByPlay: PlayByPlay, boxScore: BoxScore): Lineup[] {
     this.sortActionsByTimeActualInPlace(playByPlay);
@@ -16,22 +17,22 @@ export class LineupService {
     let lineups = [lineup];
     let previousActionTypeForTeam = undefined;
     let nextLineup: Lineup;
-    playByPlay.actions.forEach( (action, index) =>  {
+    playByPlay.actions.forEach((action, index) => {
       const boxScoreTeamToCompareId = homeAway === HomeAway.AWAY ? boxScore.awayTeam.teamId : boxScore.homeTeam.teamId;
-      if (action.actionType === "substitution" && boxScoreTeamToCompareId === action.teamId) {
-        if (previousActionTypeForTeam !== "substitution") {
+      if (action.actionType === 'substitution' && boxScoreTeamToCompareId === action.teamId) {
+        if (previousActionTypeForTeam !== 'substitution') {
           nextLineup = new Lineup(homeAway);
-          nextLineup.players = lineups[lineups.length-1].players;
-          lineups[lineups.length-1].lastAction = action;
-          lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay.actions);
+          nextLineup.players = lineups[lineups.length - 1].players;
+          lineups[lineups.length - 1].lastAction = action;
+          lineups[lineups.length - 1].actions = this.getActionsForLineup(lineups[lineups.length - 1], playByPlay.actions);
           nextLineup.firstAction = action;
           lineups.push(nextLineup);
         } else {
-          nextLineup = lineups[lineups.length-1];
+          nextLineup = lineups[lineups.length - 1];
         }
-        if (action.subType === "out") {
+        if (action.subType === 'out') {
           nextLineup.players = nextLineup.players.filter(p => action.personId !== p.personId);
-        } else if (action.subType === "in") {
+        } else if (action.subType === 'in') {
           nextLineup.players.push(this.getPlayerFromBoxScore(action.personId, boxScore));
         }
       }
@@ -41,11 +42,11 @@ export class LineupService {
       // last entry needs to be part of the last lineup
       if (index === playByPlay.actions.length - 1) {
         lineups[lineups.length - 1].lastAction = action;
-        lineups[lineups.length-1].actions = this.getActionsForLineup(lineups[lineups.length-1], playByPlay.actions);
+        lineups[lineups.length - 1].actions = this.getActionsForLineup(lineups[lineups.length - 1], playByPlay.actions);
       }
     });
-     const lineupWithStats = this.addLineupSpecificStatsForPlayers(lineups);
-     return this.addTeamStatsForLineups(lineupWithStats, homeAway === HomeAway.AWAY ? boxScore.awayTeam.teamId : boxScore.homeTeam.teamId);
+    const lineupWithStats = this.addLineupSpecificStatsForPlayers(lineups);
+    return this.addTeamStatsForLineups(lineupWithStats, homeAway === HomeAway.AWAY ? boxScore.awayTeam.teamId : boxScore.homeTeam.teamId);
   }
 
   private sortActionsByTimeActualInPlace(playByPlay: PlayByPlay) {
@@ -87,34 +88,50 @@ export class LineupService {
     let defensiveRebounds = 0;
     let fgaMade = 0;
     let missedSecondFreeThrow = 0;
+    let oppositionMissedSecondFreeThrow = 0;
+    let oppositionFgm = 0;
+    let oppositionFga = 0;
     for (const action of actions) {
       if (action.teamId === teamId) {
-        if (["3pt", "2pt"].includes(action.actionType)) {
+        if (['3pt', '2pt'].includes(action.actionType)) {
           fga++;
-          if (action.shotResult === "Made") {
+          if (action.shotResult === 'Made') {
             fgaMade++;
           }
-        } else if (["freethrow"].includes(action.actionType)) {
+        } else if (['freethrow'].includes(action.actionType)) {
           fta++;
-          if (["2 of 2", "3 of 3"].includes(action.subType) && action.shotResult === "Missed") {
+          if (['2 of 2', '3 of 3'].includes(action.subType) && action.shotResult === 'Missed') {
             missedSecondFreeThrow++;
           }
-        } else if (["turnover"].includes(action.actionType)) {
+        } else if (['turnover'].includes(action.actionType)) {
           turnovers++;
-        } else if (action.actionType === "rebound" && action.subType === "offensive" && (action.qualifiers === undefined || !action.qualifiers.includes("deadball"))) {
+        } else if (action.actionType === 'rebound' && action.subType === 'offensive' && (action.qualifiers === undefined || !action.qualifiers.includes('deadball'))) {
           offensiveRebounds++;
-        } else if (action.actionType === "rebound" && action.subType === "defensive") {
+        } else if (action.actionType === 'rebound' && action.subType === 'defensive') {
           defensiveRebounds++;
+        }
+      } else if (action.teamId !== undefined) {
+        if (['3pt', '2pt'].includes(action.actionType)) {
+          oppositionFga++;
+          if (action.shotResult === 'Made') {
+            oppositionFgm++;
+          }
+        } else if ('freethrow' === action.actionType && ['2 of 2', '3 of 3'].includes(action.subType) && action.shotResult === 'Missed') {
+          oppositionMissedSecondFreeThrow++;
         }
       }
     }
+
     return new TeamStats({
-      totalOffensivePossessions: fga+turnovers + (.44 * fta),
+      totalOffensivePossessions: fga + turnovers + (.44 * fta),
       fga,
       offensiveRebounds,
       defensiveRebounds,
       fgaMade,
-      missedSecondFreeThrow
+      missedSecondFreeThrow,
+      oppositionMissedSecondFreeThrow,
+      oppositionFgm,
+      oppositionFga
     });
   }
 
@@ -133,11 +150,11 @@ export class LineupService {
   }
 
   private getAwayStarters(boxScore: BoxScore) {
-    return boxScore.awayTeam.players.filter(p => p.starter === "1");
+    return boxScore.awayTeam.players.filter(p => p.starter === '1');
   }
 
   private getHomeStarters(boxScore: BoxScore) {
-    return boxScore.homeTeam.players.filter(p => p.starter === "1");
+    return boxScore.homeTeam.players.filter(p => p.starter === '1');
   }
 
 }

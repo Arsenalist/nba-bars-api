@@ -106,6 +106,12 @@ describe('LineupService', () => {
       const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
       expect(lineups[0].teamStats.offensiveRebounds).toBe(6)
     })
+    it ('opponent stats', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+      expect(lineups[0].teamStats.oppositionFga).toBe(12)
+      expect(lineups[0].teamStats.oppositionFgm).toBe(5)
+      expect(lineups[1].teamStats.oppositionMissedSecondFreeThrow).toBe(1)
+    })
 
   });
   describe('Cleveland @ Philly', () => {

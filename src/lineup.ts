@@ -103,4 +103,34 @@ export class Lineup {
       `Missed FGA: ${this._teamStats.fga - this._teamStats.fgaMade}<br>` +
       `Missed FTs (last ones only): ${this._teamStats.missedSecondFreeThrow}<br>${this.summary}`;
   }
+
+  private calculateDefensiveReboundPercentage(): number {
+    const opportunitiesForDefensiveRebounds = (this._teamStats.oppositionFga-this._teamStats.oppositionFgm) + this._teamStats.oppositionMissedSecondFreeThrow;
+    if (opportunitiesForDefensiveRebounds > 0) {
+      return this._teamStats.defensiveRebounds / opportunitiesForDefensiveRebounds;
+    } else {
+      return 0;
+    }
+  }
+
+  get defensiveReboundPercentage(): string {
+    return `${(Math.round(100*this.calculateDefensiveReboundPercentage()))}%`;
+  }
+
+  get defensiveReboundPercentageExplained(): string {
+    return `DREB: ${this._teamStats.defensiveRebounds}<br>` +
+      `Opp Missed FGA: ${this._teamStats.oppositionFga - this._teamStats.oppositionFgm}<br>` +
+      `Opp Missed FTs (last ones only): ${this._teamStats.oppositionMissedSecondFreeThrow}<br>${this.summary}`;
+  }
+
+  get defensiveReboundAlphaColor() : number {
+    const dreb = this.calculateDefensiveReboundPercentage();
+    if (dreb <= 0.55) {
+      return 0.20;
+    } else if (dreb <= 0.78) {
+      return 0.55;
+    } else {
+      return 1;
+    }
+  }
 }

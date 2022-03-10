@@ -103,7 +103,17 @@ export class AppController {
   private toLineupJson(awayLineup: Lineup[], homeLineup: Lineup[]) {
     const traces = [];
     for (let i=0; i<Math.max(awayLineup.length, homeLineup.length); i++) {
-      const trace = {values: [], labels: [], summary: [], offensiveReboundPercentage: [], offensiveReboundPercentageExplained: [], offensiveReboundAlphaColor: []};
+      const trace = {
+        values: [],
+        labels: [],
+        summary: [],
+        offensiveReboundPercentage: [],
+        offensiveReboundPercentageExplained: [],
+        offensiveReboundAlphaColor: [],
+        defensiveReboundPercentage: [],
+        defensiveReboundPercentageExplained: [],
+        defensiveReboundAlphaColor: [],
+      };
       if (i < awayLineup.length) {
         trace.values.push(awayLineup[i].durationInSeconds);
         trace.labels.push(awayLineup[i].plusMinus)
@@ -111,6 +121,9 @@ export class AppController {
         trace.offensiveReboundPercentage.push(awayLineup[i].offensiveReboundPercentage)
         trace.offensiveReboundPercentageExplained.push(awayLineup[i].offensiveReboundPercentageExplained)
         trace.offensiveReboundAlphaColor.push(awayLineup[i].offensiveReboundAlphaColor)
+        trace.defensiveReboundPercentage.push(awayLineup[i].defensiveReboundPercentage)
+        trace.defensiveReboundPercentageExplained.push(awayLineup[i].defensiveReboundPercentageExplained)
+        trace.defensiveReboundAlphaColor.push(awayLineup[i].defensiveReboundAlphaColor)
       } else {
         trace.labels.push(0);
         trace.values.push(0);
@@ -118,6 +131,9 @@ export class AppController {
         trace.offensiveReboundPercentage.push('')
         trace.offensiveReboundPercentageExplained.push('')
         trace.offensiveReboundAlphaColor.push('')
+        trace.defensiveReboundPercentage.push('')
+        trace.defensiveReboundPercentageExplained.push('')
+        trace.defensiveReboundAlphaColor.push('')
       }
       if (i < homeLineup.length) {
         trace.values.push(homeLineup[i].durationInSeconds);
@@ -126,6 +142,9 @@ export class AppController {
         trace.offensiveReboundPercentage.push(homeLineup[i].offensiveReboundPercentage)
         trace.offensiveReboundPercentageExplained.push(homeLineup[i].offensiveReboundPercentageExplained)
         trace.offensiveReboundAlphaColor.push(homeLineup[i].offensiveReboundAlphaColor)
+        trace.defensiveReboundPercentage.push(homeLineup[i].defensiveReboundPercentage)
+        trace.defensiveReboundPercentageExplained.push(homeLineup[i].defensiveReboundPercentageExplained)
+        trace.defensiveReboundAlphaColor.push(homeLineup[i].defensiveReboundAlphaColor)
       } else {
         trace.values.push(0);
         trace.labels.push(0);
@@ -133,6 +152,9 @@ export class AppController {
         trace.offensiveReboundPercentage.push('')
         trace.offensiveReboundPercentageExplained.push('')
         trace.offensiveReboundAlphaColor.push('')
+        trace.defensiveReboundPercentage.push('')
+        trace.defensiveReboundPercentageExplained.push('')
+        trace.defensiveReboundAlphaColor.push('')
       }
       traces.push(trace);
     }
