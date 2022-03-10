@@ -13,6 +13,10 @@ export class TeamStats {
   oppositionMissedSecondFreeThrow: number;
   oppositionFgm: number;
   oppositionFga: number;
+  offensivePossessions: number;
+  defensivePossessions: number;
+  pointsScored: number;
+  oppositionPointsScored: number;
 
   add(stats: TeamStats) {
     this.totalOffensivePossessions += stats.totalOffensivePossessions;
@@ -21,9 +25,13 @@ export class TeamStats {
     this.fga += stats.fga;
     this.fgaMade += stats.fgaMade;
     this.missedSecondFreeThrow += stats.missedSecondFreeThrow;
-    this.oppositionMissedSecondFreeThrow = stats.oppositionMissedSecondFreeThrow;
-    this.oppositionFgm = stats.oppositionFgm;
-    this.oppositionFga = stats.oppositionFga;
+    this.oppositionMissedSecondFreeThrow += stats.oppositionMissedSecondFreeThrow;
+    this.oppositionFgm += stats.oppositionFgm;
+    this.oppositionFga += stats.oppositionFga;
+    this.offensivePossessions += stats.offensivePossessions;
+    this.defensivePossessions += stats.defensivePossessions;
+    this.pointsScored += stats.pointsScored;
+    this.oppositionPointsScored += stats.oppositionPointsScored;
   }
 }
 

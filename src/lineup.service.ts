@@ -91,19 +91,32 @@ export class LineupService {
     let oppositionMissedSecondFreeThrow = 0;
     let oppositionFgm = 0;
     let oppositionFga = 0;
+    let offensivePossessions = 0;
+    let defensivePossessions = 0;
+    let pointsScored = 0;
+    let oppositionPointsScored = 0;
     for (const action of actions) {
       if (action.teamId === teamId) {
         if (['3pt', '2pt'].includes(action.actionType)) {
+          offensivePossessions++;
           fga++;
           if (action.shotResult === 'Made') {
             fgaMade++;
+            pointsScored += action.actionType === "3pt" ? 3 : 2;
           }
         } else if (['freethrow'].includes(action.actionType)) {
           fta++;
+          if (action.shotResult === 'Made') {
+            pointsScored++;
+          }
+          if (['1 of 2', '1 of 3'].includes(action.subType)) {
+            offensivePossessions++;
+          }
           if (['2 of 2', '3 of 3'].includes(action.subType) && action.shotResult === 'Missed') {
             missedSecondFreeThrow++;
           }
         } else if (['turnover'].includes(action.actionType)) {
+          offensivePossessions++;
           turnovers++;
         } else if (action.actionType === 'rebound' && action.subType === 'offensive' && (action.qualifiers === undefined || !action.qualifiers.includes('deadball'))) {
           offensiveRebounds++;
@@ -112,12 +125,24 @@ export class LineupService {
         }
       } else if (action.teamId !== undefined) {
         if (['3pt', '2pt'].includes(action.actionType)) {
+          defensivePossessions++;
           oppositionFga++;
           if (action.shotResult === 'Made') {
             oppositionFgm++;
+            oppositionPointsScored += action.actionType === "3pt" ? 3 : 2;
           }
-        } else if ('freethrow' === action.actionType && ['2 of 2', '3 of 3'].includes(action.subType) && action.shotResult === 'Missed') {
-          oppositionMissedSecondFreeThrow++;
+        } else if (['turnover'].includes(action.actionType)) {
+          defensivePossessions++;
+        } else if ('freethrow' === action.actionType) {
+          if (action.shotResult === 'Made') {
+            oppositionPointsScored++;
+          }
+          if (['1 of 2', '1 of 3'].includes(action.subType)) {
+            defensivePossessions++;
+          }
+          if (['2 of 2', '3 of 3'].includes(action.subType) && action.shotResult === 'Missed') {
+            oppositionMissedSecondFreeThrow++;
+          }
         }
       }
     }
@@ -131,7 +156,11 @@ export class LineupService {
       missedSecondFreeThrow,
       oppositionMissedSecondFreeThrow,
       oppositionFgm,
-      oppositionFga
+      oppositionFga,
+      offensivePossessions,
+      defensivePossessions,
+      pointsScored,
+      oppositionPointsScored
     });
   }
 

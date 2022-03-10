@@ -106,13 +106,22 @@ describe('LineupService', () => {
       const lineups: Lineup[] = service.getLineups(HomeAway.HOME, playByPlay, boxScore);
       expect(lineups[0].teamStats.offensiveRebounds).toBe(6)
     })
-    it ('opponent stats', () => {
+    it ('opponent shooting stats', () => {
       const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
       expect(lineups[0].teamStats.oppositionFga).toBe(12)
       expect(lineups[0].teamStats.oppositionFgm).toBe(5)
       expect(lineups[1].teamStats.oppositionMissedSecondFreeThrow).toBe(1)
     })
-
+    it ('stats for ORTG are accurate', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+      expect(lineups[0].teamStats.pointsScored).toBe(13)
+      expect(lineups[0].teamStats.offensivePossessions).toBe(9)
+    })
+    it ('stats for DRTG are accurate', () => {
+      const lineups: Lineup[] = service.getLineups(HomeAway.AWAY, playByPlay, boxScore);
+      expect(lineups[0].teamStats.oppositionPointsScored).toBe(12)
+      expect(lineups[0].teamStats.defensivePossessions).toBe(12)
+    })
   });
   describe('Cleveland @ Philly', () => {
     beforeEach(async () => {

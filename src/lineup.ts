@@ -133,4 +133,50 @@ export class Lineup {
       return 1;
     }
   }
+
+  get ortgAlphaColor() : number {
+    const ortg = this.calculateOrtg();
+    if (ortg <= 0.55) {
+      return 0.20;
+    } else if (ortg <= 0.78) {
+      return 0.55;
+    } else {
+      return 1;
+    }
+  }
+
+  get drtgAlphaColor() : number {
+    const drtg = this.calculateDrtg();
+    if (drtg <= 0.55) {
+      return 0.20;
+    } else if (drtg <= 0.78) {
+      return 0.55;
+    } else {
+      return 1;
+    }
+  }
+
+  private calculateOrtg(): number {
+    return this._teamStats.offensivePossessions > 0 ? (this._teamStats.pointsScored / this._teamStats.offensivePossessions) : 0;
+  }
+
+  get ortg(): string {
+    return `${(Math.round(100*this.calculateOrtg()))}`;
+  }
+
+  get ortgExplained(): string {
+    return `ORTG: ${this.ortg}<br>Points Scored: ${this._teamStats.pointsScored}<br>Offensive Possessions: ${this._teamStats.offensivePossessions}`;
+  }
+
+  get drtgExplained(): string {
+    return `DRTG: ${this.drtg}<br>Opp. Points Scored: ${this._teamStats.oppositionPointsScored}<br>Defensive Possessions: ${this._teamStats.defensivePossessions}`;
+  }
+
+  get drtg(): string {
+    return `${(Math.round(100*this.calculateDrtg()))}`;
+  }
+
+  private calculateDrtg(): number {
+    return this._teamStats.defensivePossessions > 0 ? (this._teamStats.oppositionPointsScored / this._teamStats.defensivePossessions) : 0;
+  }
 }

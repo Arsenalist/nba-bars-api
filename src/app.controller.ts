@@ -113,6 +113,12 @@ export class AppController {
         defensiveReboundPercentage: [],
         defensiveReboundPercentageExplained: [],
         defensiveReboundAlphaColor: [],
+        ortg: [],
+        ortgAlphaColor: [],
+        drtg: [],
+        drtgAlphaColor: [],
+        ortgExplained: [],
+        drtgExplained: []
       };
       if (i < awayLineup.length) {
         trace.values.push(awayLineup[i].durationInSeconds);
@@ -124,6 +130,12 @@ export class AppController {
         trace.defensiveReboundPercentage.push(awayLineup[i].defensiveReboundPercentage)
         trace.defensiveReboundPercentageExplained.push(awayLineup[i].defensiveReboundPercentageExplained)
         trace.defensiveReboundAlphaColor.push(awayLineup[i].defensiveReboundAlphaColor)
+        trace.ortg.push(awayLineup[i].ortg)
+        trace.ortgAlphaColor.push(awayLineup[i].ortgAlphaColor)
+        trace.drtg.push(awayLineup[i].drtg)
+        trace.drtgAlphaColor.push(awayLineup[i].drtgAlphaColor)
+        trace.ortgExplained.push(awayLineup[i].ortgExplained)
+        trace.drtgExplained.push(awayLineup[i].drtgExplained)
       } else {
         trace.labels.push(0);
         trace.values.push(0);
@@ -134,6 +146,12 @@ export class AppController {
         trace.defensiveReboundPercentage.push('')
         trace.defensiveReboundPercentageExplained.push('')
         trace.defensiveReboundAlphaColor.push('')
+        trace.ortg.push('')
+        trace.ortgAlphaColor.push('')
+        trace.drtg.push('')
+        trace.drtgAlphaColor.push('')
+        trace.ortgExplained.push('')
+        trace.drtgExplained.push('')
       }
       if (i < homeLineup.length) {
         trace.values.push(homeLineup[i].durationInSeconds);
@@ -145,6 +163,12 @@ export class AppController {
         trace.defensiveReboundPercentage.push(homeLineup[i].defensiveReboundPercentage)
         trace.defensiveReboundPercentageExplained.push(homeLineup[i].defensiveReboundPercentageExplained)
         trace.defensiveReboundAlphaColor.push(homeLineup[i].defensiveReboundAlphaColor)
+        trace.ortg.push(homeLineup[i].ortg)
+        trace.ortgAlphaColor.push(homeLineup[i].ortgAlphaColor)
+        trace.drtg.push(homeLineup[i].drtg)
+        trace.drtgAlphaColor.push(homeLineup[i].drtgAlphaColor)
+        trace.ortgExplained.push(homeLineup[i].ortgExplained)
+        trace.drtgExplained.push(homeLineup[i].drtgExplained)
       } else {
         trace.values.push(0);
         trace.labels.push(0);
@@ -155,6 +179,12 @@ export class AppController {
         trace.defensiveReboundPercentage.push('')
         trace.defensiveReboundPercentageExplained.push('')
         trace.defensiveReboundAlphaColor.push('')
+        trace.ortg.push('')
+        trace.ortgAlphaColor.push('')
+        trace.drtg.push('')
+        trace.drtgAlphaColor.push('')
+        trace.ortgExplained.push('')
+        trace.drtgExplained.push('')
       }
       traces.push(trace);
     }
