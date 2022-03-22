@@ -14,12 +14,14 @@ import { AssistDistributionService } from './assist-distribution.service';
 import { ShotDistanceService } from './shot-distance.service';
 import { PointsQualifierService } from './points-qualifier-service';
 import { TimeoutService } from './timeout.service';
+import { GameCacheService } from './db/game-cache.service';
 
 dayjs.extend(require('dayjs/plugin/duration'));
 
 @Controller()
 export class AppController {
   constructor(private readonly nbaService: NbaService,
+              private readonly gameCacheService: GameCacheService,
               private readonly gameBarService: GameBarService,
               private readonly lineupService: LineupService,
               private readonly differentialService: DifferentialService,
@@ -30,6 +32,10 @@ export class AppController {
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
+    const gameData = await this.gameCacheService.getGameData(gameId);
+    if (gameData) {
+      return JSON.parse(gameData);
+    }
     const boxScore = await this.nbaService.getBoxScore(gameId);
     const playByPlay = await this.nbaService.getPlayByPlay(gameId);
     const [awayGameBar, homeGameBar] =  this.gameBarService.getGameBarsForTeam(boxScore, playByPlay);
@@ -43,7 +49,7 @@ export class AppController {
     boxScore.homeTeam.color = this.teamColorCodes(boxScore.homeTeam.teamName)
     boxScore.homeTeam.players = removeDNPsFromBoxScore(boxScore.homeTeam.players);
     boxScore.awayTeam.players = removeDNPsFromBoxScore(boxScore.awayTeam.players);
-    return {
+    const returnValue = {
       groupLabels: awayGameBar.periods.map(p => p.period),
       chartLabels: ['PTS vs Misses', 'AST vs TO'],
       boxScore: boxScore,
@@ -71,6 +77,10 @@ export class AppController {
         pointsInThePaint: this.pointsQualifierService.getPointsInThePaintByPeriod(HomeAway.HOME, boxScore, playByPlay)
       }
     };
+    if (boxScore.gameStatusText === "Final") {
+      this.gameCacheService.setGameData(gameId, returnValue)
+    }
+    return returnValue;
   }
 
   @Get('/games/:date')

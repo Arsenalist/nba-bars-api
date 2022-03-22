@@ -95,7 +95,8 @@ export interface Player {
 
 export interface BoxScore {
   homeTeam: Team,
-  awayTeam: Team
+  awayTeam: Team,
+  gameStatusText: string
 }
 
 export interface Action {
@@ -202,3 +203,4 @@ export interface TimeoutAnalysis {
   timeoutAction: Action;
   afterRun: Run;
 }
+
