@@ -15,6 +15,7 @@ import { ShotDistanceService } from './shot-distance.service';
 import { PointsQualifierService } from './points-qualifier-service';
 import { TimeoutService } from './timeout.service';
 import { GameCacheService } from './db/game-cache.service';
+import { ScoringRunService } from './scoring-run.service';
 
 dayjs.extend(require('dayjs/plugin/duration'));
 
@@ -28,7 +29,8 @@ export class AppController {
               private readonly assistDistributionService: AssistDistributionService,
               private readonly shotDistanceService: ShotDistanceService,
               private readonly pointsQualifierService: PointsQualifierService,
-              private readonly timeoutService: TimeoutService) {}
+              private readonly timeoutService: TimeoutService,
+              private readonly scoringRunService: ScoringRunService) {}
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
@@ -50,6 +52,7 @@ export class AppController {
     boxScore.homeTeam.players = removeDNPsFromBoxScore(boxScore.homeTeam.players);
     boxScore.awayTeam.players = removeDNPsFromBoxScore(boxScore.awayTeam.players);
     const returnValue = {
+      scoringRuns: this.scoringRunService.getScoringRuns(playByPlay),
       groupLabels: awayGameBar.periods.map(p => p.period),
       chartLabels: ['PTS vs Misses', 'AST vs TO'],
       boxScore: boxScore,
