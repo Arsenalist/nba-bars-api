@@ -46,14 +46,14 @@ describe('ScoreDifference', () => {
       expect(scoreDifference.isOverlappingWith(new ScoreDifference({
         startAction: {actionNumber: 2},
         endAction: {actionNumber: 5}
-      }))).toBeFalsy();
+      }))).toBeTruthy();
     });
 
     it ('run starts at the end of the main run', () => {
       expect(scoreDifference.isOverlappingWith(new ScoreDifference({
         startAction: {actionNumber: 15},
         endAction: {actionNumber: 20}
-      }))).toBeFalsy();
+      }))).toBeTruthy();
     });
   });
 
