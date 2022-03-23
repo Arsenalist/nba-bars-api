@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Action, HomeAway, PlayByPlay} from './model';
+import { Action, HomeAway, PlayByPlay } from './model';
 import { Clock } from './clock';
 import { ScoreDifference } from './score-difference';
 
@@ -11,7 +11,7 @@ export class ScoringRunService {
     const scoringMoments = this.createScoringMoments(actions)
     const matrix = this.createScoringDifferencesMatrix(scoringMoments);
     const allRuns = matrix.flat();
-    let filteredRuns = allRuns.filter(sd => sd.durationInSeconds < 60*15);
+    let filteredRuns = allRuns.filter(sd => sd.durationInSeconds < 60*15 && sd.difference >= 8);
 
     filteredRuns.sort((a, b) => {
       if (a.difference > b.difference) {
@@ -93,8 +93,9 @@ export class ScoringRunService {
       // remove all overlapping runs in filteredRuns[1...end] which ovelap with run
       const nonoverlap = [];
       for (let i=1; i<filteredRuns.length; i++) {
-        if (!run.isOverlappingWith(filteredRuns[i])) {
-          nonoverlap.push(filteredRuns[i]);
+        const current = filteredRuns[i];
+        if (!run.isOverlappingWith(current)) {
+          nonoverlap.push(current);
         }
       }
       result.push(run);
