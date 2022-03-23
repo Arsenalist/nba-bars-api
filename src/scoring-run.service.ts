@@ -26,17 +26,13 @@ export class ScoringRunService {
     filteredRuns = this.removeOverlappingRuns(filteredRuns, [])
 
     const homeScoringRuns = filteredRuns.filter(sd => sd.winner === HomeAway.HOME).splice(0, 5).map(sr => {
-      const startClock = new Clock(sr.startAction.clock, sr.startAction.period);
-      sr.startAction.clock = startClock.displayTime();
-      const endClock = new Clock(sr.endAction.clock, sr.endAction.period);
-      sr.endAction.clock = endClock.displayTime();
+      sr.startClockDisplay = new Clock(sr.startAction.clock, sr.startAction.period).displayTime();
+      sr.endClockDisplay = new Clock(sr.endAction.clock, sr.endAction.period).displayTime();
       return sr;
     });
     const awayScoringRuns = filteredRuns.filter(sd => sd.winner === HomeAway.AWAY).splice(0, 5).map(sr => {
-      const startClock = new Clock(sr.startAction.clock, sr.startAction.period);
-      sr.startAction.clock = startClock.displayTime();
-      const endClock = new Clock(sr.endAction.clock, sr.endAction.period);
-      sr.endAction.clock = endClock.displayTime();
+      sr.startClockDisplay = new Clock(sr.startAction.clock, sr.startAction.period).displayTime();
+      sr.endClockDisplay = new Clock(sr.endAction.clock, sr.endAction.period).displayTime();
       return sr;
     });
     return {awayScoringRuns, homeScoringRuns}

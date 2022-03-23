@@ -10,6 +10,8 @@ export class ScoreDifference {
       this.setRunDurationDisplay(this.durationInSeconds);
     }
   }
+  startClockDisplay: string;
+  endClockDisplay: string;
   runDurationDisplay: string
   startAction: Action;
   endAction: Action;
