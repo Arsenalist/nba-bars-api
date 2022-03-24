@@ -20,12 +20,7 @@ export class ScoreDifference {
   winner: HomeAway | undefined
 
   isOverlappingWith(sd: ScoreDifference): boolean {
-    if (this.startAction.actionNumber === sd.startAction.actionNumber || this.endAction.actionNumber === sd.endAction.actionNumber) {
-      return true;
-    }
-    return (sd.startAction.actionNumber > this.startAction.actionNumber && sd.endAction.actionNumber < this.endAction.actionNumber) ||
-      (this.startAction.actionNumber > sd.startAction.actionNumber && sd.endAction.actionNumber < this.endAction.actionNumber) ||
-      (this.endAction.actionNumber > sd.startAction.actionNumber && this.endAction.actionNumber < sd.endAction.actionNumber);
+    return !(this.startAction.actionNumber > sd.endAction.actionNumber || this.endAction.actionNumber < sd.startAction.actionNumber);
   }
 
   private setRunDurationDisplay(durationInSeconds: number) {

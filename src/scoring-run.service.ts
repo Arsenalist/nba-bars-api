@@ -9,8 +9,7 @@ export class ScoringRunService {
   getScoringRuns(playByPlay: PlayByPlay): { awayScoringRuns: ScoreDifference[]; homeScoringRuns: ScoreDifference[] } {
     const actions = playByPlay.actions.filter(action => action.shotResult === "Made");
     const scoringMoments = this.createScoringMoments(actions)
-    const matrix = this.createScoringDifferencesMatrix(scoringMoments);
-    const allRuns = matrix.flat();
+    const allRuns = this.createScoringDifferencesMatrix(scoringMoments);
     let filteredRuns = allRuns.filter(sd => sd.durationInSeconds < 60*15 && sd.difference >= 8);
 
     filteredRuns.sort((a, b) => {
@@ -38,10 +37,9 @@ export class ScoringRunService {
     return {awayScoringRuns, homeScoringRuns}
   }
 
-  private createScoringDifferencesMatrix(scoringDifferences: ScoreMoment[]): ScoreDifference[][] {
-    const scoringTracker2d: ScoreDifference[][] = [];
+  private createScoringDifferencesMatrix(scoringDifferences: ScoreMoment[]): ScoreDifference[] {
+    const array: ScoreDifference[] = [];
     scoringDifferences.forEach((i, idx1) => {
-      const array: ScoreDifference[] = [];
       scoringDifferences.forEach((j, idx2) => {
         if (idx2 >= idx1) {
           array.push(new ScoreDifference({
@@ -53,11 +51,8 @@ export class ScoringRunService {
           }));
         }
       });
-      if (array.length > 0) {
-        scoringTracker2d.push(array);
-      }
     });
-    return scoringTracker2d;
+    return array;
   }
 
   private createScoringMoments(actions: Action[]): ScoreMoment[] {
