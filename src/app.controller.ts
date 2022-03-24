@@ -34,11 +34,11 @@ export class AppController {
 
   @Get('/bars/:gameId')
   async getGameBars(@Param('gameId') gameId: number) {
-    const gameData = await this.gameCacheService.getGameData(gameId);
+  /*  const gameData = await this.gameCacheService.getGameData(gameId);
     if (gameData) {
       return JSON.parse(gameData);
     }
-    const boxScore = await this.nbaService.getBoxScore(gameId);
+  */  const boxScore = await this.nbaService.getBoxScore(gameId);
     const playByPlay = await this.nbaService.getPlayByPlay(gameId);
     const [awayGameBar, homeGameBar] =  this.gameBarService.getGameBarsForTeam(boxScore, playByPlay);
 
@@ -80,9 +80,11 @@ export class AppController {
         pointsInThePaint: this.pointsQualifierService.getPointsInThePaintByPeriod(HomeAway.HOME, boxScore, playByPlay)
       }
     };
+/*
     if (boxScore.gameStatusText === "Final") {
       this.gameCacheService.setGameData(gameId, returnValue)
     }
+*/
     return returnValue;
   }
 
