@@ -24,4 +24,9 @@ export class NbaService {
     return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.payload.date ? response.data.payload.date.games : [])));
   }
 
+  async getSchedule(teamCode: string) {
+    const url =`http://global.nba.com/statsm2/team/schedule.json?countryCode=CA&locale=en&teamCode=${teamCode}`;
+    return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.payload ? response.data.payload : [])));
+  }
+
 }
