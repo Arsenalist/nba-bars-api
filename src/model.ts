@@ -2,7 +2,7 @@ import { Clock } from './clock';
 
 export class TeamStats {
   constructor(stats: {}) {
-    Object.keys(stats).forEach(key=>this[key]=stats[key]);
+    Object.keys(stats).forEach((key) => (this[key] = stats[key]));
   }
   totalOffensivePossessions: number;
   offensiveRebounds: number;
@@ -25,7 +25,8 @@ export class TeamStats {
     this.fga += stats.fga;
     this.fgaMade += stats.fgaMade;
     this.missedSecondFreeThrow += stats.missedSecondFreeThrow;
-    this.oppositionMissedSecondFreeThrow += stats.oppositionMissedSecondFreeThrow;
+    this.oppositionMissedSecondFreeThrow +=
+      stats.oppositionMissedSecondFreeThrow;
     this.oppositionFgm += stats.oppositionFgm;
     this.oppositionFga += stats.oppositionFga;
     this.offensivePossessions += stats.offensivePossessions;
@@ -36,9 +37,8 @@ export class TeamStats {
 }
 
 export class PlayerStats {
-
   constructor(stats: {}) {
-    Object.keys(stats).forEach(key=>this[key]=stats[key]);
+    Object.keys(stats).forEach((key) => (this[key] = stats[key]));
   }
 
   points: number;
@@ -81,7 +81,7 @@ export class PlayerStats {
 
 export enum HomeAway {
   HOME = 0,
-  AWAY = 1
+  AWAY = 1,
 }
 
 export interface Statistics {
@@ -112,8 +112,8 @@ export interface Player {
   name?: string;
   starter?: string;
   statistics?: Statistics;
-  nameI: string;
-  position: string;
+  nameI?: string;
+  position?: string;
 
 
 
@@ -122,48 +122,48 @@ export interface Player {
 }
 
 export interface BoxScore {
-  homeTeam: Team,
-  awayTeam: Team,
-  gameStatusText: string
+  homeTeam: Team;
+  awayTeam: Team;
+  gameStatusText: string;
 }
 
 export interface Action {
-  period?: number,
-  personId?: number,
-  actionType?: string,
-  actionNumber?: number,
-  shotResult?: string,
-  pointsTotal?: number,
-  assistPersonId?: number,
-  stealPersonId?: number,
-  blockPersonId?: number,
-  teamId?: number,
-  scoreHome?: string,
-  scoreAway?: string,
-  clock?: string,
-  subType?: string,
-  description?: string,
-  shotDistance?: number,
-  teamTricode?: string,
-  playerNameI?: string,
-  qualifiers?: string[],
-  timeActual?: string
+  period?: number;
+  personId?: number;
+  actionType?: string;
+  actionNumber?: number;
+  shotResult?: string;
+  pointsTotal?: number;
+  assistPersonId?: number;
+  stealPersonId?: number;
+  blockPersonId?: number;
+  teamId?: number;
+  scoreHome?: string;
+  scoreAway?: string;
+  clock?: string;
+  subType?: string;
+  description?: string;
+  shotDistance?: number;
+  teamTricode?: string;
+  playerNameI?: string;
+  qualifiers?: string[];
+  timeActual?: string;
 }
 
 export interface PlayByPlay {
-  actions: Action[]
+  actions: Action[];
 }
 
 export interface Period {
-  period: number,
-  periodType: string,
-  score?: number
+  period: number;
+  periodType: string;
+  score?: number;
 }
 
 export interface PlayerPeriodPerformance {
-  period: Period,
-  player: Player,
-  stats: PlayerStats,
+  period: Period;
+  player: Player;
+  stats: PlayerStats;
 }
 
 export interface PlayerGameBar {
