@@ -4,8 +4,8 @@ export let redisClient = undefined
 export async function createRedisClient() {
   redisClient = createClient(
     {
-      url: 'redis://redis-19886.c9.us-east-1-2.ec2.cloud.redislabs.com:19886',
-      password: 'BlyGohE1AtxntXTZjLjZN4BZ67ysfMvx'
+      url: 'redis://redis-13376.c265.us-east-1-2.ec2.cloud.redislabs.com:13376',
+      password: 'Vwpbgjx4W2ry8rz8JEuJfz9zttrOf0Ea'
     }
   );
 
