@@ -9,7 +9,7 @@ export class NbaService {
   constructor(private httpService: HttpService) {
   }
 
-  async getBoxScore(gameId: string): Promise<BoxScore> {
+  async getBoxScore(gameId: number): Promise<BoxScore> {
     const url = `https://cdn.nba.com/static/json/liveData/boxscore/boxscore_${gameId}.json`;
     return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.game)));
   }
