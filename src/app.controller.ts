@@ -94,7 +94,7 @@ export class AppController {
   async getQuickReaction(@Param('teamTricode') teamTricode: string) {
     // const schedule = await this.nbaService.getSchedule('raptors');
     console.log("1")
-    const gameId = 0012200020; // schedule['monthGroups'][0]['games'][0]['profile']['gameId'];
+    const gameId = 12200020; // schedule['monthGroups'][0]['games'][0]['profile']['gameId'];
 
     teamTricode = 'TOR';
     const boxScore: BoxScore = await this.nbaService.getBoxScore(gameId);
