@@ -30,9 +30,11 @@ import { PointsQualifierService } from './points-qualifier-service';
 import { TimeoutService } from './timeout.service';
 import { GameCacheService } from './db/game-cache.service';
 import { ScoringRunService } from './scoring-run.service';
+import { LatestGameCalculator } from './latest-game-calculator';
 
 dayjs.extend(require('dayjs/plugin/duration'));
-
+dayjs.extend(require('dayjs/plugin/utc'));
+dayjs.extend(require('dayjs/plugin/timezone'));
 const teamMap = new Map();
 teamMap.set('1610612748', 'mia');
 teamMap.set('1610612738', 'bos');
@@ -65,6 +67,11 @@ teamMap.set('1610612757', 'por');
 teamMap.set('1610612760', 'okc');
 teamMap.set('1610612745', 'hou');
 
+function currentDateInEst() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return dayjs().tz('America/New_York');
+}
 
 @Controller()
 export class AppController {
@@ -92,13 +99,17 @@ export class AppController {
   }
   @Get('/nba/box/:teamTricode')
   async getQuickReaction(@Param('teamTricode') teamTricode: string) {
-    // const schedule = await this.nbaService.getSchedule('raptors');
-    console.log("1")
-    const gameId = 12200020; // schedule['monthGroups'][0]['games'][0]['profile']['gameId'];
-
+    const schedule = await this.nbaService.getSchedule('raptors');
+    const game = new LatestGameCalculator(schedule).getLatestGame(
+      currentDateInEst(),
+    );
+    if (game === null) {
+      throw new Error("can't find latest game");
+    }
     teamTricode = 'TOR';
-    const boxScore: BoxScore = await this.nbaService.getBoxScore(gameId);
-    console.log("2")
+    const boxScore: BoxScore = await this.nbaService.getBoxScore(
+      game.profile.gameId,
+    );
     const score: GameScore = {
       away: {
         score: boxScore.awayTeam.score + '',
@@ -190,7 +201,7 @@ export class AppController {
   }
 
   @Get('/bars/:gameId')
-  async getGameBars(@Param('gameId') gameId: number) {
+  async getGameBars(@Param('gameId') gameId: string) {
     const gameData = await this.gameCacheService.getGameData(gameId);
     if (gameData) {
       return JSON.parse(gameData);

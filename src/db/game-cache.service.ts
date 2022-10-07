@@ -4,11 +4,11 @@ import { redisClient } from './resdis-connection';
 @Injectable()
 export class GameCacheService {
 
-  async getGameData(gameId: number): Promise<string> {
+  async getGameData(gameId: string): Promise<string> {
     return await redisClient.get(`${gameId}-info`);
   }
 
-  setGameData(gameId: number, gameData: any) {
+  setGameData(gameId: string, gameData: any) {
     redisClient.set(`${gameId}-info`, JSON.stringify(gameData));
   }
 }

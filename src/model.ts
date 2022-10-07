@@ -302,3 +302,18 @@ export interface PlayerBoxScore {
   dnp: string;
   headshots: any;
 }
+
+export interface Schedule {
+  monthGroups: ScheduleMonthGroup[];
+}
+export interface ScheduleMonthGroup {
+  games: Game[];
+  name: string;
+}
+export interface Game {
+  profile: GameProfile;
+}
+export interface GameProfile {
+  gameId: string;
+  dateTimeEt: string;
+};

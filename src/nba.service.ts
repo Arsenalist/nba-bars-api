@@ -10,12 +10,12 @@ export class NbaService {
   }
 
 
-  async getBoxScore(gameId: number): Promise<BoxScore> {
-    const url = `https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0012200020.json`;
+  async getBoxScore(gameId: string): Promise<BoxScore> {
+    const url = `https://cdn.nba.com/static/json/liveData/boxscore/boxscore_${gameId}.json`;
     return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.game)));
   }
 
-  async getPlayByPlay(gameId: number): Promise<PlayByPlay>  {
+  async getPlayByPlay(gameId: string): Promise<PlayByPlay>  {
     const url = `https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_${gameId}.json`;
     return await lastValueFrom(this.httpService.get(url).pipe(map(response => response.data.game)));
   }
