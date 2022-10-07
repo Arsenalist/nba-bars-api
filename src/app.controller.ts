@@ -137,7 +137,7 @@ export class AppController {
     const overview: Overview = {
       event: event,
       score: score,
-      share_url: '',
+      share_url: `https://www.nba.com/game/${game.profile.gameId}/box-score`,
     };
 
     let playerRecords: Player[];
