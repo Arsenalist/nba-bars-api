@@ -8,6 +8,7 @@ export class TheScoreService {
   constructor(private httpService: HttpService) {}
 
   async getBasketballMarkets(): Promise<BetMarket[]> {
+    console.log("process.env is ", process.env)
     const headersRequest = {
       'x-api-key': process.env.THE_SCORE_API_KEY,
     };
