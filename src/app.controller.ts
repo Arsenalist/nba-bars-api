@@ -176,8 +176,9 @@ export class AppController {
           points: p.statistics.points + '',
           plus_minus: p.statistics.plusMinusPoints + '',
           rebounds_total: p.statistics.reboundsTotal + '',
-          three_point_field_goals_attempted: '',
-          three_point_field_goals_made: '',
+          three_point_field_goals_attempted:
+            p.statistics.threePointersAttempted + '',
+          three_point_field_goals_made: p.statistics.threePointersMade + '',
           turnovers: p.statistics.turnovers + '',
           position: p.position,
           dnp: p.played,
