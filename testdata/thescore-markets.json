@@ -1,0 +1,6510 @@
+{
+  "data": [
+    {
+      "event": {
+        "away_participant": {
+          "id": "e6811e29-a965-4d5f-ae6a-10b6aa4d1870",
+          "name": "Fighting Eagles Nagoya",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "9e052801-1992-4ba8-ad67-cc5a09d9a624",
+          "name": "Kyoto Hannaryz",
+          "resource_uri": null
+        },
+        "id": "072b016e-1055-4abf-b186-6965773fe508",
+        "name": "Kyoto Hannaryz vs Fighting Eagles Nagoya",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T04:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "5f10470d-a545-4aab-a919-29a3c275bbfd",
+      "name": "Total Points",
+      "points": 149.5,
+      "selections": [
+        {
+          "id": "ffe70b8d-66fc-4e27-a513-808a3d0ff756",
+          "name": "Over 149.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 149.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "05a7b027-3927-4f8d-99e6-43b722fe572d",
+          "name": "Under 149.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 149.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "e6811e29-a965-4d5f-ae6a-10b6aa4d1870",
+          "name": "Fighting Eagles Nagoya",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "9e052801-1992-4ba8-ad67-cc5a09d9a624",
+          "name": "Kyoto Hannaryz",
+          "resource_uri": null
+        },
+        "id": "072b016e-1055-4abf-b186-6965773fe508",
+        "name": "Kyoto Hannaryz vs Fighting Eagles Nagoya",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T04:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "7813a604-ac38-4132-8828-06a93ac5cad8",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "6f8b7364-7e7f-4528-8ca4-8f8763410f5a",
+          "name": "FE Nagoya",
+          "odds": {
+            "american": "-235",
+            "decimal": "1.43",
+            "fractional": "20/47"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "5468ba61-7b3a-4d19-9131-39ec36fa9a8a",
+          "name": "Kyoto Hannaryz",
+          "odds": {
+            "american": "+195",
+            "decimal": "2.95",
+            "fractional": "39/20"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "e6811e29-a965-4d5f-ae6a-10b6aa4d1870",
+          "name": "Fighting Eagles Nagoya",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "9e052801-1992-4ba8-ad67-cc5a09d9a624",
+          "name": "Kyoto Hannaryz",
+          "resource_uri": null
+        },
+        "id": "072b016e-1055-4abf-b186-6965773fe508",
+        "name": "Kyoto Hannaryz vs Fighting Eagles Nagoya",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T04:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "981c265f-2f02-442d-a815-00b0889b62c4",
+      "name": "Match Spread",
+      "points": 5.5,
+      "selections": [
+        {
+          "id": "03181b3c-0cbc-4f0d-9b8a-0a14f4b3f3f7",
+          "name": "FE Nagoya -5.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -5.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "b97f1fd7-f83f-4f2f-a9df-7e846d24db15",
+          "name": "Kyoto Hannaryz +5.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 5.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "cab18ef7-776f-4844-bcd8-2d12b0431b5c",
+          "name": "CB Breogan",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3672e30e-44ec-4031-b68f-8227804c3853",
+          "name": "Liga ACB",
+          "slug": "liga-acb"
+        },
+        "home_participant": {
+          "id": "3f138a08-c52e-48e7-9356-f127ee56aa64",
+          "name": "Club Joventut Badalona",
+          "resource_uri": null
+        },
+        "id": "0a0efe03-acde-498a-849f-42593fdedea1",
+        "name": "Club Joventut Badalona vs CB Breogan",
+        "organization": {
+          "id": "1dc4a2b8-c5b9-4264-9351-1b4d0f244a11",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T18:45:00Z",
+        "status": "pre_game"
+      },
+      "id": "3d64162f-af62-46bf-b30b-e299764d1cc6",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "d106db3b-d005-498f-9ac8-0ea78238cb65",
+          "name": "CB Breogan",
+          "odds": {
+            "american": "+285",
+            "decimal": "3.85",
+            "fractional": "57/20"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "61486b0c-6ab4-445d-b988-33bd09fbed11",
+          "name": "CJ Badalona",
+          "odds": {
+            "american": "-355",
+            "decimal": "1.28",
+            "fractional": "20/71"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "cab18ef7-776f-4844-bcd8-2d12b0431b5c",
+          "name": "CB Breogan",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3672e30e-44ec-4031-b68f-8227804c3853",
+          "name": "Liga ACB",
+          "slug": "liga-acb"
+        },
+        "home_participant": {
+          "id": "3f138a08-c52e-48e7-9356-f127ee56aa64",
+          "name": "Club Joventut Badalona",
+          "resource_uri": null
+        },
+        "id": "0a0efe03-acde-498a-849f-42593fdedea1",
+        "name": "Club Joventut Badalona vs CB Breogan",
+        "organization": {
+          "id": "1dc4a2b8-c5b9-4264-9351-1b4d0f244a11",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T18:45:00Z",
+        "status": "pre_game"
+      },
+      "id": "4597c333-f092-43fa-83ef-bec6bb4ae788",
+      "name": "Match Spread",
+      "points": -7.5,
+      "selections": [
+        {
+          "id": "a9e7363f-a4c2-48fd-9875-0ad7c7c04da4",
+          "name": "CB Breogan +7.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 7.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "93f51592-b2ee-4c45-aacc-5bbc3beb9181",
+          "name": "CJ Badalona -7.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -7.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "cab18ef7-776f-4844-bcd8-2d12b0431b5c",
+          "name": "CB Breogan",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3672e30e-44ec-4031-b68f-8227804c3853",
+          "name": "Liga ACB",
+          "slug": "liga-acb"
+        },
+        "home_participant": {
+          "id": "3f138a08-c52e-48e7-9356-f127ee56aa64",
+          "name": "Club Joventut Badalona",
+          "resource_uri": null
+        },
+        "id": "0a0efe03-acde-498a-849f-42593fdedea1",
+        "name": "Club Joventut Badalona vs CB Breogan",
+        "organization": {
+          "id": "1dc4a2b8-c5b9-4264-9351-1b4d0f244a11",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T18:45:00Z",
+        "status": "pre_game"
+      },
+      "id": "bb55af5b-c7ad-4f41-8f71-7330d4c7d658",
+      "name": "Total Points",
+      "points": 159.0,
+      "selections": [
+        {
+          "id": "f494ed88-2a53-4bf4-accf-e7e1fa3aa228",
+          "name": "Over 159",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "e994e366-4fdd-4f11-acdd-c610746cf45a",
+          "name": "Under 159",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "8240f11e-b4c7-4774-b4db-798db3735892",
+          "name": "Derthona Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "604fcc9c-fd54-4eb9-a423-cc0c9307c525",
+          "name": "Pallacanestro Reggiana",
+          "resource_uri": null
+        },
+        "id": "122e324c-ee07-4e4e-941f-529f53a39686",
+        "name": "Pallacanestro Reggiana vs Derthona Basket",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:35:00Z",
+        "status": "pre_game"
+      },
+      "id": "91a12b8d-6f78-49d9-991d-a1c57d92646d",
+      "name": "Match Spread",
+      "points": -5.0,
+      "selections": [
+        {
+          "id": "6f55ed1e-71a3-4a20-9252-b4889a00b40d",
+          "name": "Derthona Basket +5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 5.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "37fc5098-7e0f-4746-8cef-40f30de26ac8",
+          "name": "Reggiana -5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -5.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "8240f11e-b4c7-4774-b4db-798db3735892",
+          "name": "Derthona Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "604fcc9c-fd54-4eb9-a423-cc0c9307c525",
+          "name": "Pallacanestro Reggiana",
+          "resource_uri": null
+        },
+        "id": "122e324c-ee07-4e4e-941f-529f53a39686",
+        "name": "Pallacanestro Reggiana vs Derthona Basket",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:35:00Z",
+        "status": "pre_game"
+      },
+      "id": "b9ecd234-5787-40a5-b4f7-c422989dc87c",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "1dfea3e1-a6ed-4386-bc4e-8f555de05fa9",
+          "name": "Derthona Basket",
+          "odds": {
+            "american": "+180",
+            "decimal": "2.8",
+            "fractional": "9/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "dad8c317-8419-4272-8201-6040f4cf7c6d",
+          "name": "Reggiana",
+          "odds": {
+            "american": "-220",
+            "decimal": "1.45",
+            "fractional": "5/11"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "8bb7c9e8-8d3c-4bbc-ad23-36c8eeaca571",
+          "name": "Anwil Wroclawek",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "7c888e4a-5cd3-4308-9772-fc6fe8abe2dc",
+          "name": "Astoria Bydgoszcz",
+          "resource_uri": null
+        },
+        "id": "12bc3d68-9b16-4109-9d6f-755f1cecc0c1",
+        "name": "Astoria Bydgoszcz vs Anwil Wroclawek",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "44fc97e0-91cf-442c-b9ac-c9585033e73d",
+      "name": "Match Spread",
+      "points": 7.0,
+      "selections": [
+        {
+          "id": "ca1c5c6e-2373-4243-82ee-862432f4230e",
+          "name": "Anwil Wroclawek -7",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -7.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "731a8ae1-bdd1-40e9-8701-2c3799d32633",
+          "name": "Astoria Bydgoszcz +7",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 7.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "8bb7c9e8-8d3c-4bbc-ad23-36c8eeaca571",
+          "name": "Anwil Wroclawek",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "7c888e4a-5cd3-4308-9772-fc6fe8abe2dc",
+          "name": "Astoria Bydgoszcz",
+          "resource_uri": null
+        },
+        "id": "12bc3d68-9b16-4109-9d6f-755f1cecc0c1",
+        "name": "Astoria Bydgoszcz vs Anwil Wroclawek",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "91753329-0f7a-452a-886f-a524b4f4bceb",
+      "name": "Total Points",
+      "points": 159.5,
+      "selections": [
+        {
+          "id": "1236e498-a087-43e1-95d9-4eab9beb08d5",
+          "name": "Over 159.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "f56b7386-401f-403e-bf22-692cc9c3a078",
+          "name": "Under 159.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "8bb7c9e8-8d3c-4bbc-ad23-36c8eeaca571",
+          "name": "Anwil Wroclawek",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "7c888e4a-5cd3-4308-9772-fc6fe8abe2dc",
+          "name": "Astoria Bydgoszcz",
+          "resource_uri": null
+        },
+        "id": "12bc3d68-9b16-4109-9d6f-755f1cecc0c1",
+        "name": "Astoria Bydgoszcz vs Anwil Wroclawek",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "a559b52e-71f8-468a-8102-0e8b3195e437",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "3afc50ad-6e85-43e0-9f2f-a29a23f39fa0",
+          "name": "Anwil Wroclawek",
+          "odds": {
+            "american": "-300",
+            "decimal": "1.33",
+            "fractional": "1/3"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "73ba832b-f21e-4cef-9e1b-c9809d225778",
+          "name": "Astoria Bydgoszcz",
+          "odds": {
+            "american": "+250",
+            "decimal": "3.5",
+            "fractional": "5/2"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "f6f59260-b096-48fe-a819-ef41281660b9",
+          "name": "Norrkoping Dolphins",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f368f412-016b-413e-b47d-5726ce0f0c14",
+          "name": "Basketligan",
+          "slug": "basketligan"
+        },
+        "home_participant": {
+          "id": "0167e874-80ff-43bf-acae-071a45f86e08",
+          "name": "Nassjo Basket",
+          "resource_uri": null
+        },
+        "id": "18318e0f-6357-45c9-810b-f28ebb659748",
+        "name": "Nassjo Basket vs Norrkoping Dolphins",
+        "organization": {
+          "id": "af97e5f0-0f00-44e6-bfc9-1a65e670f61a",
+          "name": "Sweden",
+          "slug": "sweden"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-11T17:04:00Z",
+        "status": "pre_game"
+      },
+      "id": "66158b36-27b4-4892-a8a0-bae17dfd12d4",
+      "name": "Match Spread",
+      "points": 6.0,
+      "selections": [
+        {
+          "id": "9a243e34-c4d9-432a-8e0a-c7148a089f26",
+          "name": "Norrkoping Dolphins -6",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -6.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "2239ae5e-136f-40b3-90c0-083000df3169",
+          "name": "Nassjo Basket +6",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 6.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "f6f59260-b096-48fe-a819-ef41281660b9",
+          "name": "Norrkoping Dolphins",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f368f412-016b-413e-b47d-5726ce0f0c14",
+          "name": "Basketligan",
+          "slug": "basketligan"
+        },
+        "home_participant": {
+          "id": "0167e874-80ff-43bf-acae-071a45f86e08",
+          "name": "Nassjo Basket",
+          "resource_uri": null
+        },
+        "id": "18318e0f-6357-45c9-810b-f28ebb659748",
+        "name": "Nassjo Basket vs Norrkoping Dolphins",
+        "organization": {
+          "id": "af97e5f0-0f00-44e6-bfc9-1a65e670f61a",
+          "name": "Sweden",
+          "slug": "sweden"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-11T17:04:00Z",
+        "status": "pre_game"
+      },
+      "id": "70029061-07a3-4e74-a755-9f10b1f2553f",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "3d7873c9-ba90-48f5-8055-a180fd5260a6",
+          "name": "Norrkoping Dolphins",
+          "odds": {
+            "american": "-265",
+            "decimal": "1.38",
+            "fractional": "20/53"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "6f174d95-605c-4fa6-bbd4-5f1fc6c80b4c",
+          "name": "Nassjo Basket",
+          "odds": {
+            "american": "+220",
+            "decimal": "3.2",
+            "fractional": "11/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "f6f59260-b096-48fe-a819-ef41281660b9",
+          "name": "Norrkoping Dolphins",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f368f412-016b-413e-b47d-5726ce0f0c14",
+          "name": "Basketligan",
+          "slug": "basketligan"
+        },
+        "home_participant": {
+          "id": "0167e874-80ff-43bf-acae-071a45f86e08",
+          "name": "Nassjo Basket",
+          "resource_uri": null
+        },
+        "id": "18318e0f-6357-45c9-810b-f28ebb659748",
+        "name": "Nassjo Basket vs Norrkoping Dolphins",
+        "organization": {
+          "id": "af97e5f0-0f00-44e6-bfc9-1a65e670f61a",
+          "name": "Sweden",
+          "slug": "sweden"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-11T17:04:00Z",
+        "status": "pre_game"
+      },
+      "id": "ca6fe62c-9365-4c60-99c8-edf25923581e",
+      "name": "Total Points",
+      "points": 164.5,
+      "selections": [
+        {
+          "id": "5d084e44-f123-4110-8de3-2b064a0fb0b7",
+          "name": "Over 164.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 164.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "9f922819-ee46-4d51-88f9-4051fb48cdd9",
+          "name": "Under 164.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 164.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a71c9ac5-331a-4781-a79b-7a810b7b2ca2",
+          "name": "Pallacanestro Trieste 2004",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "401a3b25-7911-4b2f-8a40-e6620df81889",
+          "name": "Virtus Pallacanestro Bologna",
+          "resource_uri": null
+        },
+        "id": "1d48341c-fa07-444a-a8eb-515e0d1751f4",
+        "name": "Virtus Pallacanestro Bologna vs Pallacanestro Trieste 2004",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T18:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "acd4cbe6-d237-4805-8887-35bbe6a42631",
+      "name": "Match Spread",
+      "points": -13.0,
+      "selections": [
+        {
+          "id": "07022ba3-5e7a-4d19-bc18-4d42f0346963",
+          "name": "Trieste +13",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 13.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "51fc4e26-b887-4e99-bbd7-3a3b32651fcc",
+          "name": "VP Bologna -13",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -13.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a71c9ac5-331a-4781-a79b-7a810b7b2ca2",
+          "name": "Pallacanestro Trieste 2004",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "401a3b25-7911-4b2f-8a40-e6620df81889",
+          "name": "Virtus Pallacanestro Bologna",
+          "resource_uri": null
+        },
+        "id": "1d48341c-fa07-444a-a8eb-515e0d1751f4",
+        "name": "Virtus Pallacanestro Bologna vs Pallacanestro Trieste 2004",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T18:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "ff443bb3-e47d-4d0b-b889-d1d7a2c5b825",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "717cb151-a7ed-4198-8b7b-9ab642a30684",
+          "name": "Trieste",
+          "odds": {
+            "american": "+750",
+            "decimal": "8.5",
+            "fractional": "15/2"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "0af633f7-456d-47aa-bb2d-833d8fa2a263",
+          "name": "VP Bologna",
+          "odds": {
+            "american": "-1200",
+            "decimal": "1.08",
+            "fractional": "1/12"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "09f5083b-40f4-461f-ada3-cceaa23adf4a",
+          "name": "Trotamundos de Carabobo",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e29ec74d-c082-4090-a06b-1ab06d941621",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "6fde104d-3d5d-4f8e-8133-3317f23ffbde",
+          "name": "Centauros de Portuguesa",
+          "resource_uri": null
+        },
+        "id": "20dcba04-0f74-4aa8-b6bc-dd36a59000e8",
+        "name": "Centauros de Portuguesa vs Trotamundos de Carabobo",
+        "organization": {
+          "id": "209398f3-3410-468e-9426-7271a34cb2ad",
+          "name": "Venezuela",
+          "slug": "venezuela"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T22:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "28603f88-c1b6-46f4-bcba-52d2bda9b417",
+      "name": "Match Spread",
+      "points": 1.0,
+      "selections": [
+        {
+          "id": "63e0006e-42a3-4fe6-aa88-629a8a1c2400",
+          "name": "Trotamundos -1",
+          "odds": {
+            "american": "-105",
+            "decimal": "1.95",
+            "fractional": "20/21"
+          },
+          "points": -1.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "6a213c66-6f82-4d67-8d9f-6c547250cb19",
+          "name": "Centauros DP +1",
+          "odds": {
+            "american": "-114",
+            "decimal": "1.88",
+            "fractional": "50/57"
+          },
+          "points": 1.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "09f5083b-40f4-461f-ada3-cceaa23adf4a",
+          "name": "Trotamundos de Carabobo",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e29ec74d-c082-4090-a06b-1ab06d941621",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "6fde104d-3d5d-4f8e-8133-3317f23ffbde",
+          "name": "Centauros de Portuguesa",
+          "resource_uri": null
+        },
+        "id": "20dcba04-0f74-4aa8-b6bc-dd36a59000e8",
+        "name": "Centauros de Portuguesa vs Trotamundos de Carabobo",
+        "organization": {
+          "id": "209398f3-3410-468e-9426-7271a34cb2ad",
+          "name": "Venezuela",
+          "slug": "venezuela"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T22:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "b7ddc5ba-c3f9-451a-af11-8b924666e0d6",
+      "name": "Total Points",
+      "points": 155.5,
+      "selections": [
+        {
+          "id": "e9be8f62-ff77-4886-8429-c372e43de9e2",
+          "name": "Over 155.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 155.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "9f98af23-7744-4177-a309-194c9776ef6b",
+          "name": "Under 155.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 155.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "09f5083b-40f4-461f-ada3-cceaa23adf4a",
+          "name": "Trotamundos de Carabobo",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e29ec74d-c082-4090-a06b-1ab06d941621",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "6fde104d-3d5d-4f8e-8133-3317f23ffbde",
+          "name": "Centauros de Portuguesa",
+          "resource_uri": null
+        },
+        "id": "20dcba04-0f74-4aa8-b6bc-dd36a59000e8",
+        "name": "Centauros de Portuguesa vs Trotamundos de Carabobo",
+        "organization": {
+          "id": "209398f3-3410-468e-9426-7271a34cb2ad",
+          "name": "Venezuela",
+          "slug": "venezuela"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T22:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "f524e3a3-be46-42a4-935b-a83557831939",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "283aeba7-c4f4-481a-8db0-e66f40764d1f",
+          "name": "Trotamundos",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "326501f0-d0a3-4229-bf7c-70ad34b6f234",
+          "name": "Centauros DP",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "37ac12e5-5b57-49d3-93b7-fb305a70541b",
+          "name": "Yokohama B-Corsairs",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "9d5675fe-4e7a-4e0c-b3ad-c748cdf91e50",
+          "name": "Shimane Susanoo Magic",
+          "resource_uri": null
+        },
+        "id": "236da0d8-cf0a-4a79-873f-3d865b60efbe",
+        "name": "Shimane Susanoo Magic vs Yokohama B-Corsairs",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T05:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "02a090c0-073a-4d32-a03d-7a3b7dde4f53",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "8c40f161-5fb1-4a27-934e-3f94850ede30",
+          "name": "Yokohama",
+          "odds": {
+            "american": "+350",
+            "decimal": "4.5",
+            "fractional": "7/2"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "52e612a6-c1a7-4fad-83c3-5c2d8396445c",
+          "name": "Shimane S Magic",
+          "odds": {
+            "american": "-450",
+            "decimal": "1.22",
+            "fractional": "2/9"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "37ac12e5-5b57-49d3-93b7-fb305a70541b",
+          "name": "Yokohama B-Corsairs",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "9d5675fe-4e7a-4e0c-b3ad-c748cdf91e50",
+          "name": "Shimane Susanoo Magic",
+          "resource_uri": null
+        },
+        "id": "236da0d8-cf0a-4a79-873f-3d865b60efbe",
+        "name": "Shimane Susanoo Magic vs Yokohama B-Corsairs",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T05:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "35b445af-3ffc-461d-9b19-f8965e739035",
+      "name": "Total Points",
+      "points": 154.5,
+      "selections": [
+        {
+          "id": "9724484f-5867-4b7a-b558-988ad47d88e7",
+          "name": "Over 154.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 154.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "f00e963f-24d5-43ca-a495-ede6640d3ed2",
+          "name": "Under 154.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 154.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "37ac12e5-5b57-49d3-93b7-fb305a70541b",
+          "name": "Yokohama B-Corsairs",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "9d5675fe-4e7a-4e0c-b3ad-c748cdf91e50",
+          "name": "Shimane Susanoo Magic",
+          "resource_uri": null
+        },
+        "id": "236da0d8-cf0a-4a79-873f-3d865b60efbe",
+        "name": "Shimane Susanoo Magic vs Yokohama B-Corsairs",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T05:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "d91507bb-05ae-49bb-a6da-5d87c5fc912e",
+      "name": "Match Spread",
+      "points": -8.5,
+      "selections": [
+        {
+          "id": "f3a08578-d090-48d5-851a-5a1ea1905426",
+          "name": "Yokohama +8.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 8.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "00f10500-337a-458b-940a-2345fffb1457",
+          "name": "Shimane S Magic -8.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -8.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "56e8de08-c0cc-4cc3-823e-d7e2282e1495",
+          "name": "UBSC Graz",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "3863b6fc-389c-474f-bd53-f9980dfa7453",
+          "name": "Vienna D.C. Timberwolves",
+          "resource_uri": null
+        },
+        "id": "3318e0cd-b2d0-4bfa-a786-2a165d99f562",
+        "name": "Vienna D.C. Timberwolves vs UBSC Graz",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "406165e9-89f9-4cbd-ab82-2ccbfad57bae",
+      "name": "Match Spread",
+      "points": 4.5,
+      "selections": [
+        {
+          "id": "d9e8788f-b43e-4250-88f0-aa4779dd07e1",
+          "name": "UBSC Graz -4.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -4.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "2aa9f609-4de7-4d33-ae70-72240e32108c",
+          "name": "Vienna T-Wolves +4.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 4.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "56e8de08-c0cc-4cc3-823e-d7e2282e1495",
+          "name": "UBSC Graz",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "3863b6fc-389c-474f-bd53-f9980dfa7453",
+          "name": "Vienna D.C. Timberwolves",
+          "resource_uri": null
+        },
+        "id": "3318e0cd-b2d0-4bfa-a786-2a165d99f562",
+        "name": "Vienna D.C. Timberwolves vs UBSC Graz",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "4c932643-5c47-42f7-9bb3-ee5cbbc7f531",
+      "name": "Total Points",
+      "points": 155.5,
+      "selections": [
+        {
+          "id": "c4442d90-5852-4175-9edd-cc21ef939523",
+          "name": "Over 155.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 155.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "e47a5eb1-6ed3-41ea-b83b-9b0e11cfcdce",
+          "name": "Under 155.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 155.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "db5be109-dc94-4016-882e-95066bcfe362",
+          "name": "Kapfenberg Bulls",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "5c571b78-8871-4bd1-94ae-452a07e8bbfe",
+          "name": "BK Dukes Klosterneuburg",
+          "resource_uri": null
+        },
+        "id": "3c0c85bc-4a36-4153-9cf2-fd3352f0eb4d",
+        "name": "BK Dukes Klosterneuburg vs Kapfenberg Bulls",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "7259ee3a-d1bb-48b7-88f2-19b2bbed80e5",
+      "name": "Match Spread",
+      "points": -1.5,
+      "selections": [
+        {
+          "id": "dfb0d81c-b5ac-4765-b6fd-781ad7016fbe",
+          "name": "Kapfenberg +1.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 1.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "64dd7099-e0c9-4244-8eb0-333bd83b8469",
+          "name": "Klosterneuburg -1.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -1.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "db5be109-dc94-4016-882e-95066bcfe362",
+          "name": "Kapfenberg Bulls",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "5c571b78-8871-4bd1-94ae-452a07e8bbfe",
+          "name": "BK Dukes Klosterneuburg",
+          "resource_uri": null
+        },
+        "id": "3c0c85bc-4a36-4153-9cf2-fd3352f0eb4d",
+        "name": "BK Dukes Klosterneuburg vs Kapfenberg Bulls",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "f0c9ded4-c3bb-4217-876f-1b43503e0ba5",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "2ce76d3f-f6d8-4929-b51f-25d7db6b0641",
+          "name": "Kapfenberg",
+          "odds": {
+            "american": "+103",
+            "decimal": "2.03",
+            "fractional": "103/100"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "e54c190e-e34f-41cb-843b-3d3e5b54b29c",
+          "name": "Klosterneuburg",
+          "odds": {
+            "american": "-123",
+            "decimal": "1.81",
+            "fractional": "100/123"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "db5be109-dc94-4016-882e-95066bcfe362",
+          "name": "Kapfenberg Bulls",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "5c571b78-8871-4bd1-94ae-452a07e8bbfe",
+          "name": "BK Dukes Klosterneuburg",
+          "resource_uri": null
+        },
+        "id": "3c0c85bc-4a36-4153-9cf2-fd3352f0eb4d",
+        "name": "BK Dukes Klosterneuburg vs Kapfenberg Bulls",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "f19d7197-097b-41c1-a6f9-765c73ed4381",
+      "name": "Total Points",
+      "points": 150.0,
+      "selections": [
+        {
+          "id": "b026564a-ec1f-49ff-9a44-34f6b0f46df4",
+          "name": "Over 150",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 150.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "920fa534-dd7f-4ace-b9b3-fd1d3cfb69ca",
+          "name": "Under 150",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 150.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a360f29b-17df-4996-999f-3586802e7203",
+          "name": "Kralovsti Sokoli",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3b59e54b-5346-46a9-aea9-b2e8b696c548",
+          "name": "NBL",
+          "slug": "nbl"
+        },
+        "home_participant": {
+          "id": "61ca3520-a30a-43ba-ae3c-d92bf19ea2c2",
+          "name": "BK Olomoucko",
+          "resource_uri": null
+        },
+        "id": "3e166736-115e-4f0b-85a0-8e24284dd3ec",
+        "name": "BK Olomoucko vs Kralovsti Sokoli",
+        "organization": {
+          "id": "f7ea1e67-5ad0-4ef5-9781-4dce34820f05",
+          "name": "Czech Republic",
+          "slug": "czech-republic"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "0c8b6432-73bf-43ea-9d3f-efc1113803c4",
+      "name": "Match Spread",
+      "points": -4.0,
+      "selections": [
+        {
+          "id": "9b0f1f49-3162-4879-8a60-82f05c12f0cd",
+          "name": "Kralovsti Sokoli +4",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 4.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "3ff55cfe-e4f6-4a05-ab59-90d6b20c938f",
+          "name": "BK Olomoucko -4",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -4.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a360f29b-17df-4996-999f-3586802e7203",
+          "name": "Kralovsti Sokoli",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3b59e54b-5346-46a9-aea9-b2e8b696c548",
+          "name": "NBL",
+          "slug": "nbl"
+        },
+        "home_participant": {
+          "id": "61ca3520-a30a-43ba-ae3c-d92bf19ea2c2",
+          "name": "BK Olomoucko",
+          "resource_uri": null
+        },
+        "id": "3e166736-115e-4f0b-85a0-8e24284dd3ec",
+        "name": "BK Olomoucko vs Kralovsti Sokoli",
+        "organization": {
+          "id": "f7ea1e67-5ad0-4ef5-9781-4dce34820f05",
+          "name": "Czech Republic",
+          "slug": "czech-republic"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "a2240678-ffd3-49df-bf6a-41426e7d1b89",
+      "name": "Total Points",
+      "points": 159.0,
+      "selections": [
+        {
+          "id": "57672761-0e17-49d6-81cd-6d662c4f472c",
+          "name": "Over 159",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "331957e1-ddd0-49fe-b0e7-b9e81c2406d8",
+          "name": "Under 159",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "7ee7dbef-b7fe-4056-b8c4-38fd03f9c21e",
+          "name": "Atlanta Hawks",
+          "resource_uri": "/basketball/teams/11"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "7056e869-849e-4b2c-a92a-eec2bff08760",
+          "name": "Milwaukee Bucks",
+          "resource_uri": "/basketball/teams/10"
+        },
+        "id": "4150628d-539d-420f-8966-6261a664f06f",
+        "name": "Atlanta Hawks @ Milwaukee Bucks",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "0736fea3-7378-4aaa-bd5c-e8c4daa0f918",
+      "name": "Match Spread",
+      "points": -2.5,
+      "selections": [
+        {
+          "id": "64975bfc-c26c-42f8-8875-8cdd9add2a7d",
+          "name": "ATL Hawks +2.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 2.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "392cd420-1552-4223-a8e4-ea00e57956d2",
+          "name": "MIL Bucks -2.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -2.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "7ee7dbef-b7fe-4056-b8c4-38fd03f9c21e",
+          "name": "Atlanta Hawks",
+          "resource_uri": "/basketball/teams/11"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "7056e869-849e-4b2c-a92a-eec2bff08760",
+          "name": "Milwaukee Bucks",
+          "resource_uri": "/basketball/teams/10"
+        },
+        "id": "4150628d-539d-420f-8966-6261a664f06f",
+        "name": "Atlanta Hawks @ Milwaukee Bucks",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "17eb2481-7608-4f97-b18c-fbef45f4a558",
+      "name": "Total Points",
+      "points": 225.5,
+      "selections": [
+        {
+          "id": "2cd34406-8a07-44d8-a2b5-ffae3a6c9333",
+          "name": "Over 225.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 225.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "b0ac5bc5-1e0e-44ae-b90b-325386ebcf80",
+          "name": "Under 225.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 225.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "7ee7dbef-b7fe-4056-b8c4-38fd03f9c21e",
+          "name": "Atlanta Hawks",
+          "resource_uri": "/basketball/teams/11"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "7056e869-849e-4b2c-a92a-eec2bff08760",
+          "name": "Milwaukee Bucks",
+          "resource_uri": "/basketball/teams/10"
+        },
+        "id": "4150628d-539d-420f-8966-6261a664f06f",
+        "name": "Atlanta Hawks @ Milwaukee Bucks",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "b58293ec-461f-4405-9137-29c20cdf2cc8",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "01e7720a-435d-4cf9-aa8f-73c9561401b5",
+          "name": "ATL Hawks",
+          "odds": {
+            "american": "+115",
+            "decimal": "2.15",
+            "fractional": "23/20"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "da09da2d-63a5-4a45-8b5f-c1788434a228",
+          "name": "MIL Bucks",
+          "odds": {
+            "american": "-135",
+            "decimal": "1.74",
+            "fractional": "20/27"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6e5b78b0-f530-4e80-853b-4f6538684f84",
+          "name": "BC Vienna",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "ba2fedc5-6c6b-42c3-a9a2-8790105cfeb6",
+          "name": "Traiskirchen Lions",
+          "resource_uri": null
+        },
+        "id": "42dd9b22-ec34-43ea-98ad-99edfa107ae9",
+        "name": "Traiskirchen Lions vs BC Vienna",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "4b2df39c-687f-4aed-8c8a-86454e14cde3",
+      "name": "Total Points",
+      "points": 164.0,
+      "selections": [
+        {
+          "id": "03a4bbbc-3be7-470f-acbd-036e85e0b0a4",
+          "name": "Over 164",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 164.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "f1385187-a8c3-48e8-a328-10f0566181c2",
+          "name": "Under 164",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 164.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6e5b78b0-f530-4e80-853b-4f6538684f84",
+          "name": "BC Vienna",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "ba2fedc5-6c6b-42c3-a9a2-8790105cfeb6",
+          "name": "Traiskirchen Lions",
+          "resource_uri": null
+        },
+        "id": "42dd9b22-ec34-43ea-98ad-99edfa107ae9",
+        "name": "Traiskirchen Lions vs BC Vienna",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "87e88ddb-574b-4552-b29b-f2ea1dadaa0b",
+      "name": "Match Spread",
+      "points": 14.0,
+      "selections": [
+        {
+          "id": "5dadc433-3fb4-4c94-a051-af21712f47e8",
+          "name": "BC Vienna -14",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -14.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "886e99d4-3f8a-402b-b3b2-dd1473929344",
+          "name": "Traiskirchen +14",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 14.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6e5b78b0-f530-4e80-853b-4f6538684f84",
+          "name": "BC Vienna",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "ba2fedc5-6c6b-42c3-a9a2-8790105cfeb6",
+          "name": "Traiskirchen Lions",
+          "resource_uri": null
+        },
+        "id": "42dd9b22-ec34-43ea-98ad-99edfa107ae9",
+        "name": "Traiskirchen Lions vs BC Vienna",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "8ded8439-444e-49b8-9002-73e10d89b58e",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "4c0f1416-ef95-40bc-91b1-988e374d31b5",
+          "name": "BC Vienna",
+          "odds": {
+            "american": "-1650",
+            "decimal": "1.06",
+            "fractional": "2/33"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "859e850c-b587-45f5-86e2-0ad8e458385e",
+          "name": "Traiskirchen",
+          "odds": {
+            "american": "+900",
+            "decimal": "10.0",
+            "fractional": "9/1"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "33086f8f-de1c-4fa3-a7ec-02a509532a15",
+          "name": "Charlotte Hornets",
+          "resource_uri": "/basketball/teams/12"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "6807c4b5-71a2-4e55-aa3e-1e3905ee1c3f",
+          "name": "San Antonio Spurs",
+          "resource_uri": "/basketball/teams/25"
+        },
+        "id": "580d7a47-de48-47de-9b0b-288f68a2a183",
+        "name": "Charlotte Hornets @ San Antonio Spurs",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-20T00:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "2975d584-4b0a-4bdf-a364-2ba6258e4a6e",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "31d427b9-9086-496d-a8d0-5250f914175b",
+          "name": "CHA Hornets",
+          "odds": {
+            "american": "-152",
+            "decimal": "1.66",
+            "fractional": "25/38"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "333ef7b8-e40e-4fc8-95a6-35a70bbd6325",
+          "name": "SA Spurs",
+          "odds": {
+            "american": "+125",
+            "decimal": "2.25",
+            "fractional": "5/4"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "33086f8f-de1c-4fa3-a7ec-02a509532a15",
+          "name": "Charlotte Hornets",
+          "resource_uri": "/basketball/teams/12"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "6807c4b5-71a2-4e55-aa3e-1e3905ee1c3f",
+          "name": "San Antonio Spurs",
+          "resource_uri": "/basketball/teams/25"
+        },
+        "id": "580d7a47-de48-47de-9b0b-288f68a2a183",
+        "name": "Charlotte Hornets @ San Antonio Spurs",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-20T00:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "4d057ed7-89a2-4631-8b48-7844498b7f24",
+      "name": "Match Spread",
+      "points": 3.0,
+      "selections": [
+        {
+          "id": "c9bc6787-151c-4f61-a62b-380a99205dbc",
+          "name": "CHA Hornets -3",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -3.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "62a6714e-2524-4526-995e-76809549b4a3",
+          "name": "SA Spurs +3",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 3.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "33086f8f-de1c-4fa3-a7ec-02a509532a15",
+          "name": "Charlotte Hornets",
+          "resource_uri": "/basketball/teams/12"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "6807c4b5-71a2-4e55-aa3e-1e3905ee1c3f",
+          "name": "San Antonio Spurs",
+          "resource_uri": "/basketball/teams/25"
+        },
+        "id": "580d7a47-de48-47de-9b0b-288f68a2a183",
+        "name": "Charlotte Hornets @ San Antonio Spurs",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-20T00:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "6ce9c258-a9f5-4dc4-acaa-b409b2e71dce",
+      "name": "Total Points",
+      "points": 230.5,
+      "selections": [
+        {
+          "id": "e688ee90-1048-4319-a3c7-f5090da99633",
+          "name": "Over 230.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 230.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "2192bc76-9358-4101-adf6-f38fcb1757e5",
+          "name": "Under 230.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 230.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "af3d3f4b-62ae-4fad-8dfc-35336903e480",
+          "name": "Universo Treviso Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "58cf885f-05af-4920-87d1-6ee769cea963",
+          "name": "Aquila Basket Trento",
+          "resource_uri": null
+        },
+        "id": "584cba86-f75a-4510-9d75-128a0e8dc3af",
+        "name": "Aquila Basket Trento vs Universo Treviso Basket",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "ac1fbc50-b462-4ee7-8168-d9d74505ebcc",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "926aeab1-8a95-4198-874d-f27d8f046727",
+          "name": "Treviso",
+          "odds": {
+            "american": "+140",
+            "decimal": "2.4",
+            "fractional": "7/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "fe6269dc-6347-432d-bf23-5e0cb3ec381b",
+          "name": "AB Trento",
+          "odds": {
+            "american": "-160",
+            "decimal": "1.63",
+            "fractional": "5/8"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "af3d3f4b-62ae-4fad-8dfc-35336903e480",
+          "name": "Universo Treviso Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "58cf885f-05af-4920-87d1-6ee769cea963",
+          "name": "Aquila Basket Trento",
+          "resource_uri": null
+        },
+        "id": "584cba86-f75a-4510-9d75-128a0e8dc3af",
+        "name": "Aquila Basket Trento vs Universo Treviso Basket",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "d7f701c2-cef6-4abd-b1ce-f78203a72095",
+      "name": "Match Spread",
+      "points": -3.5,
+      "selections": [
+        {
+          "id": "d3e5dc0a-3b29-4eb1-8ab2-5b7c452486d5",
+          "name": "Treviso +3.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 3.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "3c28f3b3-5b9d-40c0-a774-d4082c944ce1",
+          "name": "AB Trento -3.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -3.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "1cfd0ad6-6071-4262-850b-23c201bf3d85",
+          "name": "Turk Telekom B.K.",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1cf754cd-d85e-4b49-94d7-db409529beea",
+          "name": "TBL",
+          "slug": "tbl"
+        },
+        "home_participant": {
+          "id": "88869b77-9ca4-4bfa-a8b3-f3894ee714e3",
+          "name": "Bursaspor",
+          "resource_uri": null
+        },
+        "id": "5ac7c89e-23b9-46a5-8107-e30802f0e5aa",
+        "name": "Bursaspor vs Turk Telekom B.K.",
+        "organization": {
+          "id": "ad2e3570-b963-4c72-b861-8fbffda86a58",
+          "name": "Turkey",
+          "slug": "turkey"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T15:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "02241225-91a8-4bbe-92a4-92c7a3cfefc2",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "113912f7-de29-4c06-917b-7767d3c7ec25",
+          "name": "Turk Telekom",
+          "odds": {
+            "american": "+230",
+            "decimal": "3.3",
+            "fractional": "23/10"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "f03452a5-abda-449d-8a41-cbb1883bffec",
+          "name": "Bursaspor",
+          "odds": {
+            "american": "-275",
+            "decimal": "1.36",
+            "fractional": "4/11"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "1cfd0ad6-6071-4262-850b-23c201bf3d85",
+          "name": "Turk Telekom B.K.",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1cf754cd-d85e-4b49-94d7-db409529beea",
+          "name": "TBL",
+          "slug": "tbl"
+        },
+        "home_participant": {
+          "id": "88869b77-9ca4-4bfa-a8b3-f3894ee714e3",
+          "name": "Bursaspor",
+          "resource_uri": null
+        },
+        "id": "5ac7c89e-23b9-46a5-8107-e30802f0e5aa",
+        "name": "Bursaspor vs Turk Telekom B.K.",
+        "organization": {
+          "id": "ad2e3570-b963-4c72-b861-8fbffda86a58",
+          "name": "Turkey",
+          "slug": "turkey"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T15:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "320f3c42-4b7b-4a5b-8f52-94dd54bac793",
+      "name": "Total Points",
+      "points": 155.0,
+      "selections": [
+        {
+          "id": "8e5f6c73-fbe2-400a-b952-646500d7a8b1",
+          "name": "Over 155",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 155.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "a1c261ff-1860-452e-b413-722e2c07df7b",
+          "name": "Under 155",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 155.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "1cfd0ad6-6071-4262-850b-23c201bf3d85",
+          "name": "Turk Telekom B.K.",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1cf754cd-d85e-4b49-94d7-db409529beea",
+          "name": "TBL",
+          "slug": "tbl"
+        },
+        "home_participant": {
+          "id": "88869b77-9ca4-4bfa-a8b3-f3894ee714e3",
+          "name": "Bursaspor",
+          "resource_uri": null
+        },
+        "id": "5ac7c89e-23b9-46a5-8107-e30802f0e5aa",
+        "name": "Bursaspor vs Turk Telekom B.K.",
+        "organization": {
+          "id": "ad2e3570-b963-4c72-b861-8fbffda86a58",
+          "name": "Turkey",
+          "slug": "turkey"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T15:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "b8385fc9-21e4-4895-b2b2-6d3bd16c835f",
+      "name": "Match Spread",
+      "points": -6.5,
+      "selections": [
+        {
+          "id": "d130ff1f-98ac-4bfb-a9bf-ebfb669b8bcc",
+          "name": "Turk Telekom +6.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 6.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "ceca7b32-9b44-4daf-9ef1-b8b335d1f7f8",
+          "name": "Bursaspor -6.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -6.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "2f546339-edd8-4e6f-a881-7d9548771585",
+          "name": "Utsunomiya Brex",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "f6d1706f-6541-4ccd-9a8d-c56afd18b968",
+          "name": "Osaka Evessa",
+          "resource_uri": null
+        },
+        "id": "694dbb62-0e09-4743-8dc2-94108b3955ae",
+        "name": "Osaka Evessa vs Utsunomiya Brex",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T06:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "4dca9db3-9a5f-4fc5-a320-af95725c45e3",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "aafb5d2c-f677-4482-a8ad-7e3cd0827ce0",
+          "name": "Utsunomiya Brex",
+          "odds": {
+            "american": "-195",
+            "decimal": "1.51",
+            "fractional": "20/39"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "73661bc3-8d58-40e9-bc7a-3213adffade3",
+          "name": "Osaka Evessa",
+          "odds": {
+            "american": "+165",
+            "decimal": "2.65",
+            "fractional": "33/20"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "2f546339-edd8-4e6f-a881-7d9548771585",
+          "name": "Utsunomiya Brex",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "f6d1706f-6541-4ccd-9a8d-c56afd18b968",
+          "name": "Osaka Evessa",
+          "resource_uri": null
+        },
+        "id": "694dbb62-0e09-4743-8dc2-94108b3955ae",
+        "name": "Osaka Evessa vs Utsunomiya Brex",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T06:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "b89a774a-51d6-415c-a692-7ff719326574",
+      "name": "Total Points",
+      "points": 150.5,
+      "selections": [
+        {
+          "id": "a3ab3a63-9102-4c50-b307-759be44a478e",
+          "name": "Over 150.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 150.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "3483f18e-8e51-42bf-937b-ff2d7a0c0061",
+          "name": "Under 150.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 150.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "2f546339-edd8-4e6f-a881-7d9548771585",
+          "name": "Utsunomiya Brex",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "f6d1706f-6541-4ccd-9a8d-c56afd18b968",
+          "name": "Osaka Evessa",
+          "resource_uri": null
+        },
+        "id": "694dbb62-0e09-4743-8dc2-94108b3955ae",
+        "name": "Osaka Evessa vs Utsunomiya Brex",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T06:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "c2d50ac1-8c97-4ef2-9ea4-e0403c89d041",
+      "name": "Match Spread",
+      "points": 4.5,
+      "selections": [
+        {
+          "id": "62b3782e-f1ae-4553-9104-154a908ecf33",
+          "name": "Utsunomiya Brex -4.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -4.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "fe4aca53-323f-4550-8fa9-bdb37866f5d8",
+          "name": "Osaka Evessa +4.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 4.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6a79f763-8f10-49f2-9d25-fc2f2f88bef4",
+          "name": "Basketball Academie Limburg",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f2528490-07c1-4b47-b281-227d1b99ac6e",
+          "name": "BNXT League",
+          "slug": "bnxt-league"
+        },
+        "home_participant": {
+          "id": "840f163d-9b3c-43ba-a55b-36a83f59ae85",
+          "name": "Yoast United",
+          "resource_uri": null
+        },
+        "id": "6fc362f2-0838-403e-9977-b9da1ec8a5de",
+        "name": "Yoast United vs Basketball Academie Limburg",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T14:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "660d9a82-cb9c-434d-b38b-b39faadf1765",
+      "name": "Match Spread",
+      "points": -7.5,
+      "selections": [
+        {
+          "id": "dfee9387-a71c-44ad-8559-7019f057109a",
+          "name": "Basketball Academie Limburg +7.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 7.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "56f0209d-6ca4-4e09-9be8-3266946badcb",
+          "name": "Yoast United -7.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -7.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6a79f763-8f10-49f2-9d25-fc2f2f88bef4",
+          "name": "Basketball Academie Limburg",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f2528490-07c1-4b47-b281-227d1b99ac6e",
+          "name": "BNXT League",
+          "slug": "bnxt-league"
+        },
+        "home_participant": {
+          "id": "840f163d-9b3c-43ba-a55b-36a83f59ae85",
+          "name": "Yoast United",
+          "resource_uri": null
+        },
+        "id": "6fc362f2-0838-403e-9977-b9da1ec8a5de",
+        "name": "Yoast United vs Basketball Academie Limburg",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T14:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "7820ccee-05dc-4556-9d00-0fd52212d3a8",
+      "name": "Total Points",
+      "points": 159.5,
+      "selections": [
+        {
+          "id": "55fd1798-aae1-4885-b9f5-2658e146c62a",
+          "name": "Over 159.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "d103bed0-30c5-4ab0-becf-cbaed44b91b6",
+          "name": "Under 159.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6a79f763-8f10-49f2-9d25-fc2f2f88bef4",
+          "name": "Basketball Academie Limburg",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f2528490-07c1-4b47-b281-227d1b99ac6e",
+          "name": "BNXT League",
+          "slug": "bnxt-league"
+        },
+        "home_participant": {
+          "id": "840f163d-9b3c-43ba-a55b-36a83f59ae85",
+          "name": "Yoast United",
+          "resource_uri": null
+        },
+        "id": "6fc362f2-0838-403e-9977-b9da1ec8a5de",
+        "name": "Yoast United vs Basketball Academie Limburg",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T14:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "e58956d0-a8f0-48ee-9101-979d70aab11b",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "7f0257c8-7490-4d05-9355-91b8eb477c30",
+          "name": "Basketball Academie Limburg",
+          "odds": {
+            "american": "+280",
+            "decimal": "3.8",
+            "fractional": "14/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "310aae4d-d350-43fb-8982-6f592330ce7f",
+          "name": "Yoast United",
+          "odds": {
+            "american": "-350",
+            "decimal": "1.29",
+            "fractional": "2/7"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "70587d4c-2c9e-4b7a-972e-a66144f40f40",
+          "name": "KK Gorica",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "ea9234a9-bc46-4621-82df-bde3e404c20d",
+          "name": "Premijer Liga",
+          "slug": "premijer-liga"
+        },
+        "home_participant": {
+          "id": "354d02c5-5ea1-412f-9c4c-eefa23001b07",
+          "name": "Kk Alkar Sinj",
+          "resource_uri": null
+        },
+        "id": "70e5ff57-4b08-4fdf-8762-c87607512d73",
+        "name": "Kk Alkar Sinj vs KK Gorica",
+        "organization": {
+          "id": "9f58d0a9-c345-4d17-8303-cd15b7b624cd",
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "434dffb0-008b-4304-9cd3-910fbaba0922",
+      "name": "Total Points",
+      "points": 158.5,
+      "selections": [
+        {
+          "id": "dbf04712-b31f-46d3-ab03-af4855f75ff5",
+          "name": "Over 158.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 158.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "687b6071-0ba3-4d31-9a1e-a8ec49b62cb9",
+          "name": "Under 158.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 158.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "70587d4c-2c9e-4b7a-972e-a66144f40f40",
+          "name": "KK Gorica",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "ea9234a9-bc46-4621-82df-bde3e404c20d",
+          "name": "Premijer Liga",
+          "slug": "premijer-liga"
+        },
+        "home_participant": {
+          "id": "354d02c5-5ea1-412f-9c4c-eefa23001b07",
+          "name": "Kk Alkar Sinj",
+          "resource_uri": null
+        },
+        "id": "70e5ff57-4b08-4fdf-8762-c87607512d73",
+        "name": "Kk Alkar Sinj vs KK Gorica",
+        "organization": {
+          "id": "9f58d0a9-c345-4d17-8303-cd15b7b624cd",
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "54385929-d595-456e-b392-4cad278998a5",
+      "name": "Match Spread",
+      "points": 3.5,
+      "selections": [
+        {
+          "id": "67626c5d-65dc-468c-8507-99f35005e80a",
+          "name": "KK Gorica -3.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -3.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "831e4cc3-0ff3-45a1-af3e-1cf523e80df0",
+          "name": "Kk Alkar Sinj +3.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 3.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "70587d4c-2c9e-4b7a-972e-a66144f40f40",
+          "name": "KK Gorica",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "ea9234a9-bc46-4621-82df-bde3e404c20d",
+          "name": "Premijer Liga",
+          "slug": "premijer-liga"
+        },
+        "home_participant": {
+          "id": "354d02c5-5ea1-412f-9c4c-eefa23001b07",
+          "name": "Kk Alkar Sinj",
+          "resource_uri": null
+        },
+        "id": "70e5ff57-4b08-4fdf-8762-c87607512d73",
+        "name": "Kk Alkar Sinj vs KK Gorica",
+        "organization": {
+          "id": "9f58d0a9-c345-4d17-8303-cd15b7b624cd",
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "bd8bc2e7-cb11-4c5d-b64a-e3ec9d9236d2",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "80e2fb7f-e3e3-4b56-aae0-0c5aee4dc85b",
+          "name": "KK Gorica",
+          "odds": {
+            "american": "-172",
+            "decimal": "1.58",
+            "fractional": "25/43"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "e1d0cf4f-198f-428c-b9fc-225d72b56e95",
+          "name": "Kk Alkar Sinj",
+          "odds": {
+            "american": "+140",
+            "decimal": "2.4",
+            "fractional": "7/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a0fd4368-a556-48dd-9186-53f89a4fcfcd",
+          "name": "Orlando Magic",
+          "resource_uri": "/basketball/teams/14"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "028058b5-d091-42b2-ba6a-8704331547b1",
+          "name": "Detroit Pistons",
+          "resource_uri": "/basketball/teams/8"
+        },
+        "id": "715c32c5-d433-4068-8d2e-cdc8cc003283",
+        "name": "Orlando Magic @ Detroit Pistons",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-19T23:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "a8bf01f9-c9c4-4073-b46f-a6dd7c3b7414",
+      "name": "Match Spread",
+      "points": -4.5,
+      "selections": [
+        {
+          "id": "3e61d571-5c28-41c6-a011-ec3040323ac3",
+          "name": "ORL Magic +4.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 4.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "7802ceb9-8223-4332-8e5b-ce71ddd697dc",
+          "name": "DET Pistons -4.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -4.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a0fd4368-a556-48dd-9186-53f89a4fcfcd",
+          "name": "Orlando Magic",
+          "resource_uri": "/basketball/teams/14"
+        },
+        "competition": {
+          "id": "ede1cc3d-f556-47fe-9a46-191cf3ec3383",
+          "name": "NBA",
+          "slug": "nba"
+        },
+        "home_participant": {
+          "id": "028058b5-d091-42b2-ba6a-8704331547b1",
+          "name": "Detroit Pistons",
+          "resource_uri": "/basketball/teams/8"
+        },
+        "id": "715c32c5-d433-4068-8d2e-cdc8cc003283",
+        "name": "Orlando Magic @ Detroit Pistons",
+        "organization": {
+          "id": "f1e562cf-1b50-49d0-8152-f90cb8f589c7",
+          "name": "United States",
+          "slug": "united-states"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-19T23:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "ec02f35b-38d1-475a-96c3-7e5c0ee2f7e4",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "0606b276-29a2-4b56-93c7-72e061fc31f2",
+          "name": "ORL Magic",
+          "odds": {
+            "american": "+148",
+            "decimal": "2.48",
+            "fractional": "37/25"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "48c73f68-e501-43e6-b7fd-e800bfe91e9f",
+          "name": "DET Pistons",
+          "odds": {
+            "american": "-182",
+            "decimal": "1.55",
+            "fractional": "50/91"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "610ffecc-8d67-4897-bdeb-92eb9ae3d649",
+          "name": "Trefl Sopot",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "04c151b5-53a6-4bba-b67c-8639ac8b4557",
+          "name": "MKS Start Lublin",
+          "resource_uri": null
+        },
+        "id": "74c620ea-619e-4876-b0e0-6f8d2d757a4c",
+        "name": "MKS Start Lublin vs Trefl Sopot",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T17:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "0eab98f3-5acf-4314-90c1-3d4d4934e137",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "72937e11-328d-4871-9252-ea5db8232712",
+          "name": "Trefl Sopot",
+          "odds": {
+            "american": "-172",
+            "decimal": "1.58",
+            "fractional": "25/43"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "f0d0a7d7-520c-4ff3-b62b-962f970a0743",
+          "name": "MKS Start Lublin",
+          "odds": {
+            "american": "+140",
+            "decimal": "2.4",
+            "fractional": "7/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "610ffecc-8d67-4897-bdeb-92eb9ae3d649",
+          "name": "Trefl Sopot",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "04c151b5-53a6-4bba-b67c-8639ac8b4557",
+          "name": "MKS Start Lublin",
+          "resource_uri": null
+        },
+        "id": "74c620ea-619e-4876-b0e0-6f8d2d757a4c",
+        "name": "MKS Start Lublin vs Trefl Sopot",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T17:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "37796acb-dc47-417f-8501-1ef8d88dd77c",
+      "name": "Total Points",
+      "points": 160.0,
+      "selections": [
+        {
+          "id": "07b1b370-ac1d-4b7e-8826-4de027ac5990",
+          "name": "Over 160",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 160.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "8fdd52ed-36e2-4029-aca0-6d4d3caada69",
+          "name": "Under 160",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 160.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "610ffecc-8d67-4897-bdeb-92eb9ae3d649",
+          "name": "Trefl Sopot",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "04c151b5-53a6-4bba-b67c-8639ac8b4557",
+          "name": "MKS Start Lublin",
+          "resource_uri": null
+        },
+        "id": "74c620ea-619e-4876-b0e0-6f8d2d757a4c",
+        "name": "MKS Start Lublin vs Trefl Sopot",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T17:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "d4fbe893-f1ec-4b9d-be6c-2ac42b5fca1e",
+      "name": "Match Spread",
+      "points": 4.0,
+      "selections": [
+        {
+          "id": "370dbdec-3bd9-4e28-b9a2-bff7f286a950",
+          "name": "Trefl Sopot -4",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -4.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "0bb7546b-02b5-4b77-88ec-7da1e384aebb",
+          "name": "MKS Start Lublin +4",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 4.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "aedbbc45-e239-4127-9cc6-b490b104250c",
+          "name": "Niigata Albirex BB",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "58f36bf9-74e8-4cc4-8863-07ecdcdac0b6",
+          "name": "Shiga Lakestars",
+          "resource_uri": null
+        },
+        "id": "755b7913-1de1-4aea-93f2-e4ae2f2318b1",
+        "name": "Shiga Lakestars vs Niigata Albirex BB",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T05:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "1bcb926f-a266-461c-833d-9e9fb8bc567b",
+      "name": "Total Points",
+      "points": 156.5,
+      "selections": [
+        {
+          "id": "f5266a67-5c7b-41ee-9f0b-a906226776c9",
+          "name": "Over 156.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 156.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "b221105c-ce90-4ea2-ba8c-89e2e1ce8684",
+          "name": "Under 156.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 156.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "aedbbc45-e239-4127-9cc6-b490b104250c",
+          "name": "Niigata Albirex BB",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "58f36bf9-74e8-4cc4-8863-07ecdcdac0b6",
+          "name": "Shiga Lakestars",
+          "resource_uri": null
+        },
+        "id": "755b7913-1de1-4aea-93f2-e4ae2f2318b1",
+        "name": "Shiga Lakestars vs Niigata Albirex BB",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T05:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "5dccf9e0-8ed0-4a0d-b526-7628a21fdc8f",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "41e04da5-e31c-4532-9a2e-0e0b6e5035d1",
+          "name": "Niigata Albirex",
+          "odds": {
+            "american": "+350",
+            "decimal": "4.5",
+            "fractional": "7/2"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "2a76d037-76fd-4624-8746-91f6b8650e1f",
+          "name": "Shiga Lakestars",
+          "odds": {
+            "american": "-450",
+            "decimal": "1.22",
+            "fractional": "2/9"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "aedbbc45-e239-4127-9cc6-b490b104250c",
+          "name": "Niigata Albirex BB",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "58f36bf9-74e8-4cc4-8863-07ecdcdac0b6",
+          "name": "Shiga Lakestars",
+          "resource_uri": null
+        },
+        "id": "755b7913-1de1-4aea-93f2-e4ae2f2318b1",
+        "name": "Shiga Lakestars vs Niigata Albirex BB",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T05:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "94c0b68f-8225-41e9-8fc2-58d7b7ddf6ab",
+      "name": "Match Spread",
+      "points": -8.5,
+      "selections": [
+        {
+          "id": "913bcf5a-98c2-4138-a622-48ed23973654",
+          "name": "Niigata Albirex +8.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 8.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "bb861220-40af-4842-8f0d-ce1f5341b4af",
+          "name": "Shiga Lakestars -8.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -8.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a82108cb-ddcb-4212-89ae-727fa9cab110",
+          "name": "Ironi Ness Ziona",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "28e5d10e-d608-4c7f-b79a-84c1ea986a27",
+          "name": "Super League",
+          "slug": "super-league"
+        },
+        "home_participant": {
+          "id": "75295702-199a-46fd-b59b-8b7c775cd344",
+          "name": "Maccabi Tel-Aviv",
+          "resource_uri": null
+        },
+        "id": "798fc16f-e66b-4e58-9466-4739c266cb5d",
+        "name": "Maccabi Tel-Aviv vs Ironi Ness Ziona",
+        "organization": {
+          "id": "d06ac607-fce6-47bf-af37-4f73b3d82466",
+          "name": "Israel",
+          "slug": "israel"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:55:00Z",
+        "status": "pre_game"
+      },
+      "id": "91780746-53c4-4b61-801d-82a123677a68",
+      "name": "Total Points",
+      "points": 166.5,
+      "selections": [
+        {
+          "id": "600b859b-72d4-4131-b82a-3a65146c3a66",
+          "name": "Over 166.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 166.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "971eff46-4830-449a-9a76-4acb2adce3eb",
+          "name": "Under 166.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 166.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a82108cb-ddcb-4212-89ae-727fa9cab110",
+          "name": "Ironi Ness Ziona",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "28e5d10e-d608-4c7f-b79a-84c1ea986a27",
+          "name": "Super League",
+          "slug": "super-league"
+        },
+        "home_participant": {
+          "id": "75295702-199a-46fd-b59b-8b7c775cd344",
+          "name": "Maccabi Tel-Aviv",
+          "resource_uri": null
+        },
+        "id": "798fc16f-e66b-4e58-9466-4739c266cb5d",
+        "name": "Maccabi Tel-Aviv vs Ironi Ness Ziona",
+        "organization": {
+          "id": "d06ac607-fce6-47bf-af37-4f73b3d82466",
+          "name": "Israel",
+          "slug": "israel"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:55:00Z",
+        "status": "pre_game"
+      },
+      "id": "aaf4e622-d1d2-41ab-8a02-32f5c793d5b3",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "dd562e48-8493-4521-9a3c-e7fa10f2bd46",
+          "name": "Ironi Ness Ziona",
+          "odds": {
+            "american": "+800",
+            "decimal": "9.0",
+            "fractional": "8/1"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "681f28a1-05b6-4fca-942c-2892e23e2f2f",
+          "name": "Maccabi Tel-Aviv",
+          "odds": {
+            "american": "-1350",
+            "decimal": "1.07",
+            "fractional": "2/27"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "a82108cb-ddcb-4212-89ae-727fa9cab110",
+          "name": "Ironi Ness Ziona",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "28e5d10e-d608-4c7f-b79a-84c1ea986a27",
+          "name": "Super League",
+          "slug": "super-league"
+        },
+        "home_participant": {
+          "id": "75295702-199a-46fd-b59b-8b7c775cd344",
+          "name": "Maccabi Tel-Aviv",
+          "resource_uri": null
+        },
+        "id": "798fc16f-e66b-4e58-9466-4739c266cb5d",
+        "name": "Maccabi Tel-Aviv vs Ironi Ness Ziona",
+        "organization": {
+          "id": "d06ac607-fce6-47bf-af37-4f73b3d82466",
+          "name": "Israel",
+          "slug": "israel"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:55:00Z",
+        "status": "pre_game"
+      },
+      "id": "f8d311c8-ce78-4dfd-b045-a5fbabcf1a59",
+      "name": "Match Spread",
+      "points": -13.5,
+      "selections": [
+        {
+          "id": "0173b531-f1e9-4eed-9ad9-4a3ba61bd34b",
+          "name": "Ironi Ness Ziona +13.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 13.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "e85103a0-2d03-4edd-a7fc-d3b816de29e7",
+          "name": "Maccabi Tel-Aviv -13.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -13.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "fc89eb4f-b830-493c-8f18-272a9c7927ba",
+          "name": "KK Dinamo Zagreb",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "ea9234a9-bc46-4621-82df-bde3e404c20d",
+          "name": "Premijer Liga",
+          "slug": "premijer-liga"
+        },
+        "home_participant": {
+          "id": "3261e19c-ed71-4d54-803d-6a757c4ba95c",
+          "name": "GKK Sibenka",
+          "resource_uri": null
+        },
+        "id": "7e1083f4-6d11-4a29-9adb-22d0786d228f",
+        "name": "GKK Sibenka vs KK Dinamo Zagreb",
+        "organization": {
+          "id": "9f58d0a9-c345-4d17-8303-cd15b7b624cd",
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "39aeb224-eb98-4736-bbb7-e3a1d1b9f715",
+      "name": "Total Points",
+      "points": 159.5,
+      "selections": [
+        {
+          "id": "723e1336-7609-424b-856c-df93ea626310",
+          "name": "Over 159.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "1bbeb50a-f26d-4b71-9cd4-b96137a1e42d",
+          "name": "Under 159.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "fc89eb4f-b830-493c-8f18-272a9c7927ba",
+          "name": "KK Dinamo Zagreb",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "ea9234a9-bc46-4621-82df-bde3e404c20d",
+          "name": "Premijer Liga",
+          "slug": "premijer-liga"
+        },
+        "home_participant": {
+          "id": "3261e19c-ed71-4d54-803d-6a757c4ba95c",
+          "name": "GKK Sibenka",
+          "resource_uri": null
+        },
+        "id": "7e1083f4-6d11-4a29-9adb-22d0786d228f",
+        "name": "GKK Sibenka vs KK Dinamo Zagreb",
+        "organization": {
+          "id": "9f58d0a9-c345-4d17-8303-cd15b7b624cd",
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "64940f5d-b084-4adc-a513-0a0f25909df6",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "ed42c706-4f01-4933-a0ab-c3b3db807a84",
+          "name": "KK Dinamo Zagreb",
+          "odds": {
+            "american": "+130",
+            "decimal": "2.3",
+            "fractional": "13/10"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "c8502514-99d9-4967-9a2f-131534b94859",
+          "name": "GKK Sibenka",
+          "odds": {
+            "american": "-159",
+            "decimal": "1.63",
+            "fractional": "100/159"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "fc89eb4f-b830-493c-8f18-272a9c7927ba",
+          "name": "KK Dinamo Zagreb",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "ea9234a9-bc46-4621-82df-bde3e404c20d",
+          "name": "Premijer Liga",
+          "slug": "premijer-liga"
+        },
+        "home_participant": {
+          "id": "3261e19c-ed71-4d54-803d-6a757c4ba95c",
+          "name": "GKK Sibenka",
+          "resource_uri": null
+        },
+        "id": "7e1083f4-6d11-4a29-9adb-22d0786d228f",
+        "name": "GKK Sibenka vs KK Dinamo Zagreb",
+        "organization": {
+          "id": "9f58d0a9-c345-4d17-8303-cd15b7b624cd",
+          "name": "Croatia",
+          "slug": "croatia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T16:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "8e689b1f-1c9b-4716-b134-33460e3bb23b",
+      "name": "Match Spread",
+      "points": -3.5,
+      "selections": [
+        {
+          "id": "962dddd3-8a0f-4674-8e9e-aa7e16497089",
+          "name": "KK Dinamo Zagreb +3.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 3.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "bcaa582d-4b6d-48df-9179-f851b7166a1d",
+          "name": "GKK Sibenka -3.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -3.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "ee100feb-db07-44cf-80be-477990aae21c",
+          "name": "Ammerud Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e7b15ae7-071d-4882-aac2-10d802f8080c",
+          "name": "BLNO",
+          "slug": "blno"
+        },
+        "home_participant": {
+          "id": "88c5f17c-8d0c-439e-b0f4-467773446300",
+          "name": "Troemso Storm",
+          "resource_uri": null
+        },
+        "id": "7ef2d0e2-a5d8-48cf-982d-c2c1fb344fc8",
+        "name": "Troemso Storm vs Ammerud Basket",
+        "organization": {
+          "id": "496e3a3f-dddb-4357-bf77-3791de01d588",
+          "name": "Norway",
+          "slug": "norway"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T14:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "4b412256-bb0e-4d67-8e86-f6995e0f431e",
+      "name": "Match Spread",
+      "points": -21.0,
+      "selections": [
+        {
+          "id": "b5db4c0c-8584-424c-bbf2-d4b895d0a3d9",
+          "name": "Ammerud Basket +21",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 21.0,
+          "status": "closed",
+          "type": "away_spread"
+        },
+        {
+          "id": "bb1824c5-2b6d-4645-a323-9bb8eb19928b",
+          "name": "Troemso Storm -21",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -21.0,
+          "status": "closed",
+          "type": "home_spread"
+        }
+      ],
+      "status": "closed",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "ee100feb-db07-44cf-80be-477990aae21c",
+          "name": "Ammerud Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e7b15ae7-071d-4882-aac2-10d802f8080c",
+          "name": "BLNO",
+          "slug": "blno"
+        },
+        "home_participant": {
+          "id": "88c5f17c-8d0c-439e-b0f4-467773446300",
+          "name": "Troemso Storm",
+          "resource_uri": null
+        },
+        "id": "7ef2d0e2-a5d8-48cf-982d-c2c1fb344fc8",
+        "name": "Troemso Storm vs Ammerud Basket",
+        "organization": {
+          "id": "496e3a3f-dddb-4357-bf77-3791de01d588",
+          "name": "Norway",
+          "slug": "norway"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T14:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "6bad8541-aa4e-42c5-bcae-6f8d44b0f36f",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "c2d6c9d5-63a4-4218-8e2f-764477762822",
+          "name": "Ammerud Basket",
+          "odds": {
+            "american": "+2200",
+            "decimal": "23.0",
+            "fractional": "22/1"
+          },
+          "points": null,
+          "status": "closed",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "3597b7eb-355c-408f-97ac-6a1bb42d3d07",
+          "name": "Troemso Storm",
+          "odds": {
+            "american": "-20000",
+            "decimal": "1.01",
+            "fractional": "1/200"
+          },
+          "points": null,
+          "status": "closed",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "closed",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "ee100feb-db07-44cf-80be-477990aae21c",
+          "name": "Ammerud Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e7b15ae7-071d-4882-aac2-10d802f8080c",
+          "name": "BLNO",
+          "slug": "blno"
+        },
+        "home_participant": {
+          "id": "88c5f17c-8d0c-439e-b0f4-467773446300",
+          "name": "Troemso Storm",
+          "resource_uri": null
+        },
+        "id": "7ef2d0e2-a5d8-48cf-982d-c2c1fb344fc8",
+        "name": "Troemso Storm vs Ammerud Basket",
+        "organization": {
+          "id": "496e3a3f-dddb-4357-bf77-3791de01d588",
+          "name": "Norway",
+          "slug": "norway"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T14:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "87a8bfe5-102a-4908-b8ad-b5a16bd45922",
+      "name": "Total Points",
+      "points": 151.5,
+      "selections": [
+        {
+          "id": "b4696de5-53ca-4e04-b9e0-ae6e766778f3",
+          "name": "Over 151.5",
+          "odds": {
+            "american": "-120",
+            "decimal": "1.83",
+            "fractional": "5/6"
+          },
+          "points": 151.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "67c32c11-4d8d-48cc-81dc-a03beac81ada",
+          "name": "Under 151.5",
+          "odds": {
+            "american": "Even",
+            "decimal": "2.0",
+            "fractional": "1/1"
+          },
+          "points": 151.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "10c5bf59-4cff-4f4f-bdc3-91086ea4536c",
+          "name": "Tenerife",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3672e30e-44ec-4031-b68f-8227804c3853",
+          "name": "Liga ACB",
+          "slug": "liga-acb"
+        },
+        "home_participant": {
+          "id": "84c23be0-79cd-41f6-b24a-6834a3de2bd0",
+          "name": "Baskonia Vitoria-Gasteiz",
+          "resource_uri": null
+        },
+        "id": "7efa0a24-371c-4cc2-ad20-92cf30d589b8",
+        "name": "Baskonia Vitoria-Gasteiz vs Tenerife",
+        "organization": {
+          "id": "1dc4a2b8-c5b9-4264-9351-1b4d0f244a11",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T16:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "03081793-1dbc-4762-927c-119d946244e0",
+      "name": "Total Points",
+      "points": 163.5,
+      "selections": [
+        {
+          "id": "aaf8b50a-35ca-40cb-b6fa-8c7c821cb858",
+          "name": "Over 163.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 163.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "71b063c1-75c5-461c-86e0-ba26c4967276",
+          "name": "Under 163.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 163.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "10c5bf59-4cff-4f4f-bdc3-91086ea4536c",
+          "name": "Tenerife",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3672e30e-44ec-4031-b68f-8227804c3853",
+          "name": "Liga ACB",
+          "slug": "liga-acb"
+        },
+        "home_participant": {
+          "id": "84c23be0-79cd-41f6-b24a-6834a3de2bd0",
+          "name": "Baskonia Vitoria-Gasteiz",
+          "resource_uri": null
+        },
+        "id": "7efa0a24-371c-4cc2-ad20-92cf30d589b8",
+        "name": "Baskonia Vitoria-Gasteiz vs Tenerife",
+        "organization": {
+          "id": "1dc4a2b8-c5b9-4264-9351-1b4d0f244a11",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T16:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "466ef10c-7382-4170-9aae-db54d1da18a4",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "460ea128-1eab-485a-8b90-bee74b25bc77",
+          "name": "Tenerife",
+          "odds": {
+            "american": "+153",
+            "decimal": "2.53",
+            "fractional": "153/100"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "7968e4b3-289c-4f95-ba6b-1d620b643eec",
+          "name": "Baskonia V-G",
+          "odds": {
+            "american": "-175",
+            "decimal": "1.57",
+            "fractional": "4/7"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "10c5bf59-4cff-4f4f-bdc3-91086ea4536c",
+          "name": "Tenerife",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "3672e30e-44ec-4031-b68f-8227804c3853",
+          "name": "Liga ACB",
+          "slug": "liga-acb"
+        },
+        "home_participant": {
+          "id": "84c23be0-79cd-41f6-b24a-6834a3de2bd0",
+          "name": "Baskonia Vitoria-Gasteiz",
+          "resource_uri": null
+        },
+        "id": "7efa0a24-371c-4cc2-ad20-92cf30d589b8",
+        "name": "Baskonia Vitoria-Gasteiz vs Tenerife",
+        "organization": {
+          "id": "1dc4a2b8-c5b9-4264-9351-1b4d0f244a11",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T16:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "b5dee578-ee23-4045-a966-97adc42b0d17",
+      "name": "Match Spread",
+      "points": -4.0,
+      "selections": [
+        {
+          "id": "71569cff-344c-47ce-a83f-3c9e1f8c9e69",
+          "name": "Tenerife +4",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 4.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "b8e73bd9-abc5-4670-b858-cc55844bfcd2",
+          "name": "Baskonia V-G -4",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": -4.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "1e5fea8b-d82f-4781-9597-eb71431c6125",
+          "name": "Brisbane Bullets",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "196e291c-d9a3-445b-a2ca-cf281b0d2a7e",
+          "name": "NBL",
+          "slug": "nbl"
+        },
+        "home_participant": {
+          "id": "4b06ce42-1074-4f2d-ba74-e2f2b76142d6",
+          "name": "Tasmania Jackjumpers",
+          "resource_uri": null
+        },
+        "id": "8714a1bf-7d6a-4178-840f-f82fb79aa4ba",
+        "name": "Tasmania Jackjumpers vs Brisbane Bullets",
+        "organization": {
+          "id": "a05e0442-09b2-4f5c-9797-e88b9c85bd9b",
+          "name": "Australia",
+          "slug": "australia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T03:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "0735a528-4dd0-44e9-ac20-6bd49d53cfc6",
+      "name": "Total Points",
+      "points": 163.0,
+      "selections": [
+        {
+          "id": "5a976f5c-796f-409c-b3af-6fa3f7d8a673",
+          "name": "Over 163",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 163.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "8017a0da-d0df-49fa-9f92-020e5b62206e",
+          "name": "Under 163",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 163.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "1e5fea8b-d82f-4781-9597-eb71431c6125",
+          "name": "Brisbane Bullets",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "196e291c-d9a3-445b-a2ca-cf281b0d2a7e",
+          "name": "NBL",
+          "slug": "nbl"
+        },
+        "home_participant": {
+          "id": "4b06ce42-1074-4f2d-ba74-e2f2b76142d6",
+          "name": "Tasmania Jackjumpers",
+          "resource_uri": null
+        },
+        "id": "8714a1bf-7d6a-4178-840f-f82fb79aa4ba",
+        "name": "Tasmania Jackjumpers vs Brisbane Bullets",
+        "organization": {
+          "id": "a05e0442-09b2-4f5c-9797-e88b9c85bd9b",
+          "name": "Australia",
+          "slug": "australia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T03:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "590066df-cbf6-4903-af37-4f81e90ec102",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "84975796-d785-4da8-9d6d-d56839294ba2",
+          "name": "Brisbane Bullets",
+          "odds": {
+            "american": "-135",
+            "decimal": "1.74",
+            "fractional": "20/27"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "9e712d48-6535-4a18-beba-2e85cbceacad",
+          "name": "Tasmania Jackjumpers",
+          "odds": {
+            "american": "+115",
+            "decimal": "2.15",
+            "fractional": "23/20"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "1e5fea8b-d82f-4781-9597-eb71431c6125",
+          "name": "Brisbane Bullets",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "196e291c-d9a3-445b-a2ca-cf281b0d2a7e",
+          "name": "NBL",
+          "slug": "nbl"
+        },
+        "home_participant": {
+          "id": "4b06ce42-1074-4f2d-ba74-e2f2b76142d6",
+          "name": "Tasmania Jackjumpers",
+          "resource_uri": null
+        },
+        "id": "8714a1bf-7d6a-4178-840f-f82fb79aa4ba",
+        "name": "Tasmania Jackjumpers vs Brisbane Bullets",
+        "organization": {
+          "id": "a05e0442-09b2-4f5c-9797-e88b9c85bd9b",
+          "name": "Australia",
+          "slug": "australia"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T03:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "ccae84f3-e480-4fb0-a6b3-77ca0631d793",
+      "name": "Match Spread",
+      "points": 2.0,
+      "selections": [
+        {
+          "id": "e12fa418-9a48-461c-98d6-ff5a646a8897",
+          "name": "Brisbane Bullets -2",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -2.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "7882d67b-615f-4c9b-a141-14af90ce4998",
+          "name": "Tasmania Jackjumpers +2",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 2.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "81750231-351f-43d1-a2bb-1834e9a8aa8a",
+          "name": "Ibaraki Robots",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "387e2825-2a0b-4855-aaaa-a8fcb1b39d87",
+          "name": "Toyama Grouses",
+          "resource_uri": null
+        },
+        "id": "89278e1b-33d2-4abe-ac3c-75dccac5dc83",
+        "name": "Toyama Grouses vs Ibaraki Robots",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T04:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "38ae1148-64cc-462f-8dbd-3663f8ffdbf6",
+      "name": "Match Spread",
+      "points": -4.5,
+      "selections": [
+        {
+          "id": "ca4e8c5e-1167-4d4c-8e09-70640c66b1c3",
+          "name": "Ibaraki Robots +4.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 4.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "5f26d8ad-a194-4665-b0e8-942128a489cd",
+          "name": "Toyama Grouses -4.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -4.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "81750231-351f-43d1-a2bb-1834e9a8aa8a",
+          "name": "Ibaraki Robots",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "387e2825-2a0b-4855-aaaa-a8fcb1b39d87",
+          "name": "Toyama Grouses",
+          "resource_uri": null
+        },
+        "id": "89278e1b-33d2-4abe-ac3c-75dccac5dc83",
+        "name": "Toyama Grouses vs Ibaraki Robots",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T04:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "3d8db2e0-80ce-4d95-af27-8ab5cd11f304",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "ead27445-66d2-40b8-ac0e-0fd71057c361",
+          "name": "Ibaraki Robots",
+          "odds": {
+            "american": "+160",
+            "decimal": "2.6",
+            "fractional": "8/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "ae021402-0b5a-494c-8553-7386853cb74d",
+          "name": "Toyama Grouses",
+          "odds": {
+            "american": "-190",
+            "decimal": "1.53",
+            "fractional": "10/19"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "81750231-351f-43d1-a2bb-1834e9a8aa8a",
+          "name": "Ibaraki Robots",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "04c12780-c4ed-48d0-b758-41d865ae0ba1",
+          "name": "B.League",
+          "slug": "b-league"
+        },
+        "home_participant": {
+          "id": "387e2825-2a0b-4855-aaaa-a8fcb1b39d87",
+          "name": "Toyama Grouses",
+          "resource_uri": null
+        },
+        "id": "89278e1b-33d2-4abe-ac3c-75dccac5dc83",
+        "name": "Toyama Grouses vs Ibaraki Robots",
+        "organization": {
+          "id": "175a73cf-2063-46c1-9df9-d2c5e035b824",
+          "name": "Japan",
+          "slug": "japan"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T04:05:00Z",
+        "status": "pre_game"
+      },
+      "id": "5e7d2e59-d612-4c0c-a8da-044a8e7733b9",
+      "name": "Total Points",
+      "points": 163.5,
+      "selections": [
+        {
+          "id": "f0f8ad91-11d5-4851-a514-f918708b0b28",
+          "name": "Over 163.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 163.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "7ff5353e-e54b-4e26-b8bf-ae904703c5be",
+          "name": "Under 163.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 163.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "7e1af1ec-684b-4ce3-8a03-e36df850910a",
+          "name": "Igokea Aleksandrovac",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "b2caa73e-fbb3-4c9e-bf81-1cda7edd6ec7",
+          "name": "Adriatic League",
+          "slug": "adriatic-league"
+        },
+        "home_participant": {
+          "id": "6003738e-c4c0-4211-8ec5-bd57b9bef199",
+          "name": "KK Mega Basket Belgrade",
+          "resource_uri": null
+        },
+        "id": "8e318727-efb7-472d-96f7-a587c1454df2",
+        "name": "KK Mega Basket Belgrade vs Igokea Aleksandrovac",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T10:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "1418b7b7-98a0-4e5f-957c-deed97fe057e",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "5ebae10c-9ac3-4251-9ecf-35da442c5425",
+          "name": "Igokea Aleksandrovac",
+          "odds": {
+            "american": "-139",
+            "decimal": "1.72",
+            "fractional": "100/139"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "89af62f6-6ac0-4886-b3be-786476bf7b04",
+          "name": "KK Mega Basket Belgrade",
+          "odds": {
+            "american": "+115",
+            "decimal": "2.15",
+            "fractional": "23/20"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "7e1af1ec-684b-4ce3-8a03-e36df850910a",
+          "name": "Igokea Aleksandrovac",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "b2caa73e-fbb3-4c9e-bf81-1cda7edd6ec7",
+          "name": "Adriatic League",
+          "slug": "adriatic-league"
+        },
+        "home_participant": {
+          "id": "6003738e-c4c0-4211-8ec5-bd57b9bef199",
+          "name": "KK Mega Basket Belgrade",
+          "resource_uri": null
+        },
+        "id": "8e318727-efb7-472d-96f7-a587c1454df2",
+        "name": "KK Mega Basket Belgrade vs Igokea Aleksandrovac",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T10:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "95428f54-52c1-4d0c-b34f-39a0fc0cc536",
+      "name": "Match Spread",
+      "points": 2.5,
+      "selections": [
+        {
+          "id": "dbc03c23-c443-43cb-ac50-96c5f6696b2d",
+          "name": "Igokea Aleksandrovac -2.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -2.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "63bb38c6-50ec-414a-864e-24adbc5c5bc6",
+          "name": "KK Mega Basket Belgrade +2.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 2.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "7e1af1ec-684b-4ce3-8a03-e36df850910a",
+          "name": "Igokea Aleksandrovac",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "b2caa73e-fbb3-4c9e-bf81-1cda7edd6ec7",
+          "name": "Adriatic League",
+          "slug": "adriatic-league"
+        },
+        "home_participant": {
+          "id": "6003738e-c4c0-4211-8ec5-bd57b9bef199",
+          "name": "KK Mega Basket Belgrade",
+          "resource_uri": null
+        },
+        "id": "8e318727-efb7-472d-96f7-a587c1454df2",
+        "name": "KK Mega Basket Belgrade vs Igokea Aleksandrovac",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T10:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "f813e51b-aba8-44ef-bdab-60535e40d491",
+      "name": "Total Points",
+      "points": 159.5,
+      "selections": [
+        {
+          "id": "c6784dca-a94e-4635-8aa7-003e9391589d",
+          "name": "Over 159.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "3d38d1bd-ecc1-425a-97a0-6ad6735dde01",
+          "name": "Under 159.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 159.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6551300c-8f40-475e-a36a-db77bbdf8112",
+          "name": "BBC Nord Dragonz",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "453c073d-1e68-4e41-98bc-c42692ed5002",
+          "name": "SKN St. Polten Basketball",
+          "resource_uri": null
+        },
+        "id": "9332e839-df3a-4597-9018-8b8d023db900",
+        "name": "SKN St. Polten Basketball vs BBC Nord Dragonz",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "14360902-fbcf-4f8c-ae11-74860e949be9",
+      "name": "Match Spread",
+      "points": -14.5,
+      "selections": [
+        {
+          "id": "3592237b-eff6-4fc4-b951-411acf7f8b3c",
+          "name": "Nord +14.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 14.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "846ce045-8d88-45eb-80b3-f9304902bbce",
+          "name": "SKN St. Polten -14.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -14.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6551300c-8f40-475e-a36a-db77bbdf8112",
+          "name": "BBC Nord Dragonz",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "453c073d-1e68-4e41-98bc-c42692ed5002",
+          "name": "SKN St. Polten Basketball",
+          "resource_uri": null
+        },
+        "id": "9332e839-df3a-4597-9018-8b8d023db900",
+        "name": "SKN St. Polten Basketball vs BBC Nord Dragonz",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "3ed4044c-7520-401d-aa95-2518c6e79e53",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "2aa72c85-c84a-4adf-ba2f-f6589f0617a9",
+          "name": "Nord",
+          "odds": {
+            "american": "+950",
+            "decimal": "10.5",
+            "fractional": "19/2"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "88356474-7c0f-40dc-8bf4-64a033fd2908",
+          "name": "SKN St. Polten",
+          "odds": {
+            "american": "-1800",
+            "decimal": "1.06",
+            "fractional": "1/18"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "6551300c-8f40-475e-a36a-db77bbdf8112",
+          "name": "BBC Nord Dragonz",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "07a34e0e-adce-4472-ba62-f56c35ad6ec8",
+          "name": "Superliga",
+          "slug": "superliga"
+        },
+        "home_participant": {
+          "id": "453c073d-1e68-4e41-98bc-c42692ed5002",
+          "name": "SKN St. Polten Basketball",
+          "resource_uri": null
+        },
+        "id": "9332e839-df3a-4597-9018-8b8d023db900",
+        "name": "SKN St. Polten Basketball vs BBC Nord Dragonz",
+        "organization": {
+          "id": "92c50c7c-1a50-481a-a2d5-f20f6784fa1b",
+          "name": "Austria",
+          "slug": "austria"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "8d84e9f1-73cc-4bbb-986c-b2bc8c49ede2",
+      "name": "Total Points",
+      "points": 151.0,
+      "selections": [
+        {
+          "id": "7e152a54-01b4-4c5f-ae5d-7962e98320e5",
+          "name": "Over 151",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 151.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "4e89df90-ea58-4a3e-af62-a8954fbacb54",
+          "name": "Under 151",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 151.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "95b4a7ec-15dd-4f30-8db7-bae2ed6a7b26",
+          "name": "Pallacanestro Varese",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "aa67ce5e-a1d4-4d11-8fd1-3b5ec7366702",
+          "name": "Pallacanestro Brescia",
+          "resource_uri": null
+        },
+        "id": "9770a3d3-d44e-4bf8-b702-f94a7156d796",
+        "name": "Pallacanestro Brescia vs Pallacanestro Varese",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T18:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "060c68c4-fb4e-4f87-b9b9-67fe2daafd87",
+      "name": "Total Points",
+      "points": 166.5,
+      "selections": [
+        {
+          "id": "fcdb9b91-6701-437d-ba01-cd55cc495455",
+          "name": "Over 166.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 166.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "71fe1157-79ff-48f0-83fa-eb82e04ca5b4",
+          "name": "Under 166.5",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 166.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "95b4a7ec-15dd-4f30-8db7-bae2ed6a7b26",
+          "name": "Pallacanestro Varese",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "aa67ce5e-a1d4-4d11-8fd1-3b5ec7366702",
+          "name": "Pallacanestro Brescia",
+          "resource_uri": null
+        },
+        "id": "9770a3d3-d44e-4bf8-b702-f94a7156d796",
+        "name": "Pallacanestro Brescia vs Pallacanestro Varese",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T18:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "3a8d9cdc-1f5f-4c7c-8050-d168bc20d09e",
+      "name": "Match Spread",
+      "points": -9.5,
+      "selections": [
+        {
+          "id": "93bc6cfa-3ec9-480b-8927-7aee97434b47",
+          "name": "Varese +9.5",
+          "odds": {
+            "american": "-105",
+            "decimal": "1.95",
+            "fractional": "20/21"
+          },
+          "points": 9.5,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "d5b1edbe-f496-41c9-a500-b7140a257861",
+          "name": "Brescia -9.5",
+          "odds": {
+            "american": "-114",
+            "decimal": "1.88",
+            "fractional": "50/57"
+          },
+          "points": -9.5,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "95b4a7ec-15dd-4f30-8db7-bae2ed6a7b26",
+          "name": "Pallacanestro Varese",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "c84343a0-2a76-46da-b14c-4926197c3a96",
+          "name": "Serie A",
+          "slug": "serie-a"
+        },
+        "home_participant": {
+          "id": "aa67ce5e-a1d4-4d11-8fd1-3b5ec7366702",
+          "name": "Pallacanestro Brescia",
+          "resource_uri": null
+        },
+        "id": "9770a3d3-d44e-4bf8-b702-f94a7156d796",
+        "name": "Pallacanestro Brescia vs Pallacanestro Varese",
+        "organization": {
+          "id": "49241420-f909-46b1-a065-3bedbd5b895d",
+          "name": "Italy",
+          "slug": "italy"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T18:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "a6f4a705-9769-46d7-89d8-ddca43e13150",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "6c1070c6-62b7-4f5d-946b-15a6e8aa3b77",
+          "name": "Varese",
+          "odds": {
+            "american": "+425",
+            "decimal": "5.25",
+            "fractional": "17/4"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "d3f733c1-8fe3-4b32-bb5a-2b52a1ac8d6d",
+          "name": "Brescia",
+          "odds": {
+            "american": "-550",
+            "decimal": "1.18",
+            "fractional": "2/11"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "5ee6ba51-68d1-48d4-86a6-91173f76fc2b",
+          "name": "Boraas Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f368f412-016b-413e-b47d-5726ce0f0c14",
+          "name": "Basketligan",
+          "slug": "basketligan"
+        },
+        "home_participant": {
+          "id": "9d05dffc-afae-4adc-89f1-0a36c6a39994",
+          "name": "KFUM Umea",
+          "resource_uri": null
+        },
+        "id": "9e234337-f160-43e7-8e33-588f98431175",
+        "name": "KFUM Umea vs Boraas Basket",
+        "organization": {
+          "id": "af97e5f0-0f00-44e6-bfc9-1a65e670f61a",
+          "name": "Sweden",
+          "slug": "sweden"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-10T17:04:00Z",
+        "status": "pre_game"
+      },
+      "id": "3ebc670b-bc6a-4e84-8522-2e2ee562ca90",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "d5a36c16-f7af-4484-84ee-ad270e136ea9",
+          "name": "Boraas Basket",
+          "odds": {
+            "american": "-500",
+            "decimal": "1.2",
+            "fractional": "1/5"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "2e00cfd9-64f1-4230-8297-26237acaa065",
+          "name": "KFUM Umea",
+          "odds": {
+            "american": "+375",
+            "decimal": "4.75",
+            "fractional": "15/4"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "5ee6ba51-68d1-48d4-86a6-91173f76fc2b",
+          "name": "Boraas Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f368f412-016b-413e-b47d-5726ce0f0c14",
+          "name": "Basketligan",
+          "slug": "basketligan"
+        },
+        "home_participant": {
+          "id": "9d05dffc-afae-4adc-89f1-0a36c6a39994",
+          "name": "KFUM Umea",
+          "resource_uri": null
+        },
+        "id": "9e234337-f160-43e7-8e33-588f98431175",
+        "name": "KFUM Umea vs Boraas Basket",
+        "organization": {
+          "id": "af97e5f0-0f00-44e6-bfc9-1a65e670f61a",
+          "name": "Sweden",
+          "slug": "sweden"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-10T17:04:00Z",
+        "status": "pre_game"
+      },
+      "id": "4bdde489-f4ed-42a6-8594-23e7bb277ddb",
+      "name": "Match Spread",
+      "points": 9.0,
+      "selections": [
+        {
+          "id": "3c807333-d9ad-4be8-98b5-c7ad124f4bb5",
+          "name": "Boraas Basket -9",
+          "odds": {
+            "american": "-114",
+            "decimal": "1.88",
+            "fractional": "50/57"
+          },
+          "points": -9.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "ecab272e-3063-4512-bebe-17bb199ab073",
+          "name": "KFUM Umea +9",
+          "odds": {
+            "american": "-105",
+            "decimal": "1.95",
+            "fractional": "20/21"
+          },
+          "points": 9.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "5ee6ba51-68d1-48d4-86a6-91173f76fc2b",
+          "name": "Boraas Basket",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "f368f412-016b-413e-b47d-5726ce0f0c14",
+          "name": "Basketligan",
+          "slug": "basketligan"
+        },
+        "home_participant": {
+          "id": "9d05dffc-afae-4adc-89f1-0a36c6a39994",
+          "name": "KFUM Umea",
+          "resource_uri": null
+        },
+        "id": "9e234337-f160-43e7-8e33-588f98431175",
+        "name": "KFUM Umea vs Boraas Basket",
+        "organization": {
+          "id": "af97e5f0-0f00-44e6-bfc9-1a65e670f61a",
+          "name": "Sweden",
+          "slug": "sweden"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-10T17:04:00Z",
+        "status": "pre_game"
+      },
+      "id": "ce01561c-fd77-4498-ad9a-bf9226b5ee63",
+      "name": "Total Points",
+      "points": 172.5,
+      "selections": [
+        {
+          "id": "b0367204-01e3-4cca-bacd-93d7b95b0c8c",
+          "name": "Over 172.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 172.5,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "f2eeadf3-65b6-4714-a111-91174961e002",
+          "name": "Under 172.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 172.5,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "90c6afec-4971-49e2-9cf7-379be71ec895",
+          "name": "Stal Ostrow Wielkopolski",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "e89359e8-d8a0-451c-9fd3-955de4546252",
+          "name": "Twarde Pierniki Torun",
+          "resource_uri": null
+        },
+        "id": "a6e32ed3-3e04-4fc5-b9bb-6327695720b0",
+        "name": "Twarde Pierniki Torun vs Stal Ostrow Wielkopolski",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T13:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "2bea4de5-73ca-492f-aa93-3af86b2f5258",
+      "name": "Total Points",
+      "points": 169.0,
+      "selections": [
+        {
+          "id": "769fc32f-e613-4bd5-966b-1788c93ebced",
+          "name": "Over 169",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 169.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "10ff981a-7f35-49b1-b648-ccb2a0565911",
+          "name": "Under 169",
+          "odds": {
+            "american": "-110",
+            "decimal": "1.91",
+            "fractional": "10/11"
+          },
+          "points": 169.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "90c6afec-4971-49e2-9cf7-379be71ec895",
+          "name": "Stal Ostrow Wielkopolski",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "e89359e8-d8a0-451c-9fd3-955de4546252",
+          "name": "Twarde Pierniki Torun",
+          "resource_uri": null
+        },
+        "id": "a6e32ed3-3e04-4fc5-b9bb-6327695720b0",
+        "name": "Twarde Pierniki Torun vs Stal Ostrow Wielkopolski",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T13:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "626d6999-8e1b-4f10-ba38-b79a45909648",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "a833f112-7afd-457d-be87-4bf77c585412",
+          "name": "Stal Ostrow Wielkopolski",
+          "odds": {
+            "american": "-556",
+            "decimal": "1.18",
+            "fractional": "25/139"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "6f79bdfb-a61f-41c3-9f09-2e445df7c6d3",
+          "name": "Twarde Pierniki Torun",
+          "odds": {
+            "american": "+400",
+            "decimal": "5.0",
+            "fractional": "4/1"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "90c6afec-4971-49e2-9cf7-379be71ec895",
+          "name": "Stal Ostrow Wielkopolski",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "1d17258f-73db-4e01-bc0e-804c1a95b823",
+          "name": "Basket Liga",
+          "slug": "energa-basket-liga"
+        },
+        "home_participant": {
+          "id": "e89359e8-d8a0-451c-9fd3-955de4546252",
+          "name": "Twarde Pierniki Torun",
+          "resource_uri": null
+        },
+        "id": "a6e32ed3-3e04-4fc5-b9bb-6327695720b0",
+        "name": "Twarde Pierniki Torun vs Stal Ostrow Wielkopolski",
+        "organization": {
+          "id": "7be1aff8-2e27-400e-b9ee-39b82b01d42b",
+          "name": "Poland",
+          "slug": "poland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T13:30:00Z",
+        "status": "pre_game"
+      },
+      "id": "93f1f903-1527-4474-a4f2-e84224d01a76",
+      "name": "Match Spread",
+      "points": 10.0,
+      "selections": [
+        {
+          "id": "a4f57ffc-3061-4d7e-8930-23d30d33c129",
+          "name": "Stal Ostrow Wielkopolski -10",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": -10.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "d4fb214a-6588-4b8b-8c8c-1e753b94cbce",
+          "name": "Twarde Pierniki Torun +10",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 10.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "29aef75d-dddc-47f5-823e-11cc0bd06a6d",
+          "name": "KK Zadar",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "b2caa73e-fbb3-4c9e-bf81-1cda7edd6ec7",
+          "name": "Adriatic League",
+          "slug": "adriatic-league"
+        },
+        "home_participant": {
+          "id": "b7c28ee4-0714-4035-a3c8-4d2b06c5051d",
+          "name": "KK Mornar Bar",
+          "resource_uri": null
+        },
+        "id": "a8b6a5fc-31e2-4f30-b7d8-2035a348e429",
+        "name": "KK Mornar Bar vs KK Zadar",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "6c45bded-df9c-4bf2-a39e-b99da3e745c6",
+      "name": "Match Spread",
+      "points": -9.0,
+      "selections": [
+        {
+          "id": "63767835-6ba1-44af-b9f3-0ee5791c86e5",
+          "name": "KK Zadar +9",
+          "odds": {
+            "american": "-114",
+            "decimal": "1.88",
+            "fractional": "50/57"
+          },
+          "points": 9.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "16fe9119-270a-45f7-bd71-9584eae7ef7e",
+          "name": "KK Mornar Bar -9",
+          "odds": {
+            "american": "-105",
+            "decimal": "1.95",
+            "fractional": "20/21"
+          },
+          "points": -9.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "29aef75d-dddc-47f5-823e-11cc0bd06a6d",
+          "name": "KK Zadar",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "b2caa73e-fbb3-4c9e-bf81-1cda7edd6ec7",
+          "name": "Adriatic League",
+          "slug": "adriatic-league"
+        },
+        "home_participant": {
+          "id": "b7c28ee4-0714-4035-a3c8-4d2b06c5051d",
+          "name": "KK Mornar Bar",
+          "resource_uri": null
+        },
+        "id": "a8b6a5fc-31e2-4f30-b7d8-2035a348e429",
+        "name": "KK Mornar Bar vs KK Zadar",
+        "organization": {
+          "id": "9688d85b-cdea-4d3c-8cbb-72934bc4f504",
+          "name": "Europe",
+          "slug": "europe"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T17:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "d9044b0d-e6ef-4fd4-b4f8-b233ea2183b9",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "a21b117a-ad0d-4242-ad34-b3a703cb301a",
+          "name": "KK Zadar",
+          "odds": {
+            "american": "+325",
+            "decimal": "4.25",
+            "fractional": "13/4"
+          },
+          "points": null,
+          "status": "open",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "d7224bbf-893b-44dd-a5d5-71e017c3c146",
+          "name": "KK Mornar Bar",
+          "odds": {
+            "american": "-435",
+            "decimal": "1.23",
+            "fractional": "20/87"
+          },
+          "points": null,
+          "status": "open",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "open",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "f1fd5884-4f0e-467c-b50e-21a2a0ddba19",
+          "name": "Kobrat Lapua",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "619a8f69-02b2-4de6-a9f4-a32aeb63db2e",
+          "name": "Korisliiga",
+          "slug": "korisliiga"
+        },
+        "home_participant": {
+          "id": "adc62b41-804a-42ba-8226-0d7a50993eef",
+          "name": "Kataja Basket Joensuu",
+          "resource_uri": null
+        },
+        "id": "ace5c4fa-449b-423f-85f3-ae248e88a894",
+        "name": "Kataja Basket Joensuu vs Kobrat Lapua",
+        "organization": {
+          "id": "50d2c3ef-40f7-482e-bc51-22cecac342ac",
+          "name": "Finland",
+          "slug": "finland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T14:00:00Z",
+        "status": "in_play"
+      },
+      "id": "08bb2c61-0584-44b4-a10d-a2020005b040",
+      "name": "Total Points",
+      "points": 160.5,
+      "selections": [
+        {
+          "id": "d7c0b129-ff89-4f73-bfca-08f5529484e8",
+          "name": "Over 160.5",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 160.5,
+          "status": "closed",
+          "type": "over"
+        },
+        {
+          "id": "00369e73-247a-4e27-a3a1-810d042ddb8c",
+          "name": "Under 160.5",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 160.5,
+          "status": "closed",
+          "type": "under"
+        }
+      ],
+      "status": "closed",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "f1fd5884-4f0e-467c-b50e-21a2a0ddba19",
+          "name": "Kobrat Lapua",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "619a8f69-02b2-4de6-a9f4-a32aeb63db2e",
+          "name": "Korisliiga",
+          "slug": "korisliiga"
+        },
+        "home_participant": {
+          "id": "adc62b41-804a-42ba-8226-0d7a50993eef",
+          "name": "Kataja Basket Joensuu",
+          "resource_uri": null
+        },
+        "id": "ace5c4fa-449b-423f-85f3-ae248e88a894",
+        "name": "Kataja Basket Joensuu vs Kobrat Lapua",
+        "organization": {
+          "id": "50d2c3ef-40f7-482e-bc51-22cecac342ac",
+          "name": "Finland",
+          "slug": "finland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T14:00:00Z",
+        "status": "in_play"
+      },
+      "id": "917bb834-241b-4a33-9333-1971a99cfa15",
+      "name": "Match Spread",
+      "points": 1.5,
+      "selections": [
+        {
+          "id": "053b9880-c28a-4764-8aca-f5c88ddb8ad9",
+          "name": "Kobrat Lapua -1.5",
+          "odds": {
+            "american": "+110",
+            "decimal": "2.1",
+            "fractional": "11/10"
+          },
+          "points": -1.5,
+          "status": "closed",
+          "type": "away_spread"
+        },
+        {
+          "id": "7402576e-2eac-4baf-a084-589099b22c13",
+          "name": "Kataja B Joensuu +1.5",
+          "odds": {
+            "american": "-133",
+            "decimal": "1.75",
+            "fractional": "100/133"
+          },
+          "points": 1.5,
+          "status": "closed",
+          "type": "home_spread"
+        }
+      ],
+      "status": "closed",
+      "type": "spread"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "f1fd5884-4f0e-467c-b50e-21a2a0ddba19",
+          "name": "Kobrat Lapua",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "619a8f69-02b2-4de6-a9f4-a32aeb63db2e",
+          "name": "Korisliiga",
+          "slug": "korisliiga"
+        },
+        "home_participant": {
+          "id": "adc62b41-804a-42ba-8226-0d7a50993eef",
+          "name": "Kataja Basket Joensuu",
+          "resource_uri": null
+        },
+        "id": "ace5c4fa-449b-423f-85f3-ae248e88a894",
+        "name": "Kataja Basket Joensuu vs Kobrat Lapua",
+        "organization": {
+          "id": "50d2c3ef-40f7-482e-bc51-22cecac342ac",
+          "name": "Finland",
+          "slug": "finland"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-08T14:00:00Z",
+        "status": "in_play"
+      },
+      "id": "be5d71ea-f3a7-453a-b752-18234fa45e41",
+      "name": "Moneyline",
+      "points": null,
+      "selections": [
+        {
+          "id": "58c4004f-ea35-438d-891b-22704cc8314c",
+          "name": "Kobrat Lapua",
+          "odds": {
+            "american": "+108",
+            "decimal": "2.08",
+            "fractional": "27/25"
+          },
+          "points": null,
+          "status": "closed",
+          "type": "away_moneyline"
+        },
+        {
+          "id": "63894d5e-b181-4fa8-a3ce-648995ca71ae",
+          "name": "Kataja B Joensuu",
+          "odds": {
+            "american": "-128",
+            "decimal": "1.78",
+            "fractional": "25/32"
+          },
+          "points": null,
+          "status": "closed",
+          "type": "home_moneyline"
+        }
+      ],
+      "status": "closed",
+      "type": "moneyline"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "51ce8072-f61f-4807-af92-485ad2a06b39",
+          "name": "Centrum Tigers Oslo",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e7b15ae7-071d-4882-aac2-10d802f8080c",
+          "name": "BLNO",
+          "slug": "blno"
+        },
+        "home_participant": {
+          "id": "25cb3fab-9956-4679-818e-1634dab8376c",
+          "name": "Gimle BK",
+          "resource_uri": null
+        },
+        "id": "aed2d36f-dd0b-4f4b-af58-dc97a5a254ed",
+        "name": "Gimle BK vs Centrum Tigers Oslo",
+        "organization": {
+          "id": "496e3a3f-dddb-4357-bf77-3791de01d588",
+          "name": "Norway",
+          "slug": "norway"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "0ab57852-0bff-4d59-80b3-7ad9cd8f9486",
+      "name": "Total Points",
+      "points": 152.0,
+      "selections": [
+        {
+          "id": "0224fa81-6d86-4306-a860-cd6a468064c6",
+          "name": "Over 152",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 152.0,
+          "status": "open",
+          "type": "over"
+        },
+        {
+          "id": "f75f76b2-b143-4db8-8c8a-bbc748230db2",
+          "name": "Under 152",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": 152.0,
+          "status": "open",
+          "type": "under"
+        }
+      ],
+      "status": "open",
+      "type": "total"
+    },
+    {
+      "event": {
+        "away_participant": {
+          "id": "51ce8072-f61f-4807-af92-485ad2a06b39",
+          "name": "Centrum Tigers Oslo",
+          "resource_uri": null
+        },
+        "competition": {
+          "id": "e7b15ae7-071d-4882-aac2-10d802f8080c",
+          "name": "BLNO",
+          "slug": "blno"
+        },
+        "home_participant": {
+          "id": "25cb3fab-9956-4679-818e-1634dab8376c",
+          "name": "Gimle BK",
+          "resource_uri": null
+        },
+        "id": "aed2d36f-dd0b-4f4b-af58-dc97a5a254ed",
+        "name": "Gimle BK vs Centrum Tigers Oslo",
+        "organization": {
+          "id": "496e3a3f-dddb-4357-bf77-3791de01d588",
+          "name": "Norway",
+          "slug": "norway"
+        },
+        "resource_uri": null,
+        "sport": {
+          "id": "d5ca099d-f918-4796-836c-3acdeac64c71",
+          "name": "Basketball",
+          "slug": "basketball"
+        },
+        "start_time": "2022-10-09T15:00:00Z",
+        "status": "pre_game"
+      },
+      "id": "2fb5429e-cc5e-4582-bb07-91a1723a08ce",
+      "name": "Match Spread",
+      "points": -20.0,
+      "selections": [
+        {
+          "id": "f1a972f0-0907-4c30-aacb-b5197faceb44",
+          "name": "CT Oslo +20",
+          "odds": {
+            "american": "-111",
+            "decimal": "1.9",
+            "fractional": "100/111"
+          },
+          "points": 20.0,
+          "status": "open",
+          "type": "away_spread"
+        },
+        {
+          "id": "4e5f91ee-8c6c-4449-ad3f-dc41aeb021bc",
+          "name": "Gimle BK -20",
+          "odds": {
+            "american": "-109",
+            "decimal": "1.92",
+            "fractional": "100/109"
+          },
+          "points": -20.0,
+          "status": "open",
+          "type": "home_spread"
+        }
+      ],
+      "status": "open",
+      "type": "spread"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "page_size": 100,
+    "total_count": 169,
+    "total_pages": 2
+  }
+}

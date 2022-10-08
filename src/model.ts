@@ -102,9 +102,6 @@ export interface Statistics {
   threePointersMade: number;
   turnovers: number;
   foulsPersonal: number;
-
-
-
 }
 export interface Player {
   personId: number;
@@ -114,9 +111,6 @@ export interface Player {
   statistics?: Statistics;
   nameI?: string;
   position?: string;
-
-
-
 
   lineupStats?: PlayerStats;
 }
@@ -303,6 +297,7 @@ export interface PlayerBoxScore {
   headshots: any;
 }
 
+// nba schedule
 export interface Schedule {
   monthGroups: ScheduleMonthGroup[];
 }
@@ -316,4 +311,54 @@ export interface Game {
 export interface GameProfile {
   gameId: string;
   dateTimeEt: string;
-};
+}
+
+// thescore
+
+export interface BetMarket {
+  event: BetEvent;
+  selections: Selection[];
+  type: string;
+}
+
+export interface BetEvent {
+  away_participant: BetParticipant;
+  home_participant: BetParticipant;
+  id: string;
+  name: string;
+}
+export interface BetParticipant {
+  id: string;
+  name: string;
+  resource_uri: string;
+}
+
+export interface Selection {
+  id: string;
+  name: string;
+  odds: BetOdds;
+  points: number;
+  status: string;
+  type: string;
+}
+
+export interface BetOdds {
+  american: string;
+  decimal: string;
+  fractional: string;
+}
+
+// RR
+
+export interface TableOdds {
+  odds: TableColumnOdds[];
+  event: BetEvent;
+}
+
+export interface TableColumnOdds {
+  type: string;
+  away_points: string;
+  home_points: string;
+  away_odds: BetOdds;
+  home_odds: BetOdds;
+}

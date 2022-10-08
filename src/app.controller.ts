@@ -31,6 +31,8 @@ import { TimeoutService } from './timeout.service';
 import { GameCacheService } from './db/game-cache.service';
 import { ScoringRunService } from './scoring-run.service';
 import { LatestGameCalculator } from './latest-game-calculator';
+import { TheScoreService } from './the-score.service';
+import { GameOdds } from './game-odds';
 
 dayjs.extend(require('dayjs/plugin/duration'));
 dayjs.extend(require('dayjs/plugin/utc'));
@@ -86,7 +88,26 @@ export class AppController {
     private readonly pointsQualifierService: PointsQualifierService,
     private readonly timeoutService: TimeoutService,
     private readonly scoringRunService: ScoringRunService,
+    private readonly theScoreService: TheScoreService,
   ) {}
+
+  @Get('/bet-box/:teamBettingId')
+  async getBetBox(@Param('teamBettingId') teamBettingId: string) {
+    const betMarkets = await this.theScoreService.getBasketballMarkets();
+    const gameOdds = new GameOdds(betMarkets);
+    const result = gameOdds.calculate(teamBettingId);
+    if (result === null) {
+      return {
+        status: 'NO_MARKETS_FOUND',
+        payload: {},
+      };
+    } else {
+      return {
+        status: 'OK',
+        payload: result,
+      };
+    }
+  }
 
   @Post('/teams')
   getTeams() {

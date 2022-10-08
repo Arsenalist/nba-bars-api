@@ -12,10 +12,11 @@ import { TimeoutService } from './timeout.service';
 import { AppService } from './app-service';
 import { GameCacheService } from './db/game-cache.service';
 import { ScoringRunService } from './scoring-run.service';
+import { TheScoreService } from './the-score.service';
 
 @Module({
   imports: [HttpModule],
   controllers: [AppController],
-  providers: [ScoringRunService, GameCacheService, AppService, GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService, PointsQualifierService, TimeoutService],
+  providers: [TheScoreService, ScoringRunService, GameCacheService, AppService, GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService, PointsQualifierService, TimeoutService],
 })
 export class AppModule {}
