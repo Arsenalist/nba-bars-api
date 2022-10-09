@@ -13,10 +13,12 @@ import { AppService } from './app-service';
 import { GameCacheService } from './db/game-cache.service';
 import { ScoringRunService } from './scoring-run.service';
 import { TheScoreService } from './the-score.service';
+import { BettingController } from './betting.controller';
+import { QuickReactionController } from './quick-reaction.controller';
 
 @Module({
   imports: [HttpModule],
-  controllers: [AppController],
+  controllers: [AppController, BettingController, QuickReactionController],
   providers: [TheScoreService, ScoringRunService, GameCacheService, AppService, GameBarService, NbaService, LineupService, DifferentialService, AssistDistributionService, ShotDistanceService, PointsQualifierService, TimeoutService],
 })
 export class AppModule {}
