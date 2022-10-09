@@ -32,7 +32,7 @@ export class TheScoreEventAnalyzer {
     const parsed = Date.parse(this.theScoreEvent.game_date);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    dayjs.tz(dayjs(parsed), 'America/Toronto');
-    return dayjs(parsed).format('ddd MMM D, h:mm A z');
+    const est = dayjs.tz(dayjs(parsed), 'America/Toronto');
+    return dayjs(est).format('ddd MMM D, h:mm A z');
   }
 }
