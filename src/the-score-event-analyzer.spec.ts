@@ -38,6 +38,8 @@ describe('TheScoreEvent', () => {
       fs.readFileSync(`./testdata/the-score-event.json`),
     );
     theScoreEventAnalyzer = new TheScoreEventAnalyzer(event);
-    expect(theScoreEventAnalyzer.getGameTime()).toEqual('Sun Oct 9, 6:00 PM EDT')
+    expect(theScoreEventAnalyzer.getGameTime()).toEqual(
+      'Sun Oct 9, 6:00 PM EDT',
+    );
   });
 });
