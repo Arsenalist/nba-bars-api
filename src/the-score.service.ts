@@ -34,6 +34,19 @@ export class TheScoreService {
     );
   }
 
+  async getCurrentGameResourceUri(teamId: number): Promise<string> {
+    const url = `https://api.thescore.com/nba/teams/${teamId}/events/current`;
+    return await lastValueFrom(
+      this.httpService
+        .get(url)
+        .pipe(
+          map((response) =>
+            response.data.length !== 0 ? response.data[0].api_uri : null,
+          ),
+        ),
+    );
+  }
+
   async getEventDetails(resourceUri: string): Promise<TheScoreEvent> {
     const url = `https://api.thescore.com${resourceUri}`;
     return await lastValueFrom(

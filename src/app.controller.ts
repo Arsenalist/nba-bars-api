@@ -109,9 +109,15 @@ export class AppController {
         const teamId = parseInt(
           result.event.away_participant.resource_uri.split('/')[3],
         );
-        const resourceUri =
+        const currentGameResourceUri =
+          await this.theScoreService.getCurrentGameResourceUri(teamId);
+        const upcomingGameResourceUri =
           await this.theScoreService.getUpcomingGameResourceUri(teamId);
-        const event = await this.theScoreService.getEventDetails(resourceUri);
+        const event = await this.theScoreService.getEventDetails(
+          currentGameResourceUri
+            ? currentGameResourceUri
+            : upcomingGameResourceUri,
+        );
         const analyzer = new TheScoreEventAnalyzer(event);
         tvListingsForDisplay = analyzer.getTvListingsForDisplay();
         gameDateForDisplay = analyzer.getGameTime();
