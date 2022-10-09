@@ -33,6 +33,7 @@ import { ScoringRunService } from './scoring-run.service';
 import { LatestGameCalculator } from './latest-game-calculator';
 import { TheScoreService } from './the-score.service';
 import { GameOdds } from './game-odds';
+import { TheScoreEventAnalyzer } from './the-score-event-analyzer';
 
 dayjs.extend(require('dayjs/plugin/duration'));
 dayjs.extend(require('dayjs/plugin/utc'));
@@ -96,15 +97,30 @@ export class AppController {
     const betMarkets = await this.theScoreService.getBasketballMarkets();
     const gameOdds = new GameOdds(betMarkets);
     const result = gameOdds.calculate(teamBettingId);
+    let tvListingsForDisplay;
+    let gameDateForDisplay;
     if (result === null) {
       return {
         status: 'NO_MARKETS_FOUND',
         payload: {},
       };
     } else {
+      if (result.event.away_participant.resource_uri) {
+        const teamId = parseInt(
+          result.event.away_participant.resource_uri.split('/')[3],
+        );
+        const resourceUri =
+          await this.theScoreService.getUpcomingGameResourceUri(teamId);
+        const event = await this.theScoreService.getEventDetails(resourceUri);
+        const analyzer = new TheScoreEventAnalyzer(event);
+        tvListingsForDisplay = analyzer.getTvListingsForDisplay();
+        gameDateForDisplay = analyzer.getGameTime();
+      }
       return {
         status: 'OK',
         payload: result,
+        tvListingsForDisplay: tvListingsForDisplay,
+        gameDateForDisplay: gameDateForDisplay,
       };
     }
   }

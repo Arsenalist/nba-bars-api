@@ -1,0 +1,553 @@
+{
+  "last_matchup": "CHI 113-99, March 21st, 2022",
+  "sport_name": "basketball",
+  "location": "Toronto, ON, CAN",
+  "stadium": "Scotiabank Arena",
+  "away_conference": "Eastern",
+  "home_conference": "Eastern",
+  "colours": {
+    "away": "C01335",
+    "home": "CE1141"
+  },
+  "has_play_by_play_records": false,
+  "stubhub_url": null,
+  "if_necessary": false,
+  "id": 2404713,
+  "event_status": "pre_game",
+  "game_date": "Sun, 09 Oct 2022 22:00:00 -0000",
+  "game_type": "Preseason",
+  "game_description": null,
+  "tba": false,
+  "updated_at": "Mon, 26 Sep 2022 21:05:37 -0000",
+  "bet_works_id": null,
+  "betradar_id": "35175091",
+  "top_match": null,
+  "status": "pre_game",
+  "api_uri": "/nba/events/2404713",
+  "resource_uri": "/basketball/events/2404713",
+  "away_team": {
+    "colour_1": "C01335",
+    "colour_2": "343434",
+    "division": "Central",
+    "full_name": "Chicago Bulls",
+    "name": "Bulls",
+    "search_name": "Chicago Bulls",
+    "location": "Chicago",
+    "short_name": "CHI",
+    "conference": "Eastern",
+    "has_injuries": true,
+    "has_rosters": true,
+    "has_extra_info": true,
+    "updated_at": "Sat, 08 Oct 2022 22:35:27 -0000",
+    "subscription_count": 1547613,
+    "id": 6,
+    "abbreviation": "CHI",
+    "medium_name": "CHI Bulls",
+    "api_uri": "/nba/teams/6",
+    "resource_uri": "/basketball/teams/6",
+    "logos": {
+      "large": "https://assets-sports.thescore.com/basketball/team/6/logo.png",
+      "small": "https://assets-sports.thescore.com/basketball/team/6/small_logo.png",
+      "w72xh72": "https://assets-sports.thescore.com/basketball/team/6/w72xh72_logo.png",
+      "tiny": "https://assets-sports.thescore.com/basketball/team/6/tiny_logo.png",
+      "facing": null
+    },
+    "subscribable_alerts": [
+      {
+        "key": "breaking_news",
+        "display": "Breaking News",
+        "default": true
+      },
+      {
+        "key": "social",
+        "display": "Social",
+        "default": true
+      },
+      {
+        "key": "features",
+        "display": "Features",
+        "default": true
+      },
+      {
+        "key": "video",
+        "display": "Video",
+        "default": true
+      },
+      {
+        "key": "game_start",
+        "display": "Game Start",
+        "default": true
+      },
+      {
+        "key": "game_end",
+        "display": "Game End",
+        "default": true
+      },
+      {
+        "key": "tight_game",
+        "display": "Close Game",
+        "default": false
+      },
+      {
+        "key": "segment_end",
+        "display": "Score - End of Quarter",
+        "default": false
+      },
+      {
+        "key": "mid_quarter",
+        "display": "Score - Mid-Quarter",
+        "default": false
+      },
+      {
+        "key": "mid_game_start",
+        "display": "Start of Half",
+        "default": false
+      },
+      {
+        "key": "line_movement",
+        "display": "Line Movement (Pre-Game)",
+        "default": false
+      },
+      {
+        "key": "over_under_movement",
+        "display": "Over/Under Movement (Pre-Game)",
+        "default": false
+      },
+      {
+        "key": "over_under_watch",
+        "display": "Over/Under Watch (In-Game)",
+        "default": false
+      },
+      {
+        "key": "close_bet",
+        "display": "Close Bet (In-Game)",
+        "default": false
+      }
+    ],
+    "subscribable_alert_text": "Keep track of this basketball team by adding it to your feed and subscribing to various alerts."
+  },
+  "home_team": {
+    "colour_1": "CE1141",
+    "colour_2": "343434",
+    "division": "Atlantic",
+    "full_name": "Toronto Raptors",
+    "name": "Raptors",
+    "search_name": "Toronto Raptors",
+    "location": "Toronto",
+    "short_name": "TOR",
+    "conference": "Eastern",
+    "has_injuries": true,
+    "has_rosters": true,
+    "has_extra_info": true,
+    "updated_at": "Sat, 08 Oct 2022 22:35:27 -0000",
+    "subscription_count": 3210316,
+    "id": 5,
+    "abbreviation": "TOR",
+    "medium_name": "TOR Raptors",
+    "api_uri": "/nba/teams/5",
+    "resource_uri": "/basketball/teams/5",
+    "logos": {
+      "large": "https://assets-sports.thescore.com/basketball/team/5/logo.png",
+      "small": "https://assets-sports.thescore.com/basketball/team/5/small_logo.png",
+      "w72xh72": "https://assets-sports.thescore.com/basketball/team/5/w72xh72_logo.png",
+      "tiny": "https://assets-sports.thescore.com/basketball/team/5/tiny_logo.png",
+      "facing": null
+    },
+    "subscribable_alerts": [
+      {
+        "key": "breaking_news",
+        "display": "Breaking News",
+        "default": true
+      },
+      {
+        "key": "social",
+        "display": "Social",
+        "default": true
+      },
+      {
+        "key": "features",
+        "display": "Features",
+        "default": true
+      },
+      {
+        "key": "video",
+        "display": "Video",
+        "default": true
+      },
+      {
+        "key": "game_start",
+        "display": "Game Start",
+        "default": true
+      },
+      {
+        "key": "game_end",
+        "display": "Game End",
+        "default": true
+      },
+      {
+        "key": "tight_game",
+        "display": "Close Game",
+        "default": false
+      },
+      {
+        "key": "segment_end",
+        "display": "Score - End of Quarter",
+        "default": false
+      },
+      {
+        "key": "mid_quarter",
+        "display": "Score - Mid-Quarter",
+        "default": false
+      },
+      {
+        "key": "mid_game_start",
+        "display": "Start of Half",
+        "default": false
+      },
+      {
+        "key": "line_movement",
+        "display": "Line Movement (Pre-Game)",
+        "default": false
+      },
+      {
+        "key": "over_under_movement",
+        "display": "Over/Under Movement (Pre-Game)",
+        "default": false
+      },
+      {
+        "key": "over_under_watch",
+        "display": "Over/Under Watch (In-Game)",
+        "default": false
+      },
+      {
+        "key": "close_bet",
+        "display": "Close Bet (In-Game)",
+        "default": false
+      }
+    ],
+    "subscribable_alert_text": "Keep track of this basketball team by adding it to your feed and subscribing to various alerts."
+  },
+  "league": {
+    "id": 2,
+    "daily_rollover_offset": 28800,
+    "daily_rollover_time": "12:00:00 +0000",
+    "default_section": "events",
+    "full_name": "NBA Basketball",
+    "medium_name": "NBA",
+    "season_type": "pre",
+    "short_name": "NBA",
+    "slug": "nba",
+    "sport_name": "basketball",
+    "updated_at": "Sat, 08 Oct 2022 08:08:04 -0000",
+    "subscription_count": 11230885,
+    "sex": "M",
+    "localizations": {},
+    "api_uri": "/nba",
+    "resource_uri": "/basketball/leagues/2"
+  },
+  "event_details": [
+    {
+      "label": "Toronto, ON, CAN",
+      "content": "Scotiabank Arena",
+      "identifier": "stadium_location"
+    },
+    {
+      "label": "Watch on",
+      "content": "SN 360",
+      "identifier": "broadcast/ca"
+    },
+    {
+      "label": "Watch on",
+      "content": "NBA TV, Sportsnet, NBCS-CHI",
+      "identifier": "broadcast/us"
+    },
+    {
+      "label": "Current odds",
+      "content": "TOR -3.0",
+      "identifier": "current_odds"
+    },
+    {
+      "label": "Previous matchup",
+      "content": "CHI 113-99, March 21st, 2022",
+      "identifier": "previous_matchup"
+    }
+  ],
+  "tv_listings_by_country_code": {
+    "ca": [
+      {
+        "short_name": "SN360",
+        "long_name": "SN 360"
+      }
+    ],
+    "us": [
+      {
+        "short_name": "NBA TV",
+        "long_name": "NBA TV"
+      },
+      {
+        "short_name": "Sportsnet",
+        "long_name": "Sportsnet"
+      },
+      {
+        "short_name": "NBCS-CHI",
+        "long_name": "NBCS-CHI"
+      }
+    ]
+  },
+  "has_team_twitter_handles": true,
+  "standings": {
+    "away": {
+      "streak": "W1",
+      "conference": "Eastern",
+      "conference_seed": 8,
+      "division": "Central",
+      "guaranteed_playoff_line": 6,
+      "last_ten_games_record": "1-1",
+      "play_in_playoff_line": 10,
+      "place": 1,
+      "short_record": "1-1",
+      "conference_rank": 8,
+      "division_rank": 1,
+      "division_seed": 1,
+      "formatted_rank": "8th Eastern",
+      "short_away_record": "0-0",
+      "short_home_record": "1-1",
+      "api_uri": "/nba/standings/18227",
+      "conference_ranking": 8,
+      "division_ranking": 1
+    },
+    "home": {
+      "streak": "L1",
+      "conference": "Eastern",
+      "conference_seed": 4,
+      "division": "Atlantic",
+      "guaranteed_playoff_line": 6,
+      "last_ten_games_record": "2-1",
+      "play_in_playoff_line": 10,
+      "place": 3,
+      "short_record": "2-1",
+      "conference_rank": 4,
+      "division_rank": 3,
+      "division_seed": 3,
+      "formatted_rank": "4th Eastern",
+      "short_away_record": "1-1",
+      "short_home_record": "1-0",
+      "api_uri": "/nba/standings/18236",
+      "conference_ranking": 4,
+      "division_ranking": 3
+    }
+  },
+  "box_score": {
+    "referees": null,
+    "home_timeouts_left": null,
+    "away_timeouts_left": null,
+    "home_fouls_to_give": null,
+    "home_bonus": false,
+    "away_fouls_to_give": null,
+    "away_bonus": false,
+    "id": 191296,
+    "has_statistics": false,
+    "progress": {
+      "clock_label": "Pre Game",
+      "string": "Pre Game",
+      "status": "pre_game",
+      "event_status": "pre_game",
+      "segment": null,
+      "segment_string": null,
+      "segment_description": null,
+      "clock": "0:00",
+      "overtime": false
+    },
+    "updated_at": "Sat, 08 Oct 2022 22:10:09 -0000",
+    "event": {
+      "api_uri": "/nba/events/2404713"
+    },
+    "api_uri": "/nba/box_scores/191296",
+    "line_scores": {
+      "home": [],
+      "away": []
+    },
+    "score": {
+      "home": {
+        "score": 0
+      },
+      "away": {
+        "score": 0
+      },
+      "tie_game": true
+    },
+    "share_url": "https://www.thescore.com/nba/events/2404713/box_score",
+    "team_records": {
+      "home": {
+        "assists": null,
+        "biggest_lead": null,
+        "blocked_shots": null,
+        "defensive_3_seconds": null,
+        "dunks": null,
+        "ejections_coach": null,
+        "ejections_player": null,
+        "fast_break_points": null,
+        "field_goals_attempted": null,
+        "field_goals_made": null,
+        "flagrant_fouls": null,
+        "free_throws_attempted": null,
+        "free_throws_made": null,
+        "hooks": null,
+        "id": 301620,
+        "illegal_defense": null,
+        "jumpshots": null,
+        "layups": null,
+        "minutes": null,
+        "personal_fouls": null,
+        "personal_fouls_disqualifications": null,
+        "points": null,
+        "points_in_paint": null,
+        "points_off_turnovers": null,
+        "rebounds_dead_ball": null,
+        "rebounds_defensive": null,
+        "rebounds_offensive": null,
+        "rebounds_team": null,
+        "rebounds_team_def": null,
+        "rebounds_team_off": null,
+        "rebounds_total": null,
+        "second_change_points": null,
+        "steals": null,
+        "team_offensive_rebounds": null,
+        "team_defensive_rebounds": null,
+        "technical_fouls_bench": null,
+        "technical_fouls_coach": null,
+        "technical_fouls_player": null,
+        "technical_fouls_team": null,
+        "three_point_field_goals_attempted": null,
+        "three_point_field_goals_made": null,
+        "tipins": null,
+        "turnovers": null,
+        "turnovers_team": null,
+        "updated_at": "Sat, 08 Oct 2022 22:10:09 -0000",
+        "api_uri": "/nba/team_records/301620",
+        "field_goals_percentage": ".000",
+        "free_throws_percentage": ".000",
+        "three_point_field_goals_percentage": ".000"
+      },
+      "away": {
+        "assists": null,
+        "biggest_lead": null,
+        "blocked_shots": null,
+        "defensive_3_seconds": null,
+        "dunks": null,
+        "ejections_coach": null,
+        "ejections_player": null,
+        "fast_break_points": null,
+        "field_goals_attempted": null,
+        "field_goals_made": null,
+        "flagrant_fouls": null,
+        "free_throws_attempted": null,
+        "free_throws_made": null,
+        "hooks": null,
+        "id": 301621,
+        "illegal_defense": null,
+        "jumpshots": null,
+        "layups": null,
+        "minutes": null,
+        "personal_fouls": null,
+        "personal_fouls_disqualifications": null,
+        "points": null,
+        "points_in_paint": null,
+        "points_off_turnovers": null,
+        "rebounds_dead_ball": null,
+        "rebounds_defensive": null,
+        "rebounds_offensive": null,
+        "rebounds_team": null,
+        "rebounds_team_def": null,
+        "rebounds_team_off": null,
+        "rebounds_total": null,
+        "second_change_points": null,
+        "steals": null,
+        "team_offensive_rebounds": null,
+        "team_defensive_rebounds": null,
+        "technical_fouls_bench": null,
+        "technical_fouls_coach": null,
+        "technical_fouls_player": null,
+        "technical_fouls_team": null,
+        "three_point_field_goals_attempted": null,
+        "three_point_field_goals_made": null,
+        "tipins": null,
+        "turnovers": null,
+        "turnovers_team": null,
+        "updated_at": "Sat, 08 Oct 2022 22:10:09 -0000",
+        "api_uri": "/nba/team_records/301621",
+        "field_goals_percentage": ".000",
+        "free_throws_percentage": ".000",
+        "three_point_field_goals_percentage": ".000"
+      }
+    },
+    "attendance": null,
+    "total_segments": 4
+  },
+  "odd": {
+    "away_odd": "N/A",
+    "home_odd": "-3.0",
+    "id": 4507732,
+    "line": "TOR -3.0",
+    "over_under": "-",
+    "api_uri": "/nba/odds/4507732"
+  },
+  "subscribable_alerts": [
+    {
+      "key": "game_start",
+      "display": "Game Start",
+      "default": true
+    },
+    {
+      "key": "game_end",
+      "display": "Game End",
+      "default": true
+    },
+    {
+      "key": "tight_game",
+      "display": "Close Game",
+      "default": true
+    },
+    {
+      "key": "mid_quarter",
+      "display": "Score - Mid-Quarter",
+      "default": false
+    },
+    {
+      "key": "segment_end",
+      "display": "Score - End of Quarter",
+      "default": true
+    },
+    {
+      "key": "buzzer_beater",
+      "display": "Game Winning Buzzer Beater",
+      "default": true
+    },
+    {
+      "key": "mid_game_start",
+      "display": "Start of Half",
+      "default": false
+    },
+    {
+      "key": "line_movement",
+      "display": "Line Movement (Pre-Game)",
+      "default": false
+    },
+    {
+      "key": "over_under_movement",
+      "display": "Over/Under Movement (Pre-Game)",
+      "default": false
+    },
+    {
+      "key": "over_under_watch",
+      "display": "Over/Under Watch (In-Game)",
+      "default": false
+    },
+    {
+      "key": "close_bet",
+      "display": "Close Bet (In-Game)",
+      "default": false
+    }
+  ],
+  "share_url": "https://www.thescore.com/nba/events/2404713/box_score"
+}

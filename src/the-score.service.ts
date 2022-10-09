@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { BetMarket, BoxScore, HomeAway, PlayByPlay, Shot } from './model';
+import { BetMarket, TheScoreEvent } from './model';
 import { lastValueFrom, map } from 'rxjs';
 import { HttpService } from '@nestjs/axios';
 
@@ -8,7 +8,6 @@ export class TheScoreService {
   constructor(private httpService: HttpService) {}
 
   async getBasketballMarkets(): Promise<BetMarket[]> {
-    console.log("process.env is ", process.env)
     const headersRequest = {
       'x-api-key': process.env.THE_SCORE_API_KEY,
     };
@@ -19,6 +18,28 @@ export class TheScoreService {
         .pipe(
           map((response) => (response.data.data ? response.data.data : [])),
         ),
+    );
+  }
+
+  async getUpcomingGameResourceUri(teamId: number): Promise<string> {
+    const url = `https://api.thescore.com/nba/teams/${teamId}/events/upcoming?rpp=1`;
+    return await lastValueFrom(
+      this.httpService
+        .get(url)
+        .pipe(
+          map((response) =>
+            response.data.length !== 0 ? response.data[0].api_uri : null,
+          ),
+        ),
+    );
+  }
+
+  async getEventDetails(resourceUri: string): Promise<TheScoreEvent> {
+    const url = `https://api.thescore.com${resourceUri}`;
+    return await lastValueFrom(
+      this.httpService
+        .get(url)
+        .pipe(map((response) => (response.data ? response.data : null))),
     );
   }
 }

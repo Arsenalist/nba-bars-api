@@ -348,6 +348,21 @@ export interface BetOdds {
   fractional: string;
 }
 
+export interface TheScoreEvent {
+  tv_listings_by_country_code: TVCountryCodeListing;
+  game_date: string;
+}
+
+export interface TVCountryCodeListing {
+  ca: TVListing[];
+  us: TVListing[];
+}
+
+export interface TVListing {
+  short_name: string;
+  long_name: string;
+}
+
 // RR
 
 export interface TableOdds {
