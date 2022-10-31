@@ -11,7 +11,7 @@ export class TheScoreService {
     const headersRequest = {
       'x-api-key': process.env.THE_SCORE_API_KEY,
     };
-    const url = `https://vegas.us-core.uat.thescore.bet/api/v1/markets?sport_slug=basketball&most_balanced=true&market_classification_name=main&page=1&page_size=100`;
+    const url = `https://vegas.us-core.uat.thescore.bet/api/v1/markets?competition_slug=nba&organization_slug=united-states&sport_slug=basketball&most_balanced=true&market_classification_name=main&page=1&page_size=100`;
     return await lastValueFrom(
       this.httpService
         .get(url, { headers: headersRequest })
