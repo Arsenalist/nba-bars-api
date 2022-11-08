@@ -16,10 +16,27 @@ export class BettingController {
     let awayTeamLogo;
     let homeTeamLogo;
     if (result === null) {
-      return {
-        status: 'NO_MARKETS_FOUND',
-        payload: {},
-      };
+      const upcomingGameResourceUri =
+        await this.theScoreService.getUpcomingGameResourceUri(5);
+      if (upcomingGameResourceUri) {
+        const event = await this.theScoreService.getEventDetails(
+          upcomingGameResourceUri,
+        );
+        const analyzer = new TheScoreEventAnalyzer(event);
+        const tvListingsForDisplay = analyzer.getTvListingsForDisplay();
+        const gameDateForDisplay = analyzer.getGameTime();
+        return {
+          status: 'NO_MARKETS_FOUND_UPCOMING_GAME_EXISTS',
+          tvListingsForDisplay,
+          gameDateForDisplay,
+          event,
+        };
+      } else {
+        return {
+          status: 'NO_MARKETS_FOUND',
+          payload: {},
+        };
+      }
     } else {
       if (
         result.event.away_participant.resource_uri &&
